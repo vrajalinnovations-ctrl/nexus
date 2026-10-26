@@ -1,16 +1,4 @@
-import {
-  ShieldCheck,
-  MousePointer2,
-  Power,
-  Cloud,
-  Container,
-  Webhook,
-  Bell,
-  Sparkles,
-  Zap,
-  GitBranch,
-  MessageSquare
-} from 'lucide-react';
+import { ShieldCheck, MousePointer2, Power, Cloud, Container, Webhook, Bell, Sparkles, Zap, GitBranch, MessageSquare } from 'lucide-react';
 import Card from '@/components/ui/Card';
 import FloatingBackground from '@/components/ui/FloatingBackground';
 import featuresData from '@/mock/features.json';

@@ -1,18 +1,5 @@
 import LogoLoop from '@/components/ui/LogoLoop';
-import {
-  Music,
-  MessageSquare,
-  Box,
-  Users,
-  Share2,
-  Globe,
-  Play,
-  Camera,
-  LayoutGrid,
-  Search,
-  Package,
-  Laptop
-} from 'lucide-react';
+import { Music, MessageSquare, Box, Users, Share2, Globe, Play, Camera, LayoutGrid, Search, Package, Laptop } from 'lucide-react';
 import companiesData from '@/mock/companies.json';
 
 const iconMap = {

@@ -3,12 +3,7 @@ import GhostFibers from '@/components/ui/GhostFibers';
 import Navbar from '@/components/layout/Navbar';
 import robotImage from '@/assets/2.png';
 import TrustedCompanies from '@/components/sections/TrustedCompanies';
-import {
-  Shield,
-  ArrowRight,
-  Play,
-  ChevronRight
-} from 'lucide-react';
+import { Shield, ArrowRight, Play, ChevronRight } from 'lucide-react';
 
 export const Hero = () => {
 

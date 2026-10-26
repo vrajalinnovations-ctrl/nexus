@@ -2,18 +2,7 @@ import { useState } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Card from '@/components/ui/Card';
-import {
-  Sparkles,
-  Mail,
-  Phone,
-  MapPin,
-  ArrowUpRight,
-  Plus,
-  Minus,
-  Shield,
-  Clock,
-  ExternalLink
-} from 'lucide-react';
+import { Sparkles, Mail, Phone, MapPin, ArrowUpRight, Plus, Minus, Shield, Clock, ExternalLink } from 'lucide-react';
 import contactData from '@/mock/contact.json';
 import heroImg from '@/assets/3.png';
 import sfImg from '@/assets/4.png';

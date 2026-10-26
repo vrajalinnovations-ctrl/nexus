@@ -3,19 +3,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Features from '@/components/sections/Features';
 import Card from '@/components/ui/Card';
-import {
-  Sparkles,
-  Cpu,
-  Zap,
-  Globe,
-  Lock,
-  Check,
-  Shield,
-  ArrowRight,
-  Server,
-  Layers,
-  Terminal
-} from 'lucide-react';
+import { Sparkles, Cpu, Zap, Globe, Lock, Check, Shield, ArrowRight, Server, Layers, Terminal } from 'lucide-react';
 import featuresData from '@/mock/features.json';
 
 const iconMap = {
