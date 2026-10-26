@@ -4,7 +4,6 @@
 ![React 19](https://img.shields.io/badge/React-19.x-61dafb.svg)
 ![Vite 8](https://img.shields.io/badge/Vite-8.x-646cff.svg)
 ![Tailwind CSS 4](https://img.shields.io/badge/TailwindCSS-v4.x-38bdf8.svg)
-![License](https://img.shields.io/badge/license-Envato%20Commercial-emerald.svg)
 
 **NEXUS** is a cutting-edge, ultra-premium SaaS landing and web application template designed for next-generation AI cybersecurity, cloud defense, DevSecOps, and enterprise tech startups. Built with **React 19**, **Vite 8**, and **Tailwind CSS v4**, NEXUS combines high-converting layouts, unified frosted-glass specular aesthetics, interactive WebGL neural background simulations, and infinite dual-row marquee testimonials.
 
