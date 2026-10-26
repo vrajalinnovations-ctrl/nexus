@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import footer from '@/assets/7.png';
 
 export const Footer = () => {
   const [email, setEmail] = useState('');
@@ -160,7 +161,7 @@ export const Footer = () => {
 
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-t-full border border-white/15 bg-white/5 backdrop-blur-xl flex flex-col items-center justify-end p-6 overflow-hidden mx-auto lg:mx-0 shrink-0 group">
             <img
-              src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80"
+              src={footer}
               alt="Protected family"
               className="absolute inset-0 h-full w-full object-cover grayscale contrast-125 transition-transform duration-500 group-hover:scale-105"
             />

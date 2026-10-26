@@ -4,6 +4,15 @@ import Footer from '@/components/layout/Footer';
 import Card from '@/components/ui/Card';
 import { Shield, Sparkles, Phone, Lock, Zap, GitBranch, ShieldCheck } from 'lucide-react';
 import aboutData from '@/mock/about.json';
+import about from '../assets/1.png';
+import person1 from '@/assets/people/1.png';
+import person2 from '@/assets/people/2.png';
+import person3 from '@/assets/people/3.png';
+import person4 from '@/assets/people/4.png';
+import person5 from '@/assets/people/5.png';
+import person6 from '@/assets/people/6.png';
+
+const peoplePhotos = [person1, person2, person3, person4, person5, person6];
 
 const Linkedin = ({ className = '', ...props }) => (
   <svg
@@ -28,7 +37,10 @@ const values = aboutData.values.map(v => ({
   icon: iconMap[v.icon] || ShieldCheck
 }));
 
-const team = aboutData.team;
+const team = (aboutData.team || []).map((member, idx) => ({
+  ...member,
+  photo: peoplePhotos[idx] || member.photo
+}));
 
 const Pill = ({ children }) => (
   <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-cyan-300 backdrop-blur-xl shadow-md">
@@ -115,7 +127,7 @@ export const AboutPage = () => {
           <section className="space-y-8">
             <SectionHead pill="Who We Are" dark="Get to Know" light="Us" />
             <Photo
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&auto=format&fit=crop"
+              src={about}
               alt="The Nexus team collaborating"
               className="aspect-video rounded-3xl"
             />

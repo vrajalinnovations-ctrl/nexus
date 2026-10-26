@@ -9,7 +9,6 @@
     "pill": "Who We Are",
     "headingDark": "Get to Know",
     "headingLight": "Us",
-    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&auto=format&fit=crop",
     "imageAlt": "The Nexus team collaborating",
     "description": "Nexus was founded by kernel engineers and researchers who saw that humans can't out-type automated attacks. Today our team of engineers, cryptographers and data scientists builds defense that answers in microseconds."
   },
@@ -47,32 +46,32 @@
     {
       "name": "Elena Vance",
       "role": "CEO & Co-Founder",
-      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80&auto=format&fit=crop"
+      "photo": "/src/assets/people/1.png"
     },
     {
       "name": "Marcus Chen",
       "role": "CTO",
-      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80&auto=format&fit=crop"
+      "photo": "/src/assets/people/2.png"
     },
     {
       "name": "Soren Lindqvist",
       "role": "Offensive Security",
-      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80&auto=format&fit=crop"
+      "photo": "/src/assets/people/3.png"
     },
     {
       "name": "Aaliyah Patel",
       "role": "Cryptography",
-      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80&auto=format&fit=crop"
+      "photo": "/src/assets/people/4.png"
     },
     {
       "name": "Tomás Rivera",
       "role": "Edge Network",
-      "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80&auto=format&fit=crop"
+      "photo": "/src/assets/people/5.png"
     },
     {
       "name": "Priya Nair",
       "role": "Machine Learning",
-      "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80&auto=format&fit=crop"
+      "photo": "/src/assets/people/6.png"
     }
   ],
   "contact": {

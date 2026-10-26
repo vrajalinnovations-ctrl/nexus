@@ -1,10 +1,24 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, Menu, X, Shield } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
+const navItems = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Features', path: '/features' },
+  { name: 'Pricing', path: '/pricing' },
+  { name: 'Contact', path: '/contact' },
+];
+
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path) => {
+    if (path === '/') return location.pathname === '/';
+    return location.pathname === path || location.pathname.startsWith(path + '/');
+  };
 
   return (
     <header className="relative z-30 max-w-7xl mx-auto px-6 pt-6">
@@ -25,43 +39,34 @@ export const Navbar = () => {
           </div>
         </Link>
 
-        <div className="relative hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium text-slate-200">
-          <Link
-            to="/"
-            className="px-3.5 py-1.5 rounded-full hover:bg-white/10 hover:text-cyan-300 transition-all"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className="px-3.5 py-1.5 rounded-full hover:bg-white/10 hover:text-cyan-300 transition-all"
-          >
-            About
-          </Link>
-          <Link
-            to="/features"
-            className="px-3.5 py-1.5 rounded-full hover:bg-white/10 hover:text-cyan-300 transition-all"
-          >
-            Features
-          </Link>
-          <Link
-            to="/pricing"
-            className="px-3.5 py-1.5 rounded-full hover:bg-white/10 hover:text-cyan-300 transition-all"
-          >
-            Pricing
-          </Link>
-          <Link
-            to="/contact"
-            className="px-3.5 py-1.5 rounded-full hover:bg-white/10 hover:text-cyan-300 transition-all"
-          >
-            Contact
-          </Link>
+        {/* Desktop Navigation Links with Active State */}
+        <div className="relative hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium">
+          {navItems.map((item) => {
+            const active = isActive(item.path);
+            return (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`relative px-4 py-1.5 rounded-full transition-all duration-300 ${
+                  active
+                    ? 'bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 text-cyan-200 border border-cyan-400/40 shadow-sm shadow-cyan-500/20 font-semibold'
+                    : 'text-slate-300 hover:bg-white/10 hover:text-white border border-transparent'
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="relative hidden sm:flex items-center gap-3">
           <Link
             to="/signin"
-            className="text-xs font-medium text-slate-200 hover:text-white px-4 py-2 rounded-full hover:bg-white/10 transition-all"
+            className={`text-xs font-medium px-4 py-2 rounded-full transition-all ${
+              location.pathname === '/signin'
+                ? 'bg-white/15 text-white border border-white/20 font-semibold'
+                : 'text-slate-200 hover:text-white hover:bg-white/10'
+            }`}
           >
             Sign In
           </Link>
@@ -92,46 +97,32 @@ export const Navbar = () => {
 
       {mobileMenuOpen && (
         <div className="md:hidden mt-3 p-4 rounded-2xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl flex flex-col gap-2">
-          <Link
-            to="/"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-sm font-medium text-slate-200 hover:text-cyan-300 py-2 px-3 rounded-xl hover:bg-white/10 transition-all"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-sm font-medium text-slate-200 hover:text-cyan-300 py-2 px-3 rounded-xl hover:bg-white/10 transition-all"
-          >
-            About
-          </Link>
-          <Link
-            to="/features"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-sm font-medium text-slate-200 hover:text-cyan-300 py-2 px-3 rounded-xl hover:bg-white/10 transition-all"
-          >
-            Features
-          </Link>
-          <Link
-            to="/pricing"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-sm font-medium text-slate-200 hover:text-cyan-300 py-2 px-3 rounded-xl hover:bg-white/10 transition-all"
-          >
-            Pricing
-          </Link>
-          <Link
-            to="/contact"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-sm font-medium text-slate-200 hover:text-cyan-300 py-2 px-3 rounded-xl hover:bg-white/10 transition-all"
-          >
-            Contact
-          </Link>
+          {navItems.map((item) => {
+            const active = isActive(item.path);
+            return (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-sm font-medium py-2.5 px-3.5 rounded-xl transition-all ${
+                  active
+                    ? 'bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 text-cyan-200 border border-cyan-400/30 font-semibold shadow-sm'
+                    : 'text-slate-200 hover:text-cyan-300 hover:bg-white/10'
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
           <div className="pt-3 mt-1 border-t border-white/10 flex items-center justify-between gap-3">
             <Link
               to="/signin"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-xs font-medium text-slate-200 hover:text-white py-2 px-3 rounded-xl hover:bg-white/10"
+              className={`text-xs font-medium py-2 px-3 rounded-xl transition-all ${
+                location.pathname === '/signin'
+                  ? 'bg-white/15 text-white font-semibold'
+                  : 'text-slate-200 hover:text-white hover:bg-white/10'
+              }`}
             >
               Sign In
             </Link>

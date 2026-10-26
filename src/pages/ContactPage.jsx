@@ -15,6 +15,12 @@ import {
   ExternalLink
 } from 'lucide-react';
 import contactData from '@/mock/contact.json';
+import heroImg from '@/assets/3.png';
+import sfImg from '@/assets/4.png';
+import londonImg from '@/assets/5.png';
+import parisImg from '@/assets/6.png';
+
+const locationImgs = [sfImg, londonImg, parisImg];
 
 const iconMap = {
   Mail,
@@ -27,7 +33,10 @@ const channels = (contactData.channels || []).map(c => ({
   icon: iconMap[c.icon] || Mail
 }));
 
-const locations = contactData.locations || [];
+const locations = (contactData.locations || []).map((loc, idx) => ({
+  ...loc,
+  image: locationImgs[idx] || loc.image
+}));
 const topics = contactData.topics || [];
 const faqs = contactData.faqs || [];
 
@@ -159,7 +168,7 @@ export const ContactPage = () => {
               light={contactData.hero?.headingLight || 'Operations Centers'}
             />
             <Photo
-              src={contactData.hero?.image}
+              src={heroImg}
               alt={contactData.hero?.imageAlt}
               className="aspect-video rounded-3xl"
             />
