@@ -5,6 +5,7 @@
 ![Vite 8](https://img.shields.io/badge/Vite-8.x-646cff.svg)
 ![Tailwind CSS 4](https://img.shields.io/badge/TailwindCSS-v4.x-38bdf8.svg)
 ![Author](https://img.shields.io/badge/Author-vrajalInnovations-indigo.svg)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=flat-square&logo=vercel)](https://nexus-iota-six-53.vercel.app/)
 
 **NEXUS** is a cutting-edge, ultra-premium SaaS landing and web application template designed for next-generation AI cybersecurity, cloud defense, DevSecOps, and enterprise tech startups. Built with **React 19**, **Vite 8**, and **Tailwind CSS v4**, NEXUS combines high-converting layouts, unified frosted-glass specular aesthetics, hardware-accelerated Lenis smooth scrolling, and infinite dual-row marquee testimonials.
 
@@ -87,7 +88,7 @@ npm -v
    ```bash
    npm run dev
    ```
-   Open your browser and navigate to `http://localhost:5173` to view the live site with Hot Module Replacement (HMR).
+   Open your browser to the local server address shown in your terminal (or visit the live deployment at [https://nexus-iota-six-53.vercel.app/](https://nexus-iota-six-53.vercel.app/)).
 
 ---
 
@@ -97,7 +98,7 @@ In the project root, you can run:
 
 | Command | Description |
 | :--- | :--- |
-| `npm run dev` | Starts the Vite local development server on port 5173 with instant HMR. |
+| `npm run dev` | Starts the Vite local development server with instant HMR. |
 | `npm run build` | Compiles and optimizes the React application for production into `dist/`. |
 | `npm run preview` | Locally serves the optimized production build from `dist/` for verification. |
 | `npm run lint` | Runs ESLint to check for code quality and syntax issues. |
