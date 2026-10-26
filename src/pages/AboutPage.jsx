@@ -83,7 +83,6 @@ const Photo = ({ src, alt, className }) => (
     <img
       src={src}
       alt={alt}
-      loading="lazy"
       className="absolute inset-0 h-full w-full object-cover grayscale transition duration-500 hover:grayscale-0"
       onError={(e) => {
         e.currentTarget.style.display = 'none';
@@ -174,8 +173,7 @@ export const AboutPage = () => {
                     <img
                       src={p.photo}
                       alt={p.name}
-                      loading="lazy"
-                      className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                                      className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0 group-hover:scale-105"
                     />
                   </div>
                   <p className="mt-3 text-sm font-semibold text-white">{p.name}</p>

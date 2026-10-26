@@ -84,7 +84,6 @@ const Photo = ({ src, alt, className = '' }) => (
     <img
       src={src}
       alt={alt}
-      loading="lazy"
       className="absolute inset-0 h-full w-full object-cover grayscale transition duration-500 hover:grayscale-0"
       onError={(e) => {
         e.currentTarget.style.display = 'none';
@@ -198,8 +197,7 @@ export const ContactPage = () => {
                     <img
                       src={loc.image}
                       alt={loc.city}
-                      loading="lazy"
-                      className="h-full w-full object-cover grayscale transition duration-500 hover:grayscale-0 group-hover:scale-105"
+                                      className="h-full w-full object-cover grayscale transition duration-500 hover:grayscale-0 group-hover:scale-105"
                     />
                     <div className="absolute top-3 right-3 rounded-full border border-white/20 bg-black/70 px-3 py-1 text-xs font-mono text-cyan-300 backdrop-blur-md">
                       {loc.badge}

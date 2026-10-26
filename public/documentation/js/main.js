@@ -93,20 +93,42 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // 6. Mobile Sidebar Drawer Toggle
+  // 6. Mobile Sidebar Drawer Toggle & Backdrop
   const mobileToggle = document.getElementById('mobileNavToggle');
   const sidebar = document.querySelector('.docs-sidebar');
+  const backdrop = document.getElementById('sidebarBackdrop');
+
+  const closeSidebar = () => {
+    sidebar?.classList.remove('show');
+    backdrop?.classList.remove('show');
+    document.body.style.overflow = '';
+  };
+
+  const openSidebar = () => {
+    sidebar?.classList.add('show');
+    backdrop?.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  };
 
   if (mobileToggle && sidebar) {
-    mobileToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('show');
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (sidebar.classList.contains('show')) {
+        closeSidebar();
+      } else {
+        openSidebar();
+      }
     });
+
+    if (backdrop) {
+      backdrop.addEventListener('click', closeSidebar);
+    }
 
     // Close on link click
     sidebar.querySelectorAll('.sidebar-link').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth < 992) {
-          sidebar.classList.remove('show');
+          closeSidebar();
         }
       });
     });

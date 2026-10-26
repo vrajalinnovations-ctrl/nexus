@@ -32,6 +32,9 @@
   <div class="ambient-glow-2"></div>
   <div class="cyber-grid"></div>
 
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
   <!-- Header Bar -->
   <header class="docs-header">
     <div style="display: flex; align-items: center; gap: 16px;">
@@ -244,7 +247,7 @@
           <!-- 1. Home -->
           <div class="screen-card" data-category="core" id="screens-landing">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/1.png" alt="Hero & Threat Hub" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/1.png" alt="Hero & Threat Hub" class="screen-thumb">
               <span class="screen-route-badge">/</span>
             </div>
             <div class="screen-body">
@@ -262,7 +265,7 @@
           <!-- 2. Features Threat Telemetry -->
           <div class="screen-card" data-category="core">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/2.png" alt="Threat Breakdown" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/2.png" alt="Threat Breakdown" class="screen-thumb">
               <span class="screen-route-badge">/features</span>
             </div>
             <div class="screen-body">
@@ -281,7 +284,7 @@
           <!-- 3. Interactive Security Matrix -->
           <div class="screen-card" data-category="core">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/3.png" alt="Security Matrix" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/3.png" alt="Security Matrix" class="screen-thumb">
               <span class="screen-route-badge">/features</span>
             </div>
             <div class="screen-body">
@@ -300,7 +303,7 @@
           <!-- 4. Pricing Plans -->
           <div class="screen-card" data-category="core">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/4.png" alt="Enterprise Pricing" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/4.png" alt="Enterprise Pricing" class="screen-thumb">
               <span class="screen-route-badge">/pricing</span>
             </div>
             <div class="screen-body">
@@ -319,7 +322,7 @@
           <!-- 5. Testimonials & Defense Trust -->
           <div class="screen-card" data-category="core">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/5.png" alt="Customer Reviews" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/5.png" alt="Customer Reviews" class="screen-thumb">
               <span class="screen-route-badge">/contact</span>
             </div>
             <div class="screen-body">
@@ -338,7 +341,7 @@
           <!-- 6. Login -->
           <div class="screen-card" data-category="core">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/6.png" alt="About Us" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/6.png" alt="About Us" class="screen-thumb">
               <span class="screen-route-badge">/signin</span>
             </div>
             <div class="screen-body">
@@ -357,7 +360,7 @@
           <!-- 7. reset password -->
           <div class="screen-card" data-category="core">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/7.png" alt="Contact SOC" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/7.png" alt="Contact SOC" class="screen-thumb">
               <span class="screen-route-badge">/forgot-password</span>
             </div>
             <div class="screen-body">
@@ -376,7 +379,7 @@
           <!-- 8. verfy page -->
           <div class="screen-card" data-category="auth" id="screens-auth">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/8.png" alt="Sign In" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/8.png" alt="Sign In" class="screen-thumb">
               <span class="screen-route-badge">/verify</span>
             </div>
             <div class="screen-body">
@@ -396,7 +399,7 @@
           <!-- 9. confirm-password -->
           <div class="screen-card" data-category="auth">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/9.png" alt="Sign Up" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/9.png" alt="Sign Up" class="screen-thumb">
               <span class="screen-route-badge">/confirm-password</span>
             </div>
             <div class="screen-body">
@@ -416,7 +419,7 @@
           <!-- 10. signup page -->
           <div class="screen-card" data-category="auth">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/10.png" alt="OTP Verification" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/10.png" alt="OTP Verification" class="screen-thumb">
               <span class="screen-route-badge">/signup</span>
             </div>
             <div class="screen-body">
@@ -435,7 +438,7 @@
           <!-- 11. 404 Security Anomaly -->
           <div class="screen-card" data-category="diag" id="screens-error">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/11.png" alt="404 Page" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/11.png" alt="404 Page" class="screen-thumb">
               <span class="screen-route-badge">/404</span>
             </div>
             <div class="screen-body">
@@ -454,7 +457,7 @@
           <!-- 12. 500 Infrastructure Outage -->
           <div class="screen-card" data-category="diag">
             <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/12.png" alt="500 Page" class="screen-thumb" loading="lazy">
+              <img src="./images/screenshot/12.png" alt="500 Page" class="screen-thumb">
               <span class="screen-route-badge">/500</span>
             </div>
             <div class="screen-body">
@@ -522,7 +525,7 @@
 
         <p class="mb-3">Exact active dependencies declared in <code>package.json</code>:</p>
 
-        <div class="glass-card" style="padding: 0; overflow: hidden;">
+        <div class="glass-card table-responsive" style="padding: 0;">
           <table class="docs-table mb-0">
             <thead>
               <tr>
