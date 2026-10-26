@@ -1,0 +1,125 @@
+{
+  "section": {
+    "pill": "Features",
+    "heading": "Power features to supercharge your defense",
+    "subheading": "Smart, scalable protection that works while you sleep."
+  },
+  "threats": [
+    { "label": "Malware", "count": "5,396", "dot": "bg-indigo-500" },
+    { "label": "Exploits", "count": "4,240", "dot": "bg-violet-300" },
+    { "label": "DDoS", "count": "3,211", "dot": "bg-pink-300" }
+  ],
+  "threatSummary": {
+    "totalBlocked": "12,847",
+    "status": "Blocked"
+  },
+  "environments": [
+    { "name": "Kubernetes", "status": "Protected", "metric": "142 pods guarded" },
+    { "name": "AWS EKS", "status": "Protected", "metric": "0 alerts pending" }
+  ],
+  "autopilot": {
+    "badge": "Automated Response",
+    "subBadge": "Autonomous quarantine",
+    "resolutionRate": "99.8%",
+    "resolutionLabel": "automated resolution",
+    "avgMitigation": "4.2ms",
+    "latestLog": {
+      "action": "Malicious payload isolated",
+      "time": "Just now"
+    }
+  },
+  "integrations": {
+    "leftNodes": [
+      { "id": "git", "icon": "GitBranch", "label": "Git / CI", "y": 40 },
+      { "id": "cloud", "icon": "Cloud", "label": "Cloud VPC", "y": 110 },
+      { "id": "container", "icon": "Container", "label": "Containers", "y": 180 }
+    ],
+    "rightNodes": [
+      { "id": "slack", "icon": "MessageSquare", "label": "Slack", "y": 40 },
+      { "id": "webhook", "icon": "Webhook", "label": "Webhooks", "y": 110 },
+      { "id": "alerts", "icon": "Bell", "label": "Alerts", "y": 180 }
+    ]
+  },
+  "cards": [
+    {
+      "id": "scale",
+      "title": "Built for massive scale",
+      "text": "Deploy effortlessly from single clusters to multi-region cloud meshes without latency.",
+      "colSpan": "md:col-span-3"
+    },
+    {
+      "id": "rules",
+      "title": "Visual policy builder",
+      "text": "Create, test, and enforce security policies without writing custom code.",
+      "colSpan": "md:col-span-2"
+    },
+    {
+      "id": "autopilot",
+      "title": "Automated threat mitigation",
+      "text": "Neutralize zero-day exploits and abnormal traffic patterns in real time.",
+      "colSpan": "md:col-span-2"
+    },
+    {
+      "id": "integrations",
+      "title": "Native ecosystem integrations",
+      "text": "Connects directly into your existing CI/CD pipelines, SIEM, and monitoring tools.",
+      "colSpan": "md:col-span-3"
+    }
+  ],
+  "pillars": [
+    {
+      "id": "ebpf",
+      "icon": "Cpu",
+      "title": "Ring-0 Kernel eBPF Telemetry",
+      "badge": "Sub-6ms Latency",
+      "tagline": "Kernel-level execution without code instrumentation",
+      "description": "Nexus injects sandboxed eBPF bytecode directly into Linux kernel space. Analyze syscalls, socket buffers, and process namespaces with under 0.2% CPU overhead and zero sidecar baggage.",
+      "metrics": ["Sub-6ms syscall inspection", "0.2% CPU overhead", "Zero sidecar containers"]
+    },
+    {
+      "id": "neural",
+      "icon": "Zap",
+      "title": "Cognitive Neural Swarms",
+      "badge": "Microsecond AI",
+      "tagline": "Autonomous defense that predicts novel zero-days",
+      "description": "Our decentralized AI agents simulate attack graphs in real-time. Polymorphic malware, memory exploits, and credential dumps are isolated and neutralized before processes commit to disk.",
+      "metrics": ["Real-time attack graph simulation", "Zero-day heuristics", "Automated sandbox isolation"]
+    },
+    {
+      "id": "scrubbing",
+      "icon": "Globe",
+      "title": "68 Tbps Anycast Scrubbing",
+      "badge": "Tier-1 Backbone",
+      "tagline": "Global edge scrubbing across 48 Anycast points",
+      "description": "Absorb multi-terabit volumetric assaults and complex layer-7 application floods before packets touch your ingress gateways. Built-in BGP route-leak prevention and automated failover.",
+      "metrics": ["48 Global Anycast PoPs", "Automated L3-L7 scrubbing", "BGP route-leak protection"]
+    },
+    {
+      "id": "forensics",
+      "icon": "Lock",
+      "title": "Immutable Forensic Vault",
+      "badge": "Quantum Attested",
+      "tagline": "Cryptographically verifiable syscall execution replay",
+      "description": "Every anomalous kernel event is recorded into a tamper-evident cryptographic chain. Replay incident execution step-by-step for compliance attestation with post-quantum lattice signatures.",
+      "metrics": ["Tamper-evident ledger", "Lattice PQC signatures", "1-click compliance export"]
+    }
+  ],
+  "capabilities": [
+    {
+      "title": "Zero Sidecar Footprint",
+      "description": "Native Linux eBPF eliminates the memory and network drag of traditional Kubernetes daemonsets and proxy sidecars."
+    },
+    {
+      "title": "Air-Gapped Sovereign Ready",
+      "description": "Deploy on premise with offline model inference, confidential computing enclaves, and zero external egress dependencies."
+    },
+    {
+      "title": "Continuous Mesh Attestation",
+      "description": "Hardware-rooted cryptographic verification guarantees that every node running in your cluster is running authentic kernel code."
+    },
+    {
+      "title": "Instant Multi-Cloud Peering",
+      "description": "Connect AWS EKS, Google GKE, Azure AKS, and bare-metal nodes into a single unified self-healing security fabric."
+    }
+  ]
+}

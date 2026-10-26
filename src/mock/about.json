@@ -1,0 +1,84 @@
+{
+  "pill": "About Us",
+  "title": {
+    "prefix": "Welcome to",
+    "brand": "Nexus"
+  },
+  "tagline": "We believe in the transformative power of autonomous defense. Our mission is to stop attacks before they run, so every team can build without fear.",
+  "overview": {
+    "pill": "Who We Are",
+    "headingDark": "Get to Know",
+    "headingLight": "Us",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&auto=format&fit=crop",
+    "imageAlt": "The Nexus team collaborating",
+    "description": "Nexus was founded by kernel engineers and researchers who saw that humans can't out-type automated attacks. Today our team of engineers, cryptographers and data scientists builds defense that answers in microseconds."
+  },
+  "values": [
+    {
+      "id": "privacy",
+      "icon": "Lock",
+      "name": "Privacy",
+      "label": "Core principle",
+      "text": "Your data never leaves your kernel. All scoring happens locally."
+    },
+    {
+      "id": "speed",
+      "icon": "Zap",
+      "name": "Speed",
+      "label": "Core principle",
+      "text": "Threats are stopped in microseconds, with no cloud roundtrip."
+    },
+    {
+      "id": "openness",
+      "icon": "GitBranch",
+      "name": "Openness",
+      "label": "Core principle",
+      "text": "Built on open eBPF standards. No vendor lock-in, ever."
+    },
+    {
+      "id": "integrity",
+      "icon": "ShieldCheck",
+      "name": "Integrity",
+      "label": "Core principle",
+      "text": "We are transparent and ethical in everything we operate."
+    }
+  ],
+  "team": [
+    {
+      "name": "Elena Vance",
+      "role": "CEO & Co-Founder",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80&auto=format&fit=crop"
+    },
+    {
+      "name": "Marcus Chen",
+      "role": "CTO",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80&auto=format&fit=crop"
+    },
+    {
+      "name": "Soren Lindqvist",
+      "role": "Offensive Security",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80&auto=format&fit=crop"
+    },
+    {
+      "name": "Aaliyah Patel",
+      "role": "Cryptography",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80&auto=format&fit=crop"
+    },
+    {
+      "name": "Tomás Rivera",
+      "role": "Edge Network",
+      "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80&auto=format&fit=crop"
+    },
+    {
+      "name": "Priya Nair",
+      "role": "Machine Learning",
+      "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80&auto=format&fit=crop"
+    }
+  ],
+  "contact": {
+    "pill": "Connect Us",
+    "headingDark": "Tell Us What",
+    "headingLight": "You Need Secured",
+    "submitText": "Submit Request"
+  }
+}

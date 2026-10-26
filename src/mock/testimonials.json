@@ -1,0 +1,95 @@
+{
+  "badge": "Customer Stories",
+  "heading": "Trusted by Security Teams Worldwide",
+  "subheading": "See how leading engineering and SecOps teams use NEXUS to protect their cloud infrastructure, reduce alert fatigue, and stop threats in real time.",
+  "testimonials": [
+    {
+      "id": "1",
+      "quote": "NEXUS caught an unpatched API vulnerability within 20 minutes of deployment. It saved our engineering team dozens of hours of manual triage and gave our leadership peace of mind.",
+      "author": "Sarah Lin",
+      "role": "VP of Security",
+      "company": "Vanguard Networks",
+      "category": "Cloud Security",
+      "rating": 5,
+      "stat": "70% faster triage",
+      "initials": "SL"
+    },
+    {
+      "id": "2",
+      "quote": "Before NEXUS, our on-call engineers were drowning in false alarms every weekend. The automated filtering reduced our daily alert volume by over 85% without missing a single real incident.",
+      "author": "Marcus Vance",
+      "role": "Head of Infrastructure",
+      "company": "Apex Financial",
+      "category": "FinTech",
+      "rating": 5,
+      "stat": "85% fewer false alarms",
+      "initials": "MV"
+    },
+    {
+      "id": "3",
+      "quote": "Rolling out across 80 Kubernetes clusters took less than an afternoon. The compliance reports directly streamlined our SOC 2 and ISO 27001 audit workflows.",
+      "author": "Elena Rostova",
+      "role": "Director of DevSecOps",
+      "company": "Sphere Systems",
+      "category": "DevSecOps",
+      "rating": 5,
+      "stat": "80+ clusters protected",
+      "initials": "ER"
+    },
+    {
+      "id": "4",
+      "quote": "When an unauthorized process attempted lateral movement in our staging environment, NEXUS immediately quarantined the container and notified the on-call channel in Slack.",
+      "author": "David Chen",
+      "role": "Principal Security Architect",
+      "company": "Aether Dynamics",
+      "category": "Cloud Security",
+      "rating": 5,
+      "stat": "Instant automated quarantine",
+      "initials": "DC"
+    },
+    {
+      "id": "5",
+      "quote": "The visibility we gained into east-west network traffic was immediate. We replaced three fragmented legacy monitoring tools with one unified dashboard.",
+      "author": "Julian Thorne",
+      "role": "Head of Cyber Operations",
+      "company": "Strata Tech",
+      "category": "Enterprise Defense",
+      "rating": 5,
+      "stat": "Replaced 3 legacy tools",
+      "initials": "JT"
+    },
+    {
+      "id": "6",
+      "quote": "Zero performance penalty with under 0.2% CPU overhead. The live dashboard and automated policy enforcement made compliance effortless across our global regions.",
+      "author": "Amina Al-Mansoor",
+      "role": "Chief Security Officer",
+      "company": "HyperScale Telecom",
+      "category": "Telecom",
+      "rating": 5,
+      "stat": "0.2% CPU overhead",
+      "initials": "AA"
+    },
+    {
+      "id": "7",
+      "quote": "NEXUS identified anomalous lateral traversal within a staging cluster and blocked it automatically without breaking active developer deployments.",
+      "author": "Kavita Reddy",
+      "role": "VP of Cloud Engineering",
+      "company": "Novalogic Labs",
+      "category": "Cloud Security",
+      "rating": 5,
+      "stat": "350+ microservices secured",
+      "initials": "KR"
+    },
+    {
+      "id": "8",
+      "quote": "The automated runtime security guarantees that our customer data stays protected across all regions. It set a new standard for our engineering organization.",
+      "author": "Stefan Lindqvist",
+      "role": "Chief Information Officer",
+      "company": "Nordic Secure Gateway",
+      "category": "FinTech",
+      "rating": 5,
+      "stat": "Zero incident leakage",
+      "initials": "SL"
+    }
+  ]
+}

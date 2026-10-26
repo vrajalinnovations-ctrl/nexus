@@ -1,0 +1,105 @@
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import FloatingBackground from '@/components/ui/FloatingBackground';
+import { Mail, ArrowRight } from 'lucide-react';
+import logo from '@/assets/logo.png';
+
+const inputClass =
+  'w-full rounded-xl border border-white/15 bg-white/5 py-3.5 pl-11 pr-4 text-sm text-white placeholder-slate-400 outline-none backdrop-blur-md transition-all focus:border-cyan-400/50 focus:bg-white/10';
+
+export const ForgotPasswordPage = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!email) return;
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      navigate('/verify', { state: { email, flow: 'reset-password' } });
+    }, 800);
+  };
+
+  return (
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black px-3.5 sm:px-4 py-8 sm:py-12 font-sans text-white selection:bg-cyan-500/30 selection:text-cyan-200">
+      <FloatingBackground />
+
+      <div className="pointer-events-none absolute left-1/2 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-600/25 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 bottom-1/4 h-80 w-80 -translate-x-1/2 translate-y-1/2 rounded-full bg-cyan-600/20 blur-3xl" />
+
+      <main className="relative z-10 w-full max-w-md">
+        <Link to="/" className="mx-auto mb-6 sm:mb-8 flex w-fit items-center gap-2.5 group" aria-label="Nexus home">
+          <img
+            src={logo}
+            alt="NEXUS"
+            className="h-10 w-10 object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
+          />
+          <span className="text-lg font-bold tracking-tight text-white">NEXUS</span>
+        </Link>
+
+        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/20 bg-white/5 p-5 sm:p-8 md:p-10 backdrop-blur-xl shadow-2xl transition-all duration-300">
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent rounded-2xl sm:rounded-3xl" />
+
+          <div className="relative z-10">
+            <div className="mx-auto mb-3.5 sm:mb-4 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl border border-white/15 bg-white/5 text-cyan-300 backdrop-blur-md shadow-lg shadow-cyan-500/10">
+              <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
+            </div>
+
+            <h1 className="text-center text-2xl sm:text-3xl font-bold tracking-tight text-white">
+              Reset password
+            </h1>
+            <p className="mt-2 text-center text-xs sm:text-sm text-slate-300 leading-relaxed px-1">
+              Enter your email to receive a 6-digit verification code
+            </p>
+
+            <form onSubmit={handleSubmit} className="mt-6 sm:mt-8 space-y-4">
+              <div className="relative">
+                <label htmlFor="email" className="sr-only">
+                  Email
+                </label>
+                <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                <input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your registered email"
+                  autoComplete="email"
+                  required
+                  className={inputClass}
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3 sm:py-3.5 px-4 text-xs sm:text-sm font-semibold text-black transition-colors hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-80 shadow-lg shadow-white/10 cursor-pointer"
+              >
+                {loading ? (
+                  <span className="h-4 w-4 animate-spin rounded-full border-2 border-black/20 border-t-black" />
+                ) : (
+                  <>
+                    <span>Send Verification Code</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </>
+                )}
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <p className="mt-5 sm:mt-6 text-center text-xs sm:text-sm text-slate-400 px-2">
+          Remember your password?{' '}
+          <Link to="/signin" className="font-semibold text-white underline underline-offset-4 hover:text-cyan-300 transition-colors">
+            Sign in
+          </Link>
+        </p>
+      </main>
+    </div>
+  );
+};
+
+export default ForgotPasswordPage;

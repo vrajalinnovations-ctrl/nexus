@@ -1,0 +1,65 @@
+{
+  "brand": {
+    "name": "NEXUS",
+    "highlight": "",
+    "subtitle": "Neural Defense AI"
+  },
+  "navLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    { "label": "Features", "href": "/features" },
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "word": "NEXUS",
+    "headline": ["AUTONOMOUS NEURAL", "DEFENSE MESH"],
+    "tagline": "Protecting enterprise cloud infrastructure, Kubernetes clusters, and APIs against modern threats in real time.",
+    "status": {
+      "indicator": "operational",
+      "text": "All 42 Global Scrubbing PoPs Operational",
+      "sla": "99.999% SLA",
+      "latency": "< 4ms Interception"
+    },
+    "emails": [
+      { "label": "Incident Response", "address": "soc@nexus.ai" },
+      { "label": "General Inquiries", "address": "contact@nexus.ai" }
+    ],
+    "phone": "+1 (415) 890-4220",
+    "locations": [
+      { "city": "SAN FRANCISCO", "address": "500 Howard Street, CA 94105", "code": "SFO-01" },
+      { "city": "LONDON", "address": "30 St Mary Axe, EC3A 8EP", "code": "LHR-02" },
+      { "city": "PARIS", "address": "48 Rue du Faubourg Saint Martin, 75010", "code": "CDG-01" }
+    ],
+    "columns": {
+      "platform": [
+        { "name": "eBPF Kernel Mesh", "href": "/features" },
+        { "name": "Neural Swarm AI", "href": "/features" },
+        { "name": "68 Tbps Scrubbing", "href": "/features" },
+        { "name": "Immutable Vault", "href": "/features" },
+        { "name": "Global Edge PoPs", "href": "/features" }
+      ],
+      "company": [
+        { "name": "About Us", "href": "/about" },
+        { "name": "Platform Architecture", "href": "/features" },
+        { "name": "Pricing & Plans", "href": "/pricing" },
+        { "name": "SOC Emergency Contact", "href": "/contact" },
+        { "name": "Privacy Policy", "href": "/privacy" },
+        { "name": "Terms of Service", "href": "/terms" }
+      ],
+      "resources": [
+        { "name": "Threat Intelligence", "href": "/features" },
+        { "name": "Kernel Whitepaper", "href": "/about" },
+        { "name": "API Reference & SDK", "href": "/contact" },
+        { "name": "404 Error Screen", "href": "/404" },
+        { "name": "500 Anomaly Screen", "href": "/500" }
+      ]
+    },
+    "socials": [
+      { "name": "TWITTER / X", "href": "https://twitter.com" },
+      { "name": "LINKEDIN", "href": "https://linkedin.com" },
+      { "name": "GITHUB", "href": "https://github.com" },
+      { "name": "DISCORD", "href": "https://discord.com" }
+    ]
+  }
+}

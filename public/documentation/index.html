@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS Security — Developer Documentation &amp; Screen Showcase</title>
+
+  <meta name="description"
+    content="Official developer documentation and page guide for NEXUS — Modern AI Cloud Security & Cyber Defense React Template.">
+  <meta name="theme-color" content="#030712">
+
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="./css/bootstrap-icons.min.css" type="text/css">
+
+  <!-- Custom Cyber Dark Documentation CSS -->
+  <link rel="stylesheet" href="./css/app.css" type="text/css">
+</head>
+
+<body>
+
+  <!-- Ambient Light Backdrops -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="cyber-grid"></div>
+
+  <!-- Header Bar -->
+  <header class="docs-header">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <a href="#overview" class="brand-wrapper">
+        <img src="/logo.png" alt="NEXUS Logo" class="brand-logo">
+        <div>
+          <div class="brand-title">NEXUS</div>
+          <div class="brand-subtitle">Cloud Security Docs</div>
+        </div>
+        <span class="version-pill">v1.0.0</span>
+      </a>
+    </div>
+
+    <!-- Live Search -->
+    <div class="search-container">
+      <i class="bi bi-search search-icon"></i>
+      <input type="text" id="docsSearch" class="search-input" placeholder="Search screens, routes, or guides...">
+    </div>
+
+    <div class="header-actions">
+      <a href="/" target="_blank" class="btn-cyber-primary">
+        <span>Live Web App</span>
+        <i class="bi bi-box-arrow-up-right"></i>
+      </a>
+      <a href="mailto:vrajalinnovations@gmail.com" class="btn-cyber-ghost">
+        <i class="bi bi-chat-dots"></i>
+        <span>Support</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main App Layout -->
+  <div class="docs-layout">
+    <!-- Left Navigation Sidebar -->
+    <aside class="docs-sidebar">
+      <!-- Getting Started -->
+      <div class="sidebar-category">
+        <div class="sidebar-category-title">
+          <i class="bi bi-lightning-charge"></i>
+          <span>Getting Started</span>
+        </div>
+        <a href="#overview" class="sidebar-link active">
+          <span>Overview</span>
+        </a>
+        <a href="#quick-start" class="sidebar-link">
+          <span>Quick Start</span>
+          <span class="link-badge">npm</span>
+        </a>
+        <a href="#file-structure" class="sidebar-link">
+          <span>Project Structure</span>
+          <span class="link-badge">src/</span>
+        </a>
+      </div>
+
+      <!-- Live Screens & Routes -->
+      <div class="sidebar-category">
+        <div class="sidebar-category-title">
+          <i class="bi bi-grid"></i>
+          <span>Screens &amp; Routes</span>
+        </div>
+        <a href="#screens" class="sidebar-link">
+          <span>All 12 Screens</span>
+          <span class="link-badge">12</span>
+        </a>
+        <a href="#screens-landing" class="sidebar-link">
+          <span>Landing &amp; Core Pages</span>
+        </a>
+        <a href="#screens-auth" class="sidebar-link">
+          <span>Authentication Suite</span>
+        </a>
+        <a href="#screens-error" class="sidebar-link">
+          <span>System Error Views</span>
+        </a>
+      </div>
+
+
+
+      <!-- Reference -->
+      <div class="sidebar-category">
+        <div class="sidebar-category-title">
+          <i class="bi bi-journal-text"></i>
+          <span>Reference</span>
+        </div>
+        <a href="#dependencies" class="sidebar-link">
+          <span>Dependencies Table</span>
+        </a>
+        <a href="#faq" class="sidebar-link">
+          <span>Frequently Asked Questions</span>
+        </a>
+        <a href="#support" class="sidebar-link">
+          <span>Support &amp; Inquiries</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Reader -->
+    <main class="docs-content">
+      <!-- 1. Hero Overview -->
+      <div id="overview" class="docs-hero">
+        <div class="hero-pill-badge">
+          <span class="hero-pill-dot"></span>
+          <span>Enterprise Cloud Defense Template</span>
+        </div>
+        <h1 class="docs-title">NEXUS Security Platform Documentation</h1>
+        <p class="docs-subtitle">
+          Everything you need to understand, customize, and deploy the NEXUS React cybersecurity application. Built with
+          high-performance standards, zero unnecessary dependencies, and sleek dark glassmorphism.
+        </p>
+
+        <div class="quick-stats-row">
+          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> React 19.2</div>
+          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Tailwind CSS 4</div>
+          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Vite 8 Bundler</div>
+          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> 12 Complete Screens</div>
+          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Single Font (Plus Jakarta Sans)</div>
+          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Lenis Hardware Smooth Scroll</div>
+        </div>
+      </div>
+
+      <!-- 2. Quick Start Section -->
+      <section id="quick-start" class="doc-section">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-lightning-charge"></i></div>
+          <h2 class="section-title">Quick Start in 1 Minute</h2>
+        </div>
+
+        <p class="mb-4">Get the project up and running locally with just two simple terminal commands:</p>
+
+        <div class="quickstart-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div>
+              <div class="step-number">1</div>
+              <div class="step-title">Install Dependencies</div>
+              <div class="step-desc">Installs all active packages declared in <code>package.json</code>:</div>
+            </div>
+            <div class="code-wrapper">
+              <div class="code-header">
+                <div class="mac-dots"><span class="mac-dot dot-red"></span><span class="mac-dot dot-yellow"></span><span
+                    class="mac-dot dot-green"></span></div>
+                <span class="code-label">terminal</span>
+                <button class="copy-btn" data-target="code-install"><i class="bi bi-clipboard"></i> Copy</button>
+              </div>
+              <pre class="terminal-code" id="code-install">npm install</pre>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div>
+              <div class="step-number">2</div>
+              <div class="step-title">Start Development Server</div>
+              <div class="step-desc">Launches Vite hot-module reload at <code>http://localhost:5173</code>:</div>
+            </div>
+            <div class="code-wrapper">
+              <div class="code-header">
+                <div class="mac-dots"><span class="mac-dot dot-red"></span><span class="mac-dot dot-yellow"></span><span
+                    class="mac-dot dot-green"></span></div>
+                <span class="code-label">terminal</span>
+                <button class="copy-btn" data-target="code-dev"><i class="bi bi-clipboard"></i> Copy</button>
+              </div>
+              <pre class="terminal-code" id="code-dev">npm run dev</pre>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div>
+              <div class="step-number">3</div>
+              <div class="step-title">Build for Production</div>
+              <div class="step-desc">Compiles minified production bundle into the <code>dist/</code> folder:</div>
+            </div>
+            <div class="code-wrapper">
+              <div class="code-header">
+                <div class="mac-dots"><span class="mac-dot dot-red"></span><span class="mac-dot dot-yellow"></span><span
+                    class="mac-dot dot-green"></span></div>
+                <span class="code-label">terminal</span>
+                <button class="copy-btn" data-target="code-build"><i class="bi bi-clipboard"></i> Copy</button>
+              </div>
+              <pre class="terminal-code" id="code-build">npm run build</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Screen Showcase Section -->
+      <section id="screens" class="doc-section">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-display"></i></div>
+          <h2 class="section-title">Application Screens Showcase</h2>
+        </div>
+
+        <p class="mb-4">Explore all 12 fully designed pages with real routes and interactive components. Click any card
+          to launch the live screen:</p>
+
+        <!-- Category Filters -->
+        <div class="screen-filter-bar">
+          <button class="filter-btn active" data-category="all">All Screens (12)</button>
+          <button class="filter-btn" data-category="core">Core Platform (7)</button>
+          <button class="filter-btn" data-category="auth">Authentication Suite (3)</button>
+          <button class="filter-btn" data-category="diag">Diagnostic &amp; Error (2)</button>
+        </div>
+
+        <!-- 12 Screen Cards -->
+        <div class="screens-grid">
+          <!-- 1. Home -->
+          <div class="screen-card" data-category="core" id="screens-landing">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/1.png" alt="Hero & Threat Hub" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">Threat Intelligence Hub</h3>
+                <p class="screen-desc">WebGL GhostFibers banner, real-time threat tickers, platform value metric cards,
+                  and zero-trust free trial CTA.</p>
+              </div>
+              <a href="/" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Features Threat Telemetry -->
+          <div class="screen-card" data-category="core">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/2.png" alt="Threat Breakdown" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/features</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">Cloud Threat Telemetry</h3>
+                <p class="screen-desc">Multi-cloud, container runtime, and Kubernetes cluster telemetry graphs with
+                  automated anomaly scoring.</p>
+              </div>
+              <a href="/features" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Interactive Security Matrix -->
+          <div class="screen-card" data-category="core">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/3.png" alt="Security Matrix" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/features</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">SOC Defense Matrix</h3>
+                <p class="screen-desc">Dynamic connection node graph displaying automated webhook triggers, event
+                  containment, and alert routing.</p>
+              </div>
+              <a href="/features" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Pricing Plans -->
+          <div class="screen-card" data-category="core">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/4.png" alt="Enterprise Pricing" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/pricing</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">Enterprise Security Pricing</h3>
+                <p class="screen-desc">Annual vs monthly billing toggle, feature tier matrix, enterprise SLA badges, and
+                  interactive FAQ accordion.</p>
+              </div>
+              <a href="/pricing" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Testimonials & Defense Trust -->
+          <div class="screen-card" data-category="core">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/5.png" alt="Customer Reviews" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/#testimonials</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">Customer Defense Reviews</h3>
+                <p class="screen-desc">Smooth dual-marquee infinite carousel highlighting verified security leader
+                  quotes and case studies.</p>
+              </div>
+              <a href="/" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. About Us -->
+          <div class="screen-card" data-category="core">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/6.png" alt="About Us" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/about</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">About Us &amp; Leadership</h3>
+                <p class="screen-desc">Platform autonomous defense mission, engineering leadership showcase, and core
+                  zero-trust principles.</p>
+              </div>
+              <a href="/about" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 7. Contact SOC -->
+          <div class="screen-card" data-category="core">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/7.png" alt="Contact SOC" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/contact</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">24/7 Incident Escalation</h3>
+                <p class="screen-desc">Direct hotline contact, encrypted security inquiry form, response time
+                  commitments, and headquarters.</p>
+              </div>
+              <a href="/contact" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 8. Sign In Console -->
+          <div class="screen-card" data-category="auth" id="screens-auth">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/8.png" alt="Sign In" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/signin</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">SOC Console Sign In</h3>
+                <p class="screen-desc">Monochrome dark login form with SSO provider buttons, custom single eye password
+                  reveal, and toast alerts.</p>
+              </div>
+              <a href="/signin" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 9. Sign Up Sandbox -->
+          <div class="screen-card" data-category="auth">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/9.png" alt="Sign Up" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/signup</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">Enterprise Access Sign Up</h3>
+                <p class="screen-desc">Registration form with live input feedback, terms agreement, and single-click SSO
+                  options.</p>
+              </div>
+              <a href="/signup" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 10. Multi-Factor OTP Verification -->
+          <div class="screen-card" data-category="auth">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/10.png" alt="OTP Verification" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/verify</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">OTP Passcode Verification</h3>
+                <p class="screen-desc">6-digit auto-advancing passcode inputs with paste handling and complete password
+                  recovery cycle routing.</p>
+              </div>
+              <a href="/verify" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 11. 404 Security Anomaly -->
+          <div class="screen-card" data-category="diag" id="screens-error">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/11.png" alt="404 Page" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/404</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">404 — Security Anomaly</h3>
+                <p class="screen-desc">Not Found error screen with return navigation buttons and ambient background
+                  lighting.</p>
+              </div>
+              <a href="/404" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 12. 500 Infrastructure Outage -->
+          <div class="screen-card" data-category="diag">
+            <div class="screen-thumb-wrap">
+              <img src="./images/screenshot/12.png" alt="500 Page" class="screen-thumb" loading="lazy">
+              <span class="screen-route-badge">/500</span>
+            </div>
+            <div class="screen-body">
+              <div>
+                <h3 class="screen-name">500 — Server Incident</h3>
+                <p class="screen-desc">Graceful failure state with retry diagnostics button and SOC incident reporting
+                  hotline link.</p>
+              </div>
+              <a href="/500" target="_blank" class="screen-action">
+                <span>Open Live Screen</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Project Structure -->
+      <section id="file-structure" class="doc-section">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-folder2-open"></i></div>
+          <h2 class="section-title">Clear Project Structure</h2>
+        </div>
+
+        <p class="mb-3">The codebase is organized into clean, single-responsibility folders:</p>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <div class="mac-dots"><span class="mac-dot dot-red"></span><span class="mac-dot dot-yellow"></span><span
+                class="mac-dot dot-green"></span></div>
+            <span class="code-label">directory-tree</span>
+            <button class="copy-btn" data-target="code-tree"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="terminal-code" id="code-tree">nexus/
+├── src/
+│   ├── assets/              # Branding, official logo.png, artwork
+│   ├── auth/                # Full authentication suite (SignIn, SignUp, Verify, etc.)
+│   ├── components/
+│   │   ├── common/          # Shared utilities (ScrollManager.jsx for Lenis)
+│   │   ├── layout/          # Global layout (Navbar.jsx, Footer.jsx)
+│   │   ├── sections/        # Section blocks (Hero, Features, Pricing, Testimonials)
+│   │   └── ui/              # Reusable atoms (Card.jsx, GhostFibers.jsx)
+│   ├── mock/                # Clean JSON mock data (features.json, pricing.json, etc.)
+│   ├── pages/               # Top-level route pages (HomePage, AboutPage, FeaturesPage)
+│   ├── routes/              # Centralized route mapping (AppRoutes.jsx)
+│   ├── App.jsx              # Ultra-clean layout root (14 lines)
+│   ├── main.jsx             # Entry point with BrowserRouter provider
+│   └── index.css            # Tailwind 4 configuration & Plus Jakarta Sans typography
+├── public/
+│   ├── documentation/       # Standalone documentation website
+│   ├── favicon.svg          # Favicon asset
+│   └── logo.png             # Root logo asset
+└── package.json             # Dependencies and scripts</pre>
+        </div>
+      </section>
+
+
+
+      <!-- 8. Package Dependencies Table -->
+      <section id="dependencies" class="doc-section">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-boxes"></i></div>
+          <h2 class="section-title">Package Dependencies &amp; Versions</h2>
+        </div>
+
+        <p class="mb-3">Exact active dependencies declared in <code>package.json</code>:</p>
+
+        <div class="glass-card" style="padding: 0; overflow: hidden;">
+          <table class="docs-table mb-0">
+            <thead>
+              <tr>
+                <th>Package Name</th>
+                <th>Version</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>react</code></td>
+                <td><span class="badge-tag">^19.2.8</span></td>
+                <td>Latest official React 19 UI engine</td>
+              </tr>
+              <tr>
+                <td><code>react-dom</code></td>
+                <td><span class="badge-tag">^19.2.8</span></td>
+                <td>React DOM rendering library</td>
+              </tr>
+              <tr>
+                <td><code>react-router-dom</code></td>
+                <td><span class="badge-tag">^7.18.4</span></td>
+                <td>Declarative client-side routing v7</td>
+              </tr>
+              <tr>
+                <td><code>tailwindcss</code></td>
+                <td><span class="badge-tag">^4.3.3</span></td>
+                <td>Next-gen utility-first CSS framework v4</td>
+              </tr>
+              <tr>
+                <td><code>@tailwindcss/vite</code></td>
+                <td><span class="badge-tag">^4.3.3</span></td>
+                <td>Official Vite integration plugin for Tailwind</td>
+              </tr>
+              <tr>
+                <td><code>lucide-react</code></td>
+                <td><span class="badge-tag">^1.51.0</span></td>
+                <td>Crisp modern cyber and security vector icons</td>
+              </tr>
+              <tr>
+                <td><code>lenis</code></td>
+                <td><span class="badge-tag">^1.3.27</span></td>
+                <td>Hardware-accelerated smooth momentum scrolling</td>
+              </tr>
+              <tr>
+                <td><code>ogl</code></td>
+                <td><span class="badge-tag">^1.0.11</span></td>
+                <td>Minimal WebGL 2 library for GhostFibers shader</td>
+              </tr>
+              <tr>
+                <td><code>vite</code></td>
+                <td><span class="badge-tag">^8.3.0</span></td>
+                <td>Frontend bundler and dev server</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 9. FAQ Section -->
+      <section id="faq" class="doc-section">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-question-circle"></i></div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-item open">
+          <div class="faq-question">
+            <span>How do I replace the logo with my own company branding?</span>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Simply replace <code>src/assets/logo.png</code> and <code>public/logo.png</code> with your company logo PNG
+            file. All navigation bars, footers, error pages, and authentication screens automatically import and scale
+            this asset.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How can I modify pricing tiers or FAQ questions?</span>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Open <code>src/mock/pricing.json</code>. You can easily edit tier names, prices, monthly/annual discounts,
+            feature checklist items, and accordion questions without touching any JSX code.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I connect real backend authentication APIs?</span>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            In <code>src/auth/SignInPage.jsx</code>, <code>SignUpPage.jsx</code>, and <code>VerifyPage.jsx</code>,
+            replace the simulated <code>setTimeout</code> handlers inside <code>handleSubmit</code> with your actual
+            <code>fetch()</code> or <code>axios</code> calls to your authentication endpoints (e.g. Supabase, Firebase,
+            or custom REST APIs).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Why is there only one Google Font loaded?</span>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Loading multiple Google Fonts causes render-blocking network delays and layout shifts. Standardizing on
+            <strong>Plus Jakarta Sans</strong> ensures instantaneous page loads, 100/100 Lighthouse performance, and
+            pristine typographic consistency.
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Support Section -->
+      <section id="support" class="doc-section mb-0">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-headset"></i></div>
+          <h2 class="section-title">Support &amp; Developer Inquiries</h2>
+        </div>
+
+        <div class="support-card">
+          <div class="support-icon-avatar">
+            <i class="bi bi-headset"></i>
+          </div>
+          <h3 class="support-title">Need Assistance or Custom Development?</h3>
+          <p class="support-desc">
+            Our engineering team at vrajalInnovations provides dedicated assistance for template setup, backend API
+            integrations, and custom feature development.
+          </p>
+
+          <div class="support-contact-grid">
+            <a href="mailto:vrajalinnovations@gmail.com" class="contact-tile">
+              <div class="contact-tile-icon">
+                <i class="bi bi-envelope-check-fill"></i>
+              </div>
+              <div>
+                <div class="contact-tile-label">Direct Support Email</div>
+                <div class="contact-tile-val">vrajalinnovations@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="https://vrajalinnovations.com" target="_blank" rel="noopener noreferrer" class="contact-tile">
+              <div class="contact-tile-icon">
+                <i class="bi bi-globe2"></i>
+              </div>
+              <div>
+                <div class="contact-tile-label">Official Website</div>
+                <div class="contact-tile-val">vrajalInnovations.com</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="support-badge-note">
+            <i class="bi bi-clock-history text-cyan"></i>
+            <span>Average Response Time: Within 24 Hours</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Interactive JavaScript Controller -->
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+{
+  "badge": "Predictable Enterprise Pricing",
+  "heading": "Autonomous Security for Every Scale",
+  "subheading": "Choose the right tier for your infrastructure. Transparent pricing with zero hidden egress fees or telemetry surcharges.",
+  "tiers": [
+    {
+      "id": "sentinel",
+      "name": "Sentinel",
+      "tagline": "Essential zero-day kernel mitigation for growing cloud workloads.",
+      "monthlyPrice": 49,
+      "annualPrice": 39,
+      "popular": false,
+      "badge": "Developer & Startup",
+      "icon": "Shield",
+      "features": [
+        "Up to 10 Kubernetes or Linux nodes",
+        "Sub-6ms ring-0 eBPF syscall filtering",
+        "Autonomous threat heuristic engine",
+        "10M daily security telemetry events",
+        "30-day forensic audit logs",
+        "Community Slack & standard email support",
+        "Standard Anycast edge perimeter"
+      ],
+      "ctaText": "Start 14-Day Free Trial",
+      "ctaVariant": "secondary"
+    },
+    {
+      "id": "professional",
+      "name": "Professional",
+      "tagline": "Full runtime defense and global traffic scrubbing for production teams.",
+      "monthlyPrice": 179,
+      "annualPrice": 139,
+      "popular": true,
+      "badge": "Most Popular",
+      "icon": "Zap",
+      "features": [
+        "Up to 50 nodes (auto-scaling available)",
+        "Kernel-level runtime protection",
+        "Automated incident triage and response",
+        "Global Anycast DDoS mitigation",
+        "Real-time automated breach remediation",
+        "1-year audit and forensic replay logs",
+        "99.99% availability SLA guarantee",
+        "Priority 24/7 security engineer support"
+      ],
+      "ctaText": "Start 14-Day Free Trial",
+      "ctaVariant": "primary"
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "tagline": "Dedicated infrastructure, custom compliance, and white-glove support.",
+      "monthlyPrice": 599,
+      "annualPrice": 479,
+      "popular": false,
+      "badge": "Regulated",
+      "icon": "Building2",
+      "features": [
+        "Unlimited nodes & multi-cloud clusters",
+        "Hardware-attested confidential computing",
+        "Lattice-based Post-Quantum Cryptography",
+        "Dedicated 24/7 Red Team & Security Architect",
+        "Custom zero-day heuristics & model fine-tuning",
+        "Unlimited immutable forensic audit vault",
+        "99.999% uptime financial SLA warranty",
+        "Air-gapped on-premise & hybrid deployment"
+      ],
+      "ctaText": "Contact Enterprise Team",
+      "ctaVariant": "enterprise"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How quickly can we deploy Nexus across our clusters?",
+      "answer": "Deployment takes less than 60 seconds with our standard Helm chart or single curl command. Because Nexus leverages native Linux eBPF, it requires zero sidecar containers and zero application restarts."
+    },
+    {
+      "question": "Does Nexus add CPU overhead or latency to production traffic?",
+      "answer": "No. Nexus operates directly in kernel ring-0 using compiled eBPF bytecode. Its footprint is strictly capped at under 0.2% CPU utilization and adds zero detectable network latency."
+    },
+    {
+      "question": "How does the 14-day free trial work?",
+      "answer": "All plans come with an unrestricted 14-day trial. You get full access to all cognitive heuristic detection modules, global Anycast scrubbing, and live forensics with no credit card required upfront."
+    },
+    {
+      "question": "Which regulatory compliance frameworks are supported?",
+      "answer": "Nexus is certified for SOC2 Type II, ISO 27001, HIPAA, PCI-DSS Level 1, and GDPR. All forensic logs are cryptographically sealed with hardware-attested post-quantum signatures."
+    },
+    {
+      "question": "Can we upgrade or downgrade our plan at any time?",
+      "answer": "Yes. Billing automatically prorates immediately. If you scale nodes up during high-traffic events, Nexus automatically accommodates burst capacity without interrupting your defense mesh."
+    }
+  ],
+  "guarantees": [
+    {
+      "icon": "Shield",
+      "title": "14-Day Free Trial",
+      "description": "No credit card required to start"
+    },
+    {
+      "icon": "Zap",
+      "title": "99.999% SLA",
+      "description": "Financially backed uptime guarantee"
+    },
+    {
+      "icon": "Lock",
+      "title": "SOC2 & ISO 27001",
+      "description": "Audited cryptographic compliance"
+    },
+    {
+      "icon": "Server",
+      "title": "Zero Vendor Lock-In",
+      "description": "Open eBPF standard architecture"
+    }
+  ],
+  "consultationBanner": {
+    "title": "Need a Custom Multi-Region Mesh Architecture?",
+    "description": "Talk directly with a Principal Security Architect for dedicated bare-metal clusters, compliance attestation, or air-gapped deployments.",
+    "ctaText": "Schedule Architecture Review"
+  },
+  "comparisonCategories": [
+    {
+      "category": "Kernel & Runtime Defense",
+      "features": [
+        { "name": "eBPF Sub-6ms Syscall Filter", "sentinel": true, "neural": true, "sovereign": true },
+        { "name": "Zero-Day Behavioral Heuristics", "sentinel": true, "neural": true, "sovereign": true },
+        { "name": "Ring-0 Memory Exploit Prevention", "sentinel": false, "neural": true, "sovereign": true },
+        { "name": "Self-Healing Firewall Mesh", "sentinel": false, "neural": true, "sovereign": true }
+      ]
+    },
+    {
+      "category": "Network & Edge Scrubbing",
+      "features": [
+        { "name": "Global Anycast Perimeter", "sentinel": "Standard", "neural": "68 Tbps Tier-1", "sovereign": "Dedicated Enclave" },
+        { "name": "Automated DDoS Mitigation", "sentinel": true, "neural": true, "sovereign": true },
+        { "name": "BGP Route Leak Defense", "sentinel": false, "neural": true, "sovereign": true },
+        { "name": "TLS 1.3 Wire-Speed Decryption", "sentinel": false, "neural": true, "sovereign": true }
+      ]
+    },
+    {
+      "category": "Compliance & Forensics",
+      "features": [
+        { "name": "Forensic Log Retention", "sentinel": "30 Days", "neural": "1 Year", "sovereign": "Unlimited / Air-gapped" },
+        { "name": "SOC2 & ISO 27001 Cryptographic Proofs", "sentinel": true, "neural": true, "sovereign": true },
+        { "name": "Hardware-Attested Confidential Computing", "sentinel": false, "neural": false, "sovereign": true },
+        { "name": "Post-Quantum Lattice Encryption", "sentinel": false, "neural": false, "sovereign": true }
+      ]
+    },
+    {
+      "category": "SLA & Architect Support",
+      "features": [
+        { "name": "Availability Uptime Warranty", "sentinel": "99.9%", "neural": "99.99%", "sovereign": "99.999%" },
+        { "name": "SOC Engineer Response Time", "sentinel": "< 4 hours", "neural": "< 15 minutes", "sovereign": "Instant Priority" },
+        { "name": "Dedicated Security Architect", "sentinel": false, "neural": false, "sovereign": true }
+      ]
+    }
+  ]
+}
