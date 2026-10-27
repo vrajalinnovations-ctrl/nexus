@@ -47,7 +47,10 @@ export const Hero = () => {
       <Navbar />
 
       <main className="relative z-20 max-w-7xl mx-auto px-6 pt-16 pb-24 flex flex-col items-center text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-950/30 backdrop-blur-md mb-8 hover:border-indigo-400/50 transition-all cursor-pointer group shadow-lg shadow-indigo-500/20">
+        <Link
+          to="/features"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-950/30 backdrop-blur-md mb-8 hover:border-indigo-400/50 transition-all cursor-pointer group shadow-lg shadow-indigo-500/20"
+        >
           <span className="flex h-2 w-2 relative">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400" />
@@ -56,7 +59,7 @@ export const Hero = () => {
             AEGIX Template • Enterprise Cyber Defense & AI Cloud UI
           </span>
           <ChevronRight className="w-3.5 h-3.5 text-indigo-400 group-hover:translate-x-0.5 transition-transform" />
-        </div>
+        </Link>
 
         <h1 className="max-w-4xl text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight mb-6 drop-shadow-sm">
           Modern Cyber Defense <br className="hidden sm:inline" />
