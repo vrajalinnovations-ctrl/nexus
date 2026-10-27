@@ -5,7 +5,7 @@
 ![Vite 8](https://img.shields.io/badge/Vite-8.x-646cff.svg)
 ![Tailwind CSS 4](https://img.shields.io/badge/TailwindCSS-v4.x-38bdf8.svg)
 ![Author](https://img.shields.io/badge/Author-vrajalInnovations-indigo.svg)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=flat-square&logo=vercel)](https://nexus-iota-six-53.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=flat-square&logo=vercel)](https://aegix-template.vercel.app/)
 
 **AEGIX** is a modern, high-converting React 19 & Tailwind CSS v4 landing page template designed specifically for next-generation **AI cybersecurity, cloud defense, DevSecOps, and enterprise SaaS startups**. Built with **React 19**, **Vite 8**, and **Tailwind CSS v4**, AEGIX combines dark frosted-glass specular aesthetics, interactive WebGL ambient effects, an interactive "Request Demo" lead capture modal, Formspree/webhook-ready contact forms, and a complete authentication suite.
 
