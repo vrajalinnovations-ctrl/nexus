@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from '@/pages/HomePage';
 import AboutPage from '@/pages/AboutPage';
@@ -14,10 +15,20 @@ import ResetPasswordPage from '@/auth/ResetPasswordPage';
 import NotFoundPage from '@/pages/NotFoundPage';
 import ServerErrorPage from '@/pages/ServerErrorPage';
 
+const DocRedirect = () => {
+  useEffect(() => {
+    window.location.replace('/documentation/index.html');
+  }, []);
+  return null;
+};
+
 export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route path="/docs" element={<DocRedirect />} />
+      <Route path="/documentation" element={<DocRedirect />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/features" element={<FeaturesPage />} />
       <Route path="/pricing" element={<PricingPage />} />
