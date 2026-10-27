@@ -42,13 +42,13 @@ export const SignInPage = () => {
       <div className="pointer-events-none absolute left-1/2 bottom-1/4 h-80 w-80 -translate-x-1/2 translate-y-1/2 rounded-full bg-cyan-600/20 blur-3xl" />
 
       <main className="relative z-10 w-full max-w-md">
-        <Link to="/" className="mx-auto mb-6 sm:mb-8 flex w-fit items-center gap-2.5 group" aria-label="Nexus home">
+        <Link to="/" className="mx-auto mb-6 sm:mb-8 flex w-fit items-center gap-2.5 group" aria-label="Aegix home">
           <img
             src={logo}
-            alt="NEXUS"
+            alt="AEGIX"
             className="h-10 w-10 object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="text-lg font-bold tracking-tight text-white">NEXUS</span>
+          <span className="text-lg font-bold tracking-tight text-white">AEGIX</span>
         </Link>
 
         <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/20 bg-white/5 p-5 sm:p-8 md:p-10 backdrop-blur-xl shadow-2xl transition-all duration-300">
@@ -174,6 +174,10 @@ export const SignInPage = () => {
             Sign up
           </Link>
         </p>
+
+        <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-3 text-center text-xs text-slate-400 backdrop-blur-md">
+          <span className="text-cyan-300 font-medium">Template Note:</span> Authentication flows are styled and ready for integration with Supabase, Clerk, Firebase, or Auth0.
+        </div>
       </main>
     </div>
   );

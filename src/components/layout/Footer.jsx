@@ -21,7 +21,7 @@ export const Footer = () => {
   return (
     <footer
       className="relative w-full overflow-hidden bg-black text-slate-100 border-t border-white/10 selection:bg-cyan-500/30 selection:text-cyan-200"
-      aria-label="Nexus Footer"
+      aria-label="Aegix Footer"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-12">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
@@ -29,7 +29,7 @@ export const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <img
                 src={logo}
-                alt="Nexus Logo"
+                alt="Aegix Logo"
                 className="w-12 h-12 object-contain drop-shadow-md group-hover:scale-105 transition-transform"
               />
               <span className="text-xs font-mono tracking-widest text-slate-400 uppercase">
@@ -37,7 +37,7 @@ export const Footer = () => {
               </span>
             </div>
             <h2 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-none">
-              Nexus
+              Aegix
               <br />
               Security
             </h2>
@@ -149,8 +149,8 @@ export const Footer = () => {
               <div className="space-y-2 text-xs sm:text-sm text-slate-400">
 
                 <p>500 Howard Street, CA 94105</p>
-                <a href="mailto:soc@nexus.ai" className="block hover:text-white transition-colors">
-                  soc@nexus.ai
+                <a href="mailto:soc@aegix.ai" className="block hover:text-white transition-colors">
+                  soc@aegix.ai
                 </a>
                 <a href="tel:+14158904220" className="block hover:text-white transition-colors">
                   +1 (415) 890-4220
@@ -178,7 +178,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-sans">
-          <p>© Nexus Security Co. 2026. All rights reserved</p>
+          <p>© Aegix Security Co. 2026. All rights reserved</p>
           <div className="flex items-center gap-6">
             <Link to="/privacy" className="hover:text-white transition-colors">
               Privacy

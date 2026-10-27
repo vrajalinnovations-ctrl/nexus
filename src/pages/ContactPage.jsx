@@ -109,11 +109,37 @@ const ChannelRow = ({ icon: Icon, label, value, href }) => {
 
 export const ContactPage = () => {
   const [topic, setTopic] = useState('Incident Response');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [org, setOrg] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
+  const [refId, setRefId] = useState('');
   const [openFaq, setOpenFaq] = useState(0);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
+    const endpoint = import.meta.env.VITE_CONTACT_FORM_ENDPOINT;
+    if (endpoint) {
+      try {
+        await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ topic, name, email, org, message }),
+        });
+      } catch (err) {
+        console.error('Contact submission error:', err);
+      }
+    } else {
+      // Simulate network latency in demo mode
+      await new Promise((resolve) => setTimeout(resolve, 800));
+    }
+
+    setRefId(`REF-SOC-${Math.floor(100000 + Math.random() * 900000)}`);
+    setLoading(false);
     setSent(true);
   };
 
@@ -254,16 +280,36 @@ export const ContactPage = () => {
                 <div className="pointer-events-none absolute -left-16 -bottom-16 h-64 w-64 rounded-full bg-indigo-600/15 blur-3xl" />
 
                 {sent ? (
-                  <div className="relative flex flex-col items-center py-16 text-center">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 shadow-lg shadow-cyan-500/20">
-                      <Mail className="h-6 w-6" />
+                  <div className="relative flex flex-col items-center py-12 text-center">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 shadow-lg shadow-cyan-500/20 mb-4">
+                      <Mail className="h-6 w-6 text-cyan-400" />
                     </span>
-                    <h2 className="mt-6 text-2xl font-bold text-white">Message Dispatched</h2>
-                    <p className="mt-2 text-sm text-slate-300">A Principal Security Architect will be in touch shortly.</p>
+                    <h2 className="text-2xl font-bold text-white tracking-tight">Inquiry Dispatched</h2>
+                    <p className="mt-2 text-xs sm:text-sm text-slate-300 max-w-sm">
+                      Your technical inquiry has been registered. An L3 security architect will review your environment and contact you within 4 hours.
+                    </p>
+
+                    <div className="mt-4 rounded-xl border border-white/10 bg-white/5 px-4 py-2 font-mono text-xs text-cyan-300">
+                      Tracking Reference: <span className="font-bold text-white">{refId}</span>
+                    </div>
+
+                    <div className="mt-6 rounded-xl border border-indigo-500/25 bg-indigo-950/30 p-3.5 text-left text-xs text-indigo-200 max-w-md">
+                      <p className="font-semibold text-cyan-300 mb-1">Developer Integration Note:</p>
+                      <p className="text-slate-400">
+                        This template supports zero-config Formspree / Webhooks. Add <code className="text-cyan-200">VITE_CONTACT_FORM_ENDPOINT="https://formspree.io/f/your_id"</code> in your environment file to handle real live inbox delivery.
+                      </p>
+                    </div>
+
                     <button
                       type="button"
-                      onClick={() => setSent(false)}
-                      className="mt-8 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-2.5 text-xs font-semibold text-white transition-all hover:border-cyan-400/40 cursor-pointer"
+                      onClick={() => {
+                        setSent(false);
+                        setName('');
+                        setEmail('');
+                        setOrg('');
+                        setMessage('');
+                      }}
+                      className="mt-8 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-2.5 text-xs font-semibold text-white transition-all hover:border-cyan-400/40 cursor-pointer shadow-md"
                     >
                       Send Another Inquiry
                     </button>
@@ -291,22 +337,49 @@ export const ContactPage = () => {
                     </div>
 
                     <div className="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                      <input required type="text" placeholder="Your Name" className={inputClass} />
-                      <input required type="email" placeholder="Work Email" className={inputClass} />
+                      <input
+                        required
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Your Name"
+                        className={inputClass}
+                      />
+                      <input
+                        required
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Work Email"
+                        className={inputClass}
+                      />
                     </div>
-                    <input type="text" placeholder="Organization / Infrastructure Mesh" className={inputClass} />
+                    <input
+                      type="text"
+                      value={org}
+                      onChange={(e) => setOrg(e.target.value)}
+                      placeholder="Organization / Infrastructure Mesh"
+                      className={inputClass}
+                    />
                     <textarea
                       required
                       rows={5}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       placeholder="Describe your security challenge or architecture requirements..."
                       className={`${inputClass} resize-none`}
                     />
 
                     <button
                       type="submit"
-                      className="mt-2 w-full rounded-full border border-white/20 bg-gradient-to-r from-cyan-500 via-indigo-600 to-indigo-700 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition-all hover:from-cyan-400 hover:to-indigo-600 hover:shadow-cyan-500/40 cursor-pointer"
+                      disabled={loading}
+                      className="mt-2 w-full rounded-full border border-white/20 bg-gradient-to-r from-cyan-500 via-indigo-600 to-indigo-700 py-3.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition-all hover:from-cyan-400 hover:to-indigo-600 hover:shadow-cyan-500/40 cursor-pointer disabled:opacity-60 flex items-center justify-center gap-2"
                     >
-                      Dispatch Request
+                      {loading ? (
+                        <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                      ) : (
+                        <span>Dispatch Request</span>
+                      )}
                     </button>
                   </form>
                 )}

@@ -113,7 +113,7 @@ export const AboutPage = () => {
             <span className="text-slate-400">Welcome to</span>
             <span className="inline-flex items-center gap-2">
               <Shield className="h-8 w-8 text-cyan-400 sm:h-12 sm:w-12" />
-              <span className="bg-gradient-to-r from-white via-slate-100 to-cyan-300 bg-clip-text text-transparent font-bold">NEXUS</span>
+              <span className="bg-gradient-to-r from-white via-slate-100 to-cyan-300 bg-clip-text text-transparent font-bold">AEGIX</span>
             </span>
           </h1>
           <p className="mt-8 text-lg font-medium leading-relaxed text-slate-300 sm:text-xl">
@@ -127,11 +127,11 @@ export const AboutPage = () => {
             <SectionHead pill="Who We Are" dark="Get to Know" light="Us" />
             <Photo
               src={about}
-              alt="The Nexus team collaborating"
+              alt="The Aegix team collaborating"
               className="aspect-video rounded-3xl"
             />
             <p className="mx-auto max-w-2xl text-center text-xs leading-relaxed text-slate-400">
-              NEXUS was founded by kernel engineers and researchers who saw that humans can't out-type automated
+              AEGIX was founded by kernel engineers and researchers who saw that humans can't out-type automated
               attacks. Today our team of engineers, cryptographers and data scientists builds defense that answers in
               microseconds.
             </p>

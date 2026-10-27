@@ -1,11 +1,11 @@
 {
   "badge": "Customer Stories",
   "heading": "Trusted by Security Teams Worldwide",
-  "subheading": "See how leading engineering and SecOps teams use NEXUS to protect their cloud infrastructure, reduce alert fatigue, and stop threats in real time.",
+  "subheading": "See how leading engineering and SecOps teams use AEGIX to protect their cloud infrastructure, reduce alert fatigue, and stop threats in real time.",
   "testimonials": [
     {
       "id": "1",
-      "quote": "NEXUS caught an unpatched API vulnerability within 20 minutes of deployment. It saved our engineering team dozens of hours of manual triage and gave our leadership peace of mind.",
+      "quote": "AEGIX caught an unpatched API vulnerability within 20 minutes of deployment. It saved our engineering team dozens of hours of manual triage and gave our leadership peace of mind.",
       "author": "Sarah Lin",
       "role": "VP of Security",
       "company": "Vanguard Networks",
@@ -16,7 +16,7 @@
     },
     {
       "id": "2",
-      "quote": "Before NEXUS, our on-call engineers were drowning in false alarms every weekend. The automated filtering reduced our daily alert volume by over 85% without missing a single real incident.",
+      "quote": "Before AEGIX, our on-call engineers were drowning in false alarms every weekend. The automated filtering reduced our daily alert volume by over 85% without missing a single real incident.",
       "author": "Marcus Vance",
       "role": "Head of Infrastructure",
       "company": "Apex Financial",
@@ -38,7 +38,7 @@
     },
     {
       "id": "4",
-      "quote": "When an unauthorized process attempted lateral movement in our staging environment, NEXUS immediately quarantined the container and notified the on-call channel in Slack.",
+      "quote": "When an unauthorized process attempted lateral movement in our staging environment, AEGIX immediately quarantined the container and notified the on-call channel in Slack.",
       "author": "David Chen",
       "role": "Principal Security Architect",
       "company": "Aether Dynamics",
@@ -71,7 +71,7 @@
     },
     {
       "id": "7",
-      "quote": "NEXUS identified anomalous lateral traversal within a staging cluster and blocked it automatically without breaking active developer deployments.",
+      "quote": "AEGIX identified anomalous lateral traversal within a staging cluster and blocked it automatically without breaking active developer deployments.",
       "author": "Kavita Reddy",
       "role": "VP of Cloud Engineering",
       "company": "Novalogic Labs",

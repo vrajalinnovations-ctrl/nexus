@@ -9,7 +9,7 @@
     "headingDark": "Global Security",
     "headingLight": "Operations Centers",
     "image": "/src/assets/3.png",
-    "imageAlt": "Nexus Global Command & Security Operations Center",
+    "imageAlt": "Aegix Global Command & Security Operations Center",
     "caption": "Our distributed security mesh spans 48 tier-IV datacenter facilities with sub-6ms anycast latency, dedicated bare-metal scrubbing, and continuous cryptographic attestation."
   },
   "locations": [
@@ -39,7 +39,7 @@
     }
   ],
   "channels": [
-    { "icon": "Mail", "label": "Direct Security Telemetry", "value": "security@nexus.ai", "href": "mailto:security@nexus.ai" },
+    { "icon": "Mail", "label": "Direct Security Telemetry", "value": "security@aegix.ai", "href": "mailto:security@aegix.ai" },
     { "icon": "Phone", "label": "Emergency SOC Hotline", "value": "+1 (415) 890-4220", "href": "tel:+14158904220" },
     { "icon": "MapPin", "label": "San Francisco Facility", "value": "548 Market St, CA 94104" },
     { "icon": "MapPin", "label": "London Facility", "value": "25 Old Street, EC1V 9HL" }

@@ -52,34 +52,4 @@ export const Card = ({
   );
 };
 
-export const CardHeader = ({ className = '', children, ...props }) => (
-  <div className={`mb-4 flex flex-col gap-1.5 ${className}`} {...props}>
-    {children}
-  </div>
-);
-
-export const CardTitle = ({ className = '', children, ...props }) => (
-  <h3 className={`text-xl font-semibold tracking-tight text-white ${className}`} {...props}>
-    {children}
-  </h3>
-);
-
-export const CardDescription = ({ className = '', children, ...props }) => (
-  <p className={`text-sm leading-relaxed text-slate-300 ${className}`} {...props}>
-    {children}
-  </p>
-);
-
-export const CardContent = ({ className = '', children, ...props }) => (
-  <div className={`flex flex-1 flex-col ${className}`} {...props}>
-    {children}
-  </div>
-);
-
-export const CardFooter = ({ className = '', children, ...props }) => (
-  <div className={`mt-6 pt-4 border-t border-white/10 flex items-center justify-between ${className}`} {...props}>
-    {children}
-  </div>
-);
-
 export default Card;

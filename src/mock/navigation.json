@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "NEXUS",
+    "name": "AEGIX",
     "highlight": "",
     "subtitle": "Neural Defense AI"
   },
@@ -12,7 +12,7 @@
     { "label": "Contact", "href": "/contact" }
   ],
   "footer": {
-    "word": "NEXUS",
+    "word": "AEGIX",
     "headline": ["AUTONOMOUS NEURAL", "DEFENSE MESH"],
     "tagline": "Protecting enterprise cloud infrastructure, Kubernetes clusters, and APIs against modern threats in real time.",
     "status": {
@@ -22,8 +22,8 @@
       "latency": "< 4ms Interception"
     },
     "emails": [
-      { "label": "Incident Response", "address": "soc@nexus.ai" },
-      { "label": "General Inquiries", "address": "contact@nexus.ai" }
+      { "label": "Incident Response", "address": "soc@aegix.ai" },
+      { "label": "General Inquiries", "address": "contact@aegix.ai" }
     ],
     "phone": "+1 (415) 890-4220",
     "locations": [

@@ -25,7 +25,7 @@ export const PrivacyPage = () => {
             </span>
           </h1>
           <p className="mt-6 text-sm sm:text-base text-slate-400 leading-relaxed">
-            Last Updated: October 2026 • Effective for all NEXUS Enterprise Cloud & On-Premises Meshes
+            Last Updated: October 2026 • Effective for all AEGIX Enterprise Cloud & On-Premises Meshes
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export const PrivacyPage = () => {
                 1. Overview & Commitment to Zero-Knowledge Telemetry
               </h2>
               <p>
-                NEXUS Inc. ("NEXUS", "we", "us", or "our") operates an autonomous neural defense mesh designed to protect cloud infrastructure, containers, and edge clusters. Our architecture adheres strictly to zero-knowledge telemetry principles: kernel-level eBPF probes analyze runtime anomalies locally within hardware enclaves without inspecting private customer payload data.
+                AEGIX Inc. ("AEGIX", "we", "us", or "our") operates an autonomous neural defense mesh designed to protect cloud infrastructure, containers, and edge clusters. Our architecture adheres strictly to zero-knowledge telemetry principles: kernel-level eBPF probes analyze runtime anomalies locally within hardware enclaves without inspecting private customer payload data.
               </p>
             </div>
 
@@ -81,7 +81,7 @@ export const PrivacyPage = () => {
                 4. International Compliance & Data Sovereignty
               </h2>
               <p className="mb-4">
-                NEXUS complies with global data protection frameworks:
+                AEGIX complies with global data protection frameworks:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
@@ -109,8 +109,8 @@ export const PrivacyPage = () => {
               </h2>
               <p>
                 If you have questions regarding this Privacy Policy, please contact our Data Protection Office at{' '}
-                <a href="mailto:privacy@nexus.ai" className="text-cyan-300 underline underline-offset-4 hover:text-white transition-colors">
-                  privacy@nexus.ai
+                <a href="mailto:privacy@aegix.ai" className="text-cyan-300 underline underline-offset-4 hover:text-white transition-colors">
+                  privacy@aegix.ai
                 </a>{' '}
                 or reach our 24/7 incident desk via our{' '}
                 <Link to="/contact" className="text-cyan-300 underline underline-offset-4 hover:text-white transition-colors">

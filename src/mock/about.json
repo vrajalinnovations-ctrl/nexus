@@ -2,15 +2,15 @@
   "pill": "About Us",
   "title": {
     "prefix": "Welcome to",
-    "brand": "Nexus"
+    "brand": "Aegix"
   },
   "tagline": "We believe in the transformative power of autonomous defense. Our mission is to stop attacks before they run, so every team can build without fear.",
   "overview": {
     "pill": "Who We Are",
     "headingDark": "Get to Know",
     "headingLight": "Us",
-    "imageAlt": "The Nexus team collaborating",
-    "description": "Nexus was founded by kernel engineers and researchers who saw that humans can't out-type automated attacks. Today our team of engineers, cryptographers and data scientists builds defense that answers in microseconds."
+    "imageAlt": "The Aegix team collaborating",
+    "description": "Aegix was founded by kernel engineers and researchers who saw that humans can't out-type automated attacks. Today our team of engineers, cryptographers and data scientists builds defense that answers in microseconds."
   },
   "values": [
     {

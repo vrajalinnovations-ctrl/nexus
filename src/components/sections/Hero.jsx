@@ -53,7 +53,7 @@ export const Hero = () => {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400" />
           </span>
           <span className="text-xs font-medium text-indigo-200">
-            Nexus 3.4 Released • Real-Time Threat Intelligence
+            AEGIX Template • Enterprise Cyber Defense & AI Cloud UI
           </span>
           <ChevronRight className="w-3.5 h-3.5 text-indigo-400 group-hover:translate-x-0.5 transition-transform" />
         </div>
@@ -103,7 +103,7 @@ export const Hero = () => {
             <div className="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden">
               <img
                 src={robotImage}
-                alt="NEXUS Autonomous AI Cyber Defense Agent"
+                alt="AEGIX Autonomous AI Cyber Defense Agent"
                 loading="eager"
                 decoding="async"
                 className="w-full h-full object-cover object-top-center transition-transform duration-700 group-hover:scale-105"

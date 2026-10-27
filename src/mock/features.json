@@ -73,7 +73,7 @@
       "title": "Ring-0 Kernel eBPF Telemetry",
       "badge": "Sub-6ms Latency",
       "tagline": "Kernel-level execution without code instrumentation",
-      "description": "Nexus injects sandboxed eBPF bytecode directly into Linux kernel space. Analyze syscalls, socket buffers, and process namespaces with under 0.2% CPU overhead and zero sidecar baggage.",
+      "description": "Aegix injects sandboxed eBPF bytecode directly into Linux kernel space. Analyze syscalls, socket buffers, and process namespaces with under 0.2% CPU overhead and zero sidecar baggage.",
       "metrics": ["Sub-6ms syscall inspection", "0.2% CPU overhead", "Zero sidecar containers"]
     },
     {

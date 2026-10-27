@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '@/components/ui/Card';
-import { Check, Sparkles, Shield, Zap, Building2, Lock,ArrowRight, ChevronDown, HelpCircle, Server } from 'lucide-react';
+import { Check, Sparkles, Shield, Zap, Building2, Lock, ArrowRight, ChevronDown, HelpCircle, Server } from 'lucide-react';
 import pricingData from '@/mock/pricing.json';
 
 const iconMap = {

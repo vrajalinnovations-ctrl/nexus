@@ -1,13 +1,13 @@
-# NEXUS — Autonomous AI Cybersecurity & Neural Defense Mesh
+# AEGIX — Modern Cybersecurity & AI SaaS Landing Page Template
 
-![NEXUS Version](https://img.shields.io/badge/version-1.0.0-cyan.svg)
+![AEGIX Version](https://img.shields.io/badge/version-1.0.0-cyan.svg)
 ![React 19](https://img.shields.io/badge/React-19.x-61dafb.svg)
 ![Vite 8](https://img.shields.io/badge/Vite-8.x-646cff.svg)
 ![Tailwind CSS 4](https://img.shields.io/badge/TailwindCSS-v4.x-38bdf8.svg)
 ![Author](https://img.shields.io/badge/Author-vrajalInnovations-indigo.svg)
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=flat-square&logo=vercel)](https://nexus-iota-six-53.vercel.app/)
 
-**NEXUS** is a cutting-edge, ultra-premium SaaS landing and web application template designed for next-generation AI cybersecurity, cloud defense, DevSecOps, and enterprise tech startups. Built with **React 19**, **Vite 8**, and **Tailwind CSS v4**, NEXUS combines high-converting layouts, unified frosted-glass specular aesthetics, hardware-accelerated Lenis smooth scrolling, and infinite dual-row marquee testimonials.
+**AEGIX** is a modern, high-converting React 19 & Tailwind CSS v4 landing page template designed specifically for next-generation **AI cybersecurity, cloud defense, DevSecOps, and enterprise SaaS startups**. Built with **React 19**, **Vite 8**, and **Tailwind CSS v4**, AEGIX combines dark frosted-glass specular aesthetics, interactive WebGL ambient effects, an interactive "Request Demo" lead capture modal, Formspree/webhook-ready contact forms, and a complete authentication suite.
 
 ---
 
@@ -17,28 +17,31 @@
 2. [Technology Stack](#technology-stack)
 3. [Prerequisites](#prerequisites)
 4. [Installation & Setup](#installation--setup)
-5. [Available Scripts](#available-scripts)
-6. [Project Structure](#project-structure)
-7. [Customization Guide](#customization-guide)
-8. [Included Pages & Routes](#included-pages--routes)
-9. [Performance & SEO Optimizations](#performance--seo-optimizations)
-10. [Browser Support](#browser-support)
-11. [Credits & Sources](#credits--sources)
-12. [Support & License](#support--license)
+5. [Backend & Webhook Integration](#backend--webhook-integration)
+6. [Available Scripts](#available-scripts)
+7. [Project Structure](#project-structure)
+8. [Customization Guide](#customization-guide)
+9. [Included Pages & Routes](#included-pages--routes)
+10. [Performance & SEO Optimizations](#performance--seo-optimizations)
+11. [Browser Support](#browser-support)
+12. [Credits & Sources](#credits--sources)
+13. [Support & License](#support--license)
 
 ---
 
 ## Key Features
 
-- **14 Production-Ready Routes:** Complete landing experience with dedicated marketing pages, full authentication suite, enterprise error screens, and legal compliance pages.
-- **Unified Frosted Glass Aesthetic:** Built with a cohesive visual hierarchy featuring specular sheen overlays, crisp glowing ambient highlights, and zero-clutter typography.
+- **12 Production-Ready Routes:** Complete SaaS landing experience with dedicated marketing pages, full authentication suite (SignIn, SignUp, OTP, Recovery), enterprise error screens, and legal compliance pages.
+- **Interactive "Request Demo" Modal:** Built-in modal lead capture dialog with deployment environment selection, form validation, reference ID generation, and simulated dispatch.
+- **Formspree / Webhook Ready:** Zero-configuration live form submission via `VITE_CONTACT_FORM_ENDPOINT` environment variable in `ContactPage.jsx`.
+- **Unified Frosted Glass Aesthetic:** Cohesive dark visual hierarchy featuring specular sheen overlays, crisp glowing ambient highlights, and zero-clutter typography.
 - **Hardware-Accelerated Smooth Scroll:** Integrated Lenis smooth scroll engine wrapped in a dedicated, lightweight `ScrollManager` component.
 - **Interactive Dual Marquee Testimonials:** Smooth, gapless infinite scrolling testimonial marquee with pause-on-hover interaction and enterprise verification badges.
 - **Pure Tailwind CSS v4:** Zero arbitrary square-bracket classes; standard modern utility classes tailored for optimal readability and rapid maintenance.
 - **Single Modern Font System:** Clean, crisp UI powered by Google Fonts' *Plus Jakarta Sans*.
 - **Decoupled Data Architecture:** All navigation, pricing tiers, features, testimonials, and company logos are decoupled into clean JSON mock files in `src/mock/`.
-- **Zero-Dead-Link Policy:** Every button, tab, and navigation link connects to an active functional component with interactive state feedback.
-- **Offline Documentation Portal:** Bundled standalone cyber-dark documentation ready in `public/documentation/`.
+- **Instant Client Routing:** Clean standard React Router setup with direct page imports for seamless, instantaneous page transitions.
+- **Offline Documentation Portal:** Bundled standalone cyber-dark documentation reader ready in `public/documentation/`.
 
 ---
 
@@ -59,7 +62,7 @@
 Before running the project, ensure you have the following installed on your machine:
 
 - **Node.js:** v18.0.0 or higher (v20.x or v22.x LTS recommended)
-- **Package Manager:** `npm` (v9.x or higher) or `pnpm` / `yarn`
+- **Package Manager:** `npm` (v9.x or higher), `pnpm`, or `yarn`
 
 Check your versions by running:
 ```bash
@@ -76,7 +79,7 @@ npm -v
 
 2. **Navigate into the Project Folder**
    ```bash
-   cd nexus
+   cd aegix
    ```
 
 3. **Install Dependencies**
@@ -88,7 +91,30 @@ npm -v
    ```bash
    npm run dev
    ```
-   Open your browser to the local server address shown in your terminal (or visit the live deployment at [https://nexus-iota-six-53.vercel.app/](https://nexus-iota-six-53.vercel.app/)).
+   Open your browser to the local server address shown in your terminal (typically `http://localhost:5173`).
+
+---
+
+## Backend & Webhook Integration
+
+### 1. Live Contact Form (Formspree / Custom API)
+To receive live contact form submissions directly to your email or webhook:
+1. Create a free account at [Formspree.io](https://formspree.io) (or use your custom API endpoint).
+2. Create a `.env` file in the root directory:
+   ```env
+   VITE_CONTACT_FORM_ENDPOINT="https://formspree.io/f/your_form_id"
+   ```
+3. Restart your dev server (`npm run dev`). `ContactPage.jsx` will automatically transmit form payloads live.
+
+### 2. Authentication Suite Integration (Supabase / Clerk / Firebase)
+All views in `src/auth/` (`SignInPage.jsx`, `SignUpPage.jsx`, `VerifyPage.jsx`) contain isolated submit handlers. Simply replace the demonstration handlers with your provider SDK:
+```jsx
+// Example Supabase client integration
+const { data, error } = await supabase.auth.signInWithPassword({
+  email,
+  password
+});
+```
 
 ---
 
@@ -108,7 +134,7 @@ In the project root, you can run:
 ## Project Structure
 
 ```text
-nexus/
+aegix/
 ├── public/
 │   ├── documentation/            # Offline cyber-dark documentation portal
 │   │   ├── css/app.css           # Standalone documentation styles
@@ -117,9 +143,7 @@ nexus/
 │   ├── favicon.svg               # Vector brand favicon
 │   └── logo.png                  # Master brand identity asset
 ├── src/
-│   ├── assets/
-│   │   ├── 2.png                 # Hero visual asset
-│   │   └── logo.png              # Local logo asset
+│   ├── assets/                   # High-resolution optimized visual assets
 │   ├── auth/                     # Dedicated authentication suite
 │   │   ├── ForgotPasswordPage.jsx
 │   │   ├── ResetPasswordPage.jsx
@@ -140,7 +164,10 @@ nexus/
 │   │   │   └── TrustedCompanies.jsx
 │   │   └── ui/                   # Reusable UI primitives
 │   │       ├── Card.jsx
-│   │       └── LogoLoop.jsx
+│   │       ├── DemoModal.jsx     # Interactive Request Demo dialog
+│   │       ├── FloatingBackground.jsx
+│   │       ├── GhostFibers.jsx   # WebGL OGL shader background
+│   │       └── LogoLoop.jsx      # Infinite 3D logo ticker
 │   ├── mock/                     # Decoupled JSON data layers
 │   │   ├── about.json
 │   │   ├── auth.json
@@ -161,14 +188,14 @@ nexus/
 │   │   ├── ServerErrorPage.jsx
 │   │   └── TermsPage.jsx
 │   ├── routes/
-│   │   └── AppRoutes.jsx         # Declarative route configuration
+│   │   └── AppRoutes.jsx         # Clean client route configuration
 │   ├── App.jsx                   # Clean root shell
 │   ├── index.css                 # Theme tokens & typography utilities
 │   └── main.jsx                  # React entry point with BrowserRouter
 ├── eslint.config.js              # ESLint 9+ flat configuration
 ├── index.html                    # SEO meta tags, OpenGraph & font links
 ├── package.json                  # Dependencies & scripts
-└── vite.config.js                # Vite build configuration
+└── vite.config.js                # Vite build configuration with chunk splitting
 ```
 
 ---
@@ -179,7 +206,7 @@ nexus/
 - Open `src/mock/navigation.json` and edit the `"brand"` object:
   ```json
   "brand": {
-    "name": "NEXUS",
+    "name": "AEGIX",
     "subtitle": "Cloud Security"
   }
   ```
@@ -198,45 +225,41 @@ nexus/
     --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
   ```
-- Ambient lighting colors can be customized by editing the Tailwind background glow classes (e.g. `bg-cyan-600/15`, `bg-indigo-600/25`) in `src/components/sections/` and `src/auth/`.
 
 ---
 
 ## Included Pages & Routes
 
-| Route | File Location | Purpose |
+| Route | Source File | Description |
 | :--- | :--- | :--- |
-| `/` | `src/pages/HomePage.jsx` | Main landing with Hero, Features, Testimonial Marquee, Pricing, Footer |
-| `/about` | `src/pages/AboutPage.jsx` | Mission, core values, leadership team, and contact form |
-| `/features` | `src/pages/FeaturesPage.jsx` | Technical pillars, bento interactive grid, and attestation specs |
-| `/pricing` | `src/pages/PricingPage.jsx` | Tiers, annual/monthly toggle, in-depth feature comparison table, FAQs |
-| `/contact` | `src/pages/ContactPage.jsx` | Direct channels, worldwide hub facilities, interactive inquiry dispatch |
-| `/privacy` | `src/pages/PrivacyPage.jsx` | Zero-knowledge telemetry, GDPR/CCPA, encryption & DPO contact |
-| `/terms` | `src/pages/TermsPage.jsx` | Enterprise SLA, node licensing, acceptable use, liability terms |
-| `/signin` | `src/auth/SignInPage.jsx` | Minimal frosted glass sign-in card with enterprise SSO options |
-| `/signup` | `src/auth/SignUpPage.jsx` | Minimal frosted glass registration with terms consent |
-| `/forgot-password`| `src/auth/ForgotPasswordPage.jsx` | Recovery dispatch interface with instant validation |
+| `/` | `src/pages/HomePage.jsx` | Full landing experience (Hero, GhostFibers, Features, Testimonials, Pricing) |
+| `/about` | `src/pages/AboutPage.jsx` | Mission statement, leadership team, values, and contact card |
+| `/features` | `src/pages/FeaturesPage.jsx` | Deep architectural pillars, capabilities bento grid, and telemetry showcase |
+| `/pricing` | `src/pages/PricingPage.jsx` | Monthly/annual billing toggle, enterprise tiers, and interactive FAQ accordion |
+| `/contact` | `src/pages/ContactPage.jsx` | SOC Hubs, 24/7 channels, Formspree-ready inquiry form, and knowledge base |
+| `/privacy` | `src/pages/PrivacyPage.jsx` | Enterprise privacy policy & zero-knowledge telemetry disclosures |
+| `/terms` | `src/pages/TermsPage.jsx` | Compliant website terms of service, acceptable use, and liability terms |
+| `/signin` | `src/auth/SignInPage.jsx` | Minimal frosted glass sign-in card with enterprise SSO provider buttons |
+| `/signup` | `src/auth/SignUpPage.jsx` | Minimal frosted glass registration card with terms agreement |
+| `/forgot-password`| `src/auth/ForgotPasswordPage.jsx` | Credential recovery dispatch interface with instant validation |
 | `/verify` | `src/auth/VerifyPage.jsx` | 6-Digit OTP security code entry with clipboard paste & countdown timer |
-| `/confirm-password`| `src/auth/ResetPasswordPage.jsx` | New password and confirmation screen with security checks |
-| `/reset-password` | `src/auth/ResetPasswordPage.jsx` | Secondary alias for credential reset flow |
-| `/404` | `src/pages/NotFoundPage.jsx` | 404 Node Not Found with simulated kernel telemetry diagnostics |
+| `/confirm-password`| `src/auth/ResetPasswordPage.jsx` | New password and confirmation screen with security match checks |
+| `/404` | `src/pages/NotFoundPage.jsx` | 404 Node Not Found with simulated diagnostics and return navigation |
 | `/500` | `src/pages/ServerErrorPage.jsx` | 500 Mesh Anomaly screen with animated auto-repair & retry flow |
 
 ---
 
 ## Performance & SEO Optimizations
 
-- **Declarative Client-Side Routing:** Fast, flicker-free transitions powered by React Router v7.
-- **Modular Hardware Smooth Scroll:** Powered by Lenis for fluid desktop and mobile trackpad interaction.
-- **Zero Heavy Render Blockers:** Clean, decoupled UI elements avoiding unnecessary WebGL frame loops when idle.
-- **Search Engine Optimization:** `index.html` includes full OpenGraph cards, Twitter preview metadata, meta description, and mobile viewport directives.
+- **Instant Route Transitions:** Synchronous standard imports eliminate loading delays between screens.
+- **Modular Hardware Smooth Scroll:** Powered by Lenis for fluid desktop and trackpad interaction.
+- **Search Engine Optimization:** `index.html` includes complete OpenGraph cards, Twitter preview metadata, meta description, and JSON-LD schema markup.
 
 ---
 
 ## Browser Support
 
-NEXUS is tested and compatible with modern evergreen browsers:
-
+AEGIX is tested and compatible with modern evergreen browsers:
 - Google Chrome (latest)
 - Mozilla Firefox (latest)
 - Apple Safari (latest desktop & iOS)
@@ -248,7 +271,6 @@ NEXUS is tested and compatible with modern evergreen browsers:
 ## Credits & Sources
 
 All external assets and libraries used in this template are licensed for commercial use:
-
 - **Icons:** [Lucide Icons](https://lucide.dev/) (ISC License) & [Bootstrap Icons](https://icons.getbootstrap.com/)
 - **Fonts:** [Google Fonts](https://fonts.google.com/) — *Plus Jakarta Sans* (OFL)
 - **Smooth Scroll:** [Lenis](https://github.com/darkroomengineering/lenis) (MIT License)
@@ -260,4 +282,4 @@ All external assets and libraries used in this template are licensed for commerc
 - **Author / Company:** vrajalInnovations
 - **Support Email:** [vrajalinnovations@gmail.com](mailto:vrajalinnovations@gmail.com)
 - **Website:** [vrajalInnovations.com](https://vrajalInnovations.com)
-- **License:** Commercial License. Redistribution or reselling of uncompiled source files is strictly prohibited.
+- **License:** Governed by the official marketplace license terms under which this item was acquired.

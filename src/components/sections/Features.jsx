@@ -122,7 +122,7 @@ const Autopilot = () => (
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400" />
           </span>
           <span className="text-xs font-mono font-medium tracking-wider text-emerald-300 uppercase">
-            Chill Mode
+            Autonomous Active
           </span>
         </div>
       </div>
@@ -265,32 +265,32 @@ export const Features = () => {
           <div className="pointer-events-none absolute inset-x-1/4 top-1/2 hidden h-px bg-gradient-to-r from-transparent via-violet-300 to-transparent md:block" />
 
           <Card
-            title="Scale without the scream"
-            text="From ten nodes to ten thousand, nothing slows down."
+            title="Built for massive scale"
+            text="Deploy effortlessly from single clusters to multi-region cloud meshes without latency."
             className="md:col-span-3"
           >
             <ThreatBreakdown />
           </Card>
 
           <Card
-            title="Drag, drop, deploy"
-            text="No code. Build rules visually."
+            title="Visual policy builder"
+            text="Create, test, and enforce security policies without writing custom code."
             className="md:col-span-2"
           >
             <RuleStack />
           </Card>
 
           <Card
-            title="Smart enough to chill"
-            text="AI does the thinking while you relax."
+            title="Automated threat mitigation"
+            text="Neutralize zero-day exploits and abnormal traffic patterns in real time."
             className="md:col-span-2"
           >
             <Autopilot />
           </Card>
 
           <Card
-            title="Plug it all in"
-            text="Works with the tools you already use."
+            title="Native ecosystem integrations"
+            text="Connects directly into your existing CI/CD pipelines, SIEM, and monitoring tools."
             className="md:col-span-3"
           >
             <IntegrationHub />

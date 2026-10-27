@@ -25,7 +25,7 @@ export const TermsPage = () => {
             </span>
           </h1>
           <p className="mt-6 text-sm sm:text-base text-slate-400 leading-relaxed">
-            Last Updated: October 2026 • Governing Enterprise Access to the NEXUS Neural Defense Mesh
+            Last Updated: October 2026 • Governing Enterprise Access to the AEGIX Neural Defense Mesh
           </p>
         </div>
 
@@ -37,30 +37,30 @@ export const TermsPage = () => {
                 1. Acceptance of Terms
               </h2>
               <p>
-                By accessing or deploying the NEXUS autonomous neural defense platform, eBPF agent binaries, or management console, you ("Customer" or "User") agree to be bound by these Terms of Service ("Terms"). If you represent an entity, you warrant that you possess the requisite authority to bind that entity to these Terms.
+                By accessing, browsing, or utilizing the AEGIX website, documentation, and digital assets ("Services"), you agree to be bound by these Terms of Service. If you are accessing these Services on behalf of an enterprise or organization, you confirm that you have the authority to bind that entity to these Terms.
               </p>
             </div>
 
             <div className="border-t border-white/10 pt-8">
               <h2 className="text-xl font-bold text-white tracking-tight flex items-center gap-2.5 mb-4">
                 <FileCheck className="h-5 w-5 text-indigo-400" />
-                2. Platform License & Acceptable Use
+                2. Acceptable Use & Conduct
               </h2>
               <p className="mb-4">
-                NEXUS grants Customer a non-exclusive, worldwide, revocable license to deploy our telemetry agents across Customer-owned or Customer-leased compute nodes in accordance with the subscribed tier:
+                Users agree to use our digital resources in full compliance with all applicable laws and regulations. You agree not to:
               </p>
               <ul className="space-y-3 pl-4">
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="h-4 w-4 text-cyan-400 mt-0.5 shrink-0" />
-                  <span><strong>Authorized Operations:</strong> Agents must be deployed strictly to monitor, detect, and isolate cyber threats within authorized networks.</span>
+                  <span><strong>Lawful Use:</strong> Use the website or resources for any unlawful purpose or to solicit illegal cybersecurity activities.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="h-4 w-4 text-cyan-400 mt-0.5 shrink-0" />
-                  <span><strong>Restrictions:</strong> Customer shall not reverse-engineer, decompile, or create derivative works of our eBPF kernel modules or proprietary AI models.</span>
+                  <span><strong>System Integrity:</strong> Attempt to interfere with, compromise, or disrupt the integrity or security of the hosting network or infrastructure.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="h-4 w-4 text-cyan-400 mt-0.5 shrink-0" />
-                  <span><strong>Fair API Usage:</strong> Programmatic telemetry retrieval must adhere to published API rate thresholds to maintain global mesh stability.</span>
+                  <span><strong>Data Harvesting:</strong> Scrape, harvest, or extract data from this service using automated bots, spiders, or scrapers without express written authorization.</span>
                 </li>
               </ul>
             </div>
@@ -68,29 +68,29 @@ export const TermsPage = () => {
             <div className="border-t border-white/10 pt-8">
               <h2 className="text-xl font-bold text-white tracking-tight flex items-center gap-2.5 mb-4">
                 <CheckCircle2 className="h-5 w-5 text-emerald-400" />
-                3. Service Level Agreement (SLA) & Uptime
+                3. Intellectual Property Rights
               </h2>
               <p>
-                For Enterprise and Sovereign Enclave plans, NEXUS commits to a 99.999% Service Level Agreement for autonomous edge scrubbing and telemetry collection. Scheduled maintenance windows will be communicated at least 72 hours in advance via the SOC status dashboard.
+                All trademarks, logos, visual layouts, branding assets, custom illustrations, and original interface styling displayed on this website are the intellectual property of AEGIX and their respective rights holders. Commercial use, reproduction, or distribution is subject to the applicable marketplace license under which this template or asset was acquired.
               </p>
             </div>
 
             <div className="border-t border-white/10 pt-8">
               <h2 className="text-xl font-bold text-white tracking-tight flex items-center gap-2.5 mb-4">
                 <AlertTriangle className="h-5 w-5 text-amber-400" />
-                4. Limitation of Liability
+                4. Disclaimers & Limitation of Liability
               </h2>
               <p>
-                While the NEXUS neural defense mesh employs state-of-the-art autonomous models, no cybersecurity platform guarantees absolute immunity against all evolving threat vectors. In no event shall NEXUS be liable for indirect, incidental, or consequential damages exceeding the fees paid by Customer during the preceding twelve (12) months.
+                The materials and information on this website are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. In no event shall AEGIX or its creators be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use this website.
               </p>
             </div>
 
             <div className="border-t border-white/10 pt-8">
               <h2 className="text-xl font-bold text-white tracking-tight mb-4">
-                5. Governing Law & Arbitration
+                5. Governing Law
               </h2>
               <p>
-                These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law principles. Any dispute arising under these Terms shall be resolved via binding confidential arbitration in San Francisco, California.
+                These Terms shall be governed by and interpreted in accordance with applicable commercial laws, without regard to conflict of law principles. Any dispute arising under these Terms shall be resolved through competent legal jurisdiction.
               </p>
             </div>
           </div>
