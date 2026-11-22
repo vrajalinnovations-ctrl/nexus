@@ -22,11 +22,20 @@ const DocRedirect = () => {
   return null;
 };
 
+const ShowcaseRedirect = () => {
+  useEffect(() => {
+    window.location.replace('/documentation/landing.html');
+  }, []);
+  return null;
+};
+
 export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/home" element={<HomePage />} />
+      <Route path="/landing" element={<ShowcaseRedirect />} />
+      <Route path="/showcase" element={<ShowcaseRedirect />} />
       <Route path="/docs" element={<DocRedirect />} />
       <Route path="/documentation" element={<DocRedirect />} />
       <Route path="/about" element={<AboutPage />} />

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   Settings,
   X,
@@ -10,13 +11,42 @@ import {
   BookOpen,
   Check,
   ExternalLink,
-  Layers
+  Layers,
+  Sparkles
 } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { useSettings } from '@/context/SettingsContext';
 import logo from '@/assets/logo.png';
 
+const EXCLUDED_ROUTES = [
+  // Authentication Routes
+  '/signin',
+  '/login',
+  '/signup',
+  '/register',
+  '/forgot-password',
+  '/verify',
+  '/verify-email',
+  '/confirm-password',
+  '/reset-password',
+  // Error Routes
+  '/404',
+  '/500'
+];
+
+const MAIN_PAGES = [
+  '/',
+  '/home',
+  '/about',
+  '/features',
+  '/pricing',
+  '/contact',
+  '/privacy',
+  '/terms'
+];
+
 export const SettingsSidebar = () => {
+  const location = useLocation();
   const { theme, setTheme } = useTheme();
   const {
     direction,
@@ -26,8 +56,18 @@ export const SettingsSidebar = () => {
     setIsSettingsOpen
   } = useSettings();
 
+  // Hide on auth routes, explicit error pages (404, 500), and unknown catch-all 404 paths
+  const isHidden = EXCLUDED_ROUTES.includes(location.pathname) || !MAIN_PAGES.includes(location.pathname);
+
+  useEffect(() => {
+    if (isHidden && isSettingsOpen) {
+      setIsSettingsOpen(false);
+    }
+  }, [isHidden, isSettingsOpen, setIsSettingsOpen]);
+
   // Close on Escape key & Pause Lenis / Body scroll lock
   useEffect(() => {
+    if (isHidden) return;
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && isSettingsOpen) {
         setIsSettingsOpen(false);
@@ -52,7 +92,11 @@ export const SettingsSidebar = () => {
       }
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isSettingsOpen, setIsSettingsOpen]);
+  }, [isSettingsOpen, setIsSettingsOpen, isHidden]);
+
+  if (isHidden) {
+    return null;
+  }
 
   return (
     <>
@@ -276,6 +320,24 @@ export const SettingsSidebar = () => {
             </span>
 
             <div className="space-y-2">
+              <a
+                href="/documentation/landing.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-3 rounded-2xl border border-slate-300/90 dark:border-white/20 bg-slate-200/60 dark:bg-white/5 hover:bg-slate-300/70 dark:hover:bg-white/10 dark:hover:border-white/30 backdrop-blur-xl transition-all group cursor-pointer text-slate-900 dark:text-white"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-lg bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 flex items-center justify-center">
+                    <Sparkles className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold">Item Showcase Landing</div>
+                    <div className="text-[10px] text-slate-500 dark:text-slate-400">Marketing &amp; feature presentation</div>
+                  </div>
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+              </a>
+
               <a
                 href="/documentation/index.html"
                 target="_blank"
