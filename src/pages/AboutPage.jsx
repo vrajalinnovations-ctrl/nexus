@@ -43,8 +43,8 @@ const team = (aboutData.team || []).map((member, idx) => ({
 }));
 
 const Pill = ({ children }) => (
-  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-cyan-300 backdrop-blur-xl shadow-md">
-    <Sparkles className="h-3 w-3 text-cyan-400" />
+  <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-gradient-to-r from-cyan-500/15 via-indigo-500/15 to-fuchsia-500/15 px-4 py-1.5 text-xs font-semibold text-cyan-700 dark:text-cyan-300 backdrop-blur-xl shadow-md shadow-cyan-500/10">
+    <Sparkles className="h-3.5 w-3.5 text-cyan-500 dark:text-cyan-400" />
     {children}
   </span>
 );
@@ -52,9 +52,9 @@ const Pill = ({ children }) => (
 const BookCall = () => (
   <a
     href="#contact"
-    className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 px-4 py-2 text-xs font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/40 shadow-lg"
+    className="inline-flex shrink-0 items-center gap-2 rounded-full border border-cyan-500/40 bg-gradient-to-r from-cyan-500/10 via-indigo-500/10 to-transparent hover:from-cyan-500/20 hover:to-indigo-500/20 px-4 py-2 text-xs font-semibold text-slate-800 dark:text-white backdrop-blur-xl transition-all duration-300 hover:border-cyan-400 shadow-md cursor-pointer"
   >
-    <Phone className="h-3 w-3 text-cyan-300" />
+    <Phone className="h-3.5 w-3.5 text-cyan-600 dark:text-cyan-300" />
     Book a call
   </a>
 );
@@ -65,9 +65,9 @@ const SectionHead = ({ pill, dark, light }) => (
       <Pill>{pill}</Pill>
     </div>
     <div className="flex items-end justify-between gap-6 flex-wrap">
-      <h2 className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+      <h2 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white sm:text-5xl">
         {dark}
-        {light && <span className="block text-slate-400 sm:inline"> {light}</span>}
+        {light && <span className="block text-slate-500 dark:text-slate-400 sm:inline"> {light}</span>}
       </h2>
       <BookCall />
     </div>
@@ -75,11 +75,11 @@ const SectionHead = ({ pill, dark, light }) => (
 );
 
 const Divider = () => (
-  <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+  <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-300 dark:via-white/20 to-transparent" />
 );
 
 const Photo = ({ src, alt, className }) => (
-  <div className={`relative w-full overflow-hidden border border-white/20 bg-slate-900 shadow-2xl ${className}`}>
+  <div className={`relative w-full overflow-hidden border border-slate-200 dark:border-white/20 bg-slate-100 dark:bg-slate-900 shadow-2xl ${className}`}>
     <img
       src={src}
       alt={alt}
@@ -100,24 +100,28 @@ export const AboutPage = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-black font-sans text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200 overflow-hidden">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-96 w-full max-w-5xl -translate-x-1/2 rounded-full bg-indigo-700/25 blur-3xl" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/20 blur-3xl" />
+    <div className="relative min-h-screen w-full bg-[#f4f5f8] dark:bg-black font-sans text-slate-900 dark:text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-800 dark:selection:text-cyan-200 overflow-hidden transition-colors duration-300">
+      {/* Radiant Multi-Color Ambient Aurora Blobs */}
+      <div className="pointer-events-none absolute left-1/4 top-0 h-[450px] w-[450px] -translate-x-1/2 rounded-full bg-gradient-to-br from-cyan-500/25 via-indigo-600/25 to-transparent blur-3xl animate-pulse" />
+      <div className="pointer-events-none absolute right-1/4 top-1/3 h-[450px] w-[450px] rounded-full bg-gradient-to-bl from-fuchsia-500/25 via-violet-600/25 to-transparent blur-3xl animate-pulse" />
+      <div className="pointer-events-none absolute left-1/2 bottom-20 h-80 w-full max-w-4xl -translate-x-1/2 rounded-full bg-gradient-to-tr from-emerald-500/15 via-indigo-600/20 to-fuchsia-500/15 blur-3xl" />
 
       <Navbar />
 
       <main className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-16 sm:px-10">
         <section className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <Pill>About Us</Pill>
-          <h1 className="mt-8 flex flex-wrap items-center justify-center gap-x-3 text-4xl font-extrabold tracking-tight sm:text-6xl text-white">
-            <span className="text-slate-400">Welcome to</span>
+          <h1 className="mt-8 flex flex-wrap items-center justify-center gap-x-3 text-4xl font-extrabold tracking-tight sm:text-6xl text-slate-900 dark:text-white">
+            <span className="text-slate-500 dark:text-slate-400">Welcome to</span>
             <span className="inline-flex items-center gap-2">
-              <Shield className="h-8 w-8 text-cyan-400 sm:h-12 sm:w-12" />
-              <span className="bg-gradient-to-r from-white via-slate-100 to-cyan-300 bg-clip-text text-transparent font-bold">AEGIX</span>
+              <Shield className="h-8 w-8 text-cyan-600 dark:text-cyan-400 sm:h-12 sm:w-12" />
+              <span className="bg-gradient-to-r from-cyan-500 via-indigo-500 to-fuchsia-500 dark:from-cyan-300 dark:via-indigo-300 dark:to-fuchsia-400 bg-clip-text text-transparent font-extrabold drop-shadow-[0_10px_25px_rgba(99,102,241,0.25)]">
+                NEXAI
+              </span>
             </span>
           </h1>
-          <p className="mt-8 text-lg font-medium leading-relaxed text-slate-300 sm:text-xl">
-            We believe in the transformative <span className="text-cyan-400">power of autonomous defense.</span> Our
+          <p className="mt-8 text-lg font-medium leading-relaxed text-slate-600 dark:text-slate-300 sm:text-xl">
+            We believe in the transformative <span className="text-cyan-600 dark:text-cyan-400 font-semibold">power of autonomous defense.</span> Our
             mission is to stop attacks before they run, so every team can build without fear.
           </p>
         </section>
@@ -127,11 +131,11 @@ export const AboutPage = () => {
             <SectionHead pill="Who We Are" dark="Get to Know" light="Us" />
             <Photo
               src={about}
-              alt="The Aegix team collaborating"
+              alt="The NexAI team collaborating"
               className="aspect-video rounded-3xl"
             />
-            <p className="mx-auto max-w-2xl text-center text-xs leading-relaxed text-slate-400">
-              AEGIX was founded by kernel engineers and researchers who saw that humans can't out-type automated
+            <p className="mx-auto max-w-2xl text-center text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+              NEXAI was founded by kernel engineers and researchers who saw that humans can't out-type automated
               attacks. Today our team of engineers, cryptographers and data scientists builds defense that answers in
               microseconds.
             </p>
@@ -141,24 +145,33 @@ export const AboutPage = () => {
 
           <section className="space-y-8">
             <SectionHead pill="Our Values" dark="What We" light="Stand For" />
-            <ul className="divide-y divide-white/10">
-              {values.map(({ icon: Icon, name, label, text }) => (
-                <li
-                  key={name}
-                  className="grid grid-cols-1 gap-4 py-6 md:grid-cols-3 md:gap-8 items-start"
-                >
-                  <div className="flex items-center gap-3 text-cyan-300">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/5 backdrop-blur-md shadow-md">
-                      <Icon className="h-5 w-5 text-cyan-400" strokeWidth={1.5} />
+            <ul className="divide-y divide-slate-200 dark:divide-white/10">
+              {values.map(({ icon: Icon, name, label, text }, vIdx) => {
+                const valColors = [
+                  { border: 'border-cyan-500/30', bg: 'bg-cyan-500/15', text: 'text-cyan-600 dark:text-cyan-400' },
+                  { border: 'border-indigo-500/30', bg: 'bg-indigo-500/15', text: 'text-indigo-600 dark:text-indigo-400' },
+                  { border: 'border-violet-500/30', bg: 'bg-violet-500/15', text: 'text-violet-600 dark:text-violet-400' },
+                  { border: 'border-emerald-500/30', bg: 'bg-emerald-500/15', text: 'text-emerald-600 dark:text-emerald-400' },
+                ];
+                const vc = valColors[vIdx % valColors.length];
+                return (
+                  <li
+                    key={name}
+                    className="grid grid-cols-1 gap-4 py-6 md:grid-cols-3 md:gap-8 items-start"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className={`flex h-10 w-10 items-center justify-center rounded-xl border ${vc.border} ${vc.bg} backdrop-blur-md shadow-md`}>
+                        <Icon className={`h-5 w-5 ${vc.text}`} strokeWidth={1.8} />
+                      </div>
+                      <span className="text-sm font-bold text-slate-900 dark:text-white">{name}</span>
                     </div>
-                    <span className="text-sm font-semibold text-white">{name}</span>
-                  </div>
-                  <div className="md:col-span-2">
-                    <p className="text-xs font-mono uppercase tracking-wider text-slate-400">{label}</p>
-                    <p className="mt-1 text-sm font-medium text-slate-200 leading-relaxed">{text}</p>
-                  </div>
-                </li>
-              ))}
+                    <div className="md:col-span-2">
+                      <p className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400">{label}</p>
+                      <p className="mt-1 text-sm font-medium text-slate-700 dark:text-slate-200 leading-relaxed">{text}</p>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </section>
 
@@ -169,17 +182,17 @@ export const AboutPage = () => {
             <div className="grid grid-cols-2 gap-x-6 gap-y-10 pb-12 sm:grid-cols-3 lg:grid-cols-6">
               {team.map((p, i) => (
                 <div key={p.name} className={`group ${i % 2 === 1 ? 'lg:translate-y-16' : ''}`}>
-                  <div className={`relative overflow-hidden border border-white/20 bg-white/5 backdrop-blur-md shadow-xl transition-all duration-300 hover:border-cyan-400/50 aspect-square ${i % 2 === 0 ? 'rounded-full' : 'rounded-t-full rounded-b-3xl'}`}>
+                  <div className={`relative overflow-hidden border border-slate-300 dark:border-white/20 bg-slate-200 dark:bg-white/5 backdrop-blur-md shadow-xl transition-all duration-300 hover:border-cyan-500/50 aspect-square ${i % 2 === 0 ? 'rounded-full' : 'rounded-t-full rounded-b-3xl'}`}>
                     <img
                       src={p.photo}
                       alt={p.name}
-                                      className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                      className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0 group-hover:scale-105"
                     />
                   </div>
-                  <p className="mt-3 text-sm font-semibold text-white">{p.name}</p>
-                  <p className="mt-0.5 flex items-center gap-1.5 text-xs text-slate-400">
+                  <p className="mt-3 text-sm font-semibold text-slate-900 dark:text-white">{p.name}</p>
+                  <p className="mt-0.5 flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
                     {p.role}
-                    <Linkedin className="h-3 w-3 fill-slate-400 transition-colors group-hover:fill-cyan-400" />
+                    <Linkedin className="h-3 w-3 fill-slate-400 transition-colors group-hover:fill-cyan-500" />
                   </p>
                 </div>
               ))}
@@ -208,20 +221,20 @@ export const AboutPage = () => {
                 }}
               />
 
-              <span className="pointer-events-none absolute left-1/4 top-1/4 -translate-x-1/2 -translate-y-1/2 text-cyan-400/50 font-mono text-xs select-none">+</span>
-              <span className="pointer-events-none absolute right-1/4 top-1/4 translate-x-1/2 -translate-y-1/2 text-cyan-400/50 font-mono text-xs select-none">+</span>
-              <span className="pointer-events-none absolute left-1/4 bottom-1/4 -translate-x-1/2 translate-y-1/2 text-indigo-400/50 font-mono text-xs select-none">+</span>
-              <span className="pointer-events-none absolute right-1/4 bottom-1/4 translate-x-1/2 translate-y-1/2 text-indigo-400/50 font-mono text-xs select-none">+</span>
+              <span className="pointer-events-none absolute left-1/4 top-1/4 -translate-x-1/2 -translate-y-1/2 text-cyan-500/50 font-mono text-xs select-none">+</span>
+              <span className="pointer-events-none absolute right-1/4 top-1/4 translate-x-1/2 -translate-y-1/2 text-cyan-500/50 font-mono text-xs select-none">+</span>
+              <span className="pointer-events-none absolute left-1/4 bottom-1/4 -translate-x-1/2 translate-y-1/2 text-indigo-500/50 font-mono text-xs select-none">+</span>
+              <span className="pointer-events-none absolute right-1/4 bottom-1/4 translate-x-1/2 translate-y-1/2 text-indigo-500/50 font-mono text-xs select-none">+</span>
 
               <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl" />
               <div className="pointer-events-none absolute -left-16 -bottom-16 h-64 w-64 rounded-full bg-indigo-600/15 blur-3xl" />
 
               {sent ? (
                 <div className="relative text-center py-8">
-                  <p className="text-xl font-bold text-white">
+                  <p className="text-xl font-bold text-slate-900 dark:text-white">
                     Thanks for connecting.
                   </p>
-                  <p className="mt-2 text-sm text-cyan-300 font-mono">
+                  <p className="mt-2 text-sm text-cyan-600 dark:text-cyan-300 font-mono">
                     A Principal Security Architect will be in touch shortly.
                   </p>
                 </div>
@@ -231,19 +244,19 @@ export const AboutPage = () => {
                     required
                     type="text"
                     placeholder="Name"
-                    className="w-full rounded-xl border border-white/15 bg-black/60 px-4 py-3 text-sm text-white placeholder-slate-400 outline-none backdrop-blur-md transition-colors focus:border-cyan-400/60"
+                    className="w-full rounded-xl border border-slate-300 dark:border-white/15 bg-white dark:bg-black/60 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none backdrop-blur-md transition-colors focus:border-cyan-500 dark:focus:border-cyan-400/60"
                   />
                   <input
                     required
                     type="email"
                     placeholder="Email address"
-                    className="w-full rounded-xl border border-white/15 bg-black/60 px-4 py-3 text-sm text-white placeholder-slate-400 outline-none backdrop-blur-md transition-colors focus:border-cyan-400/60"
+                    className="w-full rounded-xl border border-slate-300 dark:border-white/15 bg-white dark:bg-black/60 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none backdrop-blur-md transition-colors focus:border-cyan-500 dark:focus:border-cyan-400/60"
                   />
                   <textarea
                     required
                     rows={5}
                     placeholder="Share what you need secured..."
-                    className="w-full resize-none rounded-xl border border-white/15 bg-black/60 px-4 py-3 text-sm text-white placeholder-slate-400 outline-none backdrop-blur-md transition-colors focus:border-cyan-400/60"
+                    className="w-full resize-none rounded-xl border border-slate-300 dark:border-white/15 bg-white dark:bg-black/60 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none backdrop-blur-md transition-colors focus:border-cyan-500 dark:focus:border-cyan-400/60"
                   />
                   <button
                     type="submit"

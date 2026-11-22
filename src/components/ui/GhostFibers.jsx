@@ -88,7 +88,7 @@ void main() {
   vec2 resolution = max(uResolution, vec2(1.0));
   vec2 uv = (2.0 * gl_FragCoord.xy - resolution) / resolution.y;
   float time = uTime * uSpeed;
-  vec3 backdrop = mix(vec3(0.070588, 0.058824, 0.090196), vec3(1.0), step(0.5, uLightMode));
+  vec3 backdrop = mix(vec3(0.070588, 0.058824, 0.090196), vec3(0.95686, 0.96078, 0.97255), step(0.5, uLightMode));
   vec3 centerTone = max(uLineColor * 0.85567 - uGlowColor * 0.06186, vec3(0.0));
   vec3 cloudTone = uLineColor * 0.19588 + uGlowColor * 0.2268;
   vec2 p = uv;
@@ -186,54 +186,67 @@ const GhostFibers = ({
     const container = containerRef.current;
     if (!container) return;
 
-    const renderer = new Renderer({
-      webgl: 2,
-      alpha: false,
-      antialias: false,
-      dpr: Math.min(Math.max(dpr, 0.5), 2)
-    });
-    const gl = renderer.gl;
-    const canvas = gl.canvas;
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.display = 'block';
-    canvas.setAttribute('aria-hidden', 'true');
-    container.appendChild(canvas);
+    let renderer, gl, canvas, geometry, program, mesh;
+    try {
+      renderer = new Renderer({
+        webgl: 2,
+        alpha: false,
+        antialias: false,
+        dpr: Math.min(Math.max(dpr, 0.5), 2)
+      });
+      gl = renderer.gl;
+      if (!gl) throw new Error('WebGL 2 not supported');
+      canvas = gl.canvas;
+      if (!canvas) throw new Error('Canvas not available');
+      canvas.style.width = '100%';
+      canvas.style.height = '100%';
+      canvas.style.display = 'block';
+      canvas.setAttribute('aria-hidden', 'true');
+      container.appendChild(canvas);
 
-    const geometry = new Triangle(gl);
-    const program = new Program(gl, {
-      vertex,
-      fragment,
-      uniforms: {
-        uResolution: { value: new Float32Array([1, 1]) },
-        uTime: { value: 0 },
-        uSpeed: { value: 0.2 },
-        uScale: { value: 2 },
-        uRotation: { value: 0 },
-        uRotationSpeed: { value: 0.25 },
-        uLayers: { value: 4 },
-        uWaveAmplitude: { value: 0.015 },
-        uWaveFrequency: { value: 3 },
-        uWaveSpeed: { value: 0.15 },
-        uLayerSpeed: { value: 0.08 },
-        uTwist: { value: 0.1 },
-        uTwistFrequency: { value: 5 },
-        uTwistSpeed: { value: 1.2 },
-        uLineFrequency: { value: 5 },
-        uLineSpacing: { value: 2 },
-        uLineSharpness: { value: 16 },
-        uGlowFalloff: { value: 10 },
-        uGlowIntensity: { value: 1.6 },
-        uBrightness: { value: 2 },
-        uBlueBoost: { value: 1.25 },
-        uVignette: { value: 0.8 },
-        uGrain: { value: 0.05 },
-        uLightMode: { value: 0 },
-        uLineColor: { value: new Float32Array(hexToRgb('#140E35')) },
-        uGlowColor: { value: new Float32Array(hexToRgb('#3437A0')) }
-      }
-    });
-    const mesh = new Mesh(gl, { geometry, program });
+      geometry = new Triangle(gl);
+      program = new Program(gl, {
+        vertex,
+        fragment,
+        uniforms: {
+          uResolution: { value: new Float32Array([1, 1]) },
+          uTime: { value: 0 },
+          uSpeed: { value: 0.2 },
+          uScale: { value: 2 },
+          uRotation: { value: 0 },
+          uRotationSpeed: { value: 0.25 },
+          uLayers: { value: 4 },
+          uWaveAmplitude: { value: 0.015 },
+          uWaveFrequency: { value: 3 },
+          uWaveSpeed: { value: 0.15 },
+          uLayerSpeed: { value: 0.08 },
+          uTwist: { value: 0.1 },
+          uTwistFrequency: { value: 5 },
+          uTwistSpeed: { value: 1.2 },
+          uLineFrequency: { value: 5 },
+          uLineSpacing: { value: 2 },
+          uLineSharpness: { value: 16 },
+          uGlowFalloff: { value: 10 },
+          uGlowIntensity: { value: 1.6 },
+          uBrightness: { value: 2 },
+          uBlueBoost: { value: 1.25 },
+          uVignette: { value: 0.8 },
+          uGrain: { value: 0.05 },
+          uLightMode: { value: 0 },
+          uLineColor: { value: new Float32Array(hexToRgb('#140E35')) },
+          uGlowColor: { value: new Float32Array(hexToRgb('#3437A0')) }
+        }
+      });
+      mesh = new Mesh(gl, { geometry, program });
+    } catch {
+      // Graceful fallback for environments/devices without WebGL2 support
+      container.style.background = lightMode
+        ? 'radial-gradient(circle at 50% 30%, #e8ecf4 0%, #f4f5f8 70%)'
+        : 'radial-gradient(circle at 50% 30%, #1e1b4b 0%, #030712 70%)';
+      return () => {
+        container.style.background = '';
+      };
+    }
 
     let frameId = 0;
     let elapsed = 0;
@@ -335,16 +348,16 @@ const GhostFibers = ({
       document.removeEventListener('visibilitychange', handleVisibility);
       reducedMotion.removeEventListener('change', handleReducedMotion);
       contexts.delete(container);
-      if (canvas.parentNode === container) container.removeChild(canvas);
-      gl.getExtension('WEBGL_lose_context')?.loseContext();
+      if (canvas && canvas.parentNode === container) container.removeChild(canvas);
+      if (gl) gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
-  }, [dpr]);
+  }, [dpr, lightMode]);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
     const context = contexts.get(container);
-    if (!context) return;
+    if (!context || !context.program) return;
 
     const uniforms = context.program.uniforms;
     setColor(uniforms.uLineColor, lineColor);

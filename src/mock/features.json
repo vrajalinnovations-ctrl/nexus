@@ -5,9 +5,9 @@
     "subheading": "Smart, scalable protection that works while you sleep."
   },
   "threats": [
-    { "label": "Malware", "count": "5,396", "dot": "bg-indigo-500" },
-    { "label": "Exploits", "count": "4,240", "dot": "bg-violet-300" },
-    { "label": "DDoS", "count": "3,211", "dot": "bg-pink-300" }
+    { "label": "Malware", "count": "5,396", "dot": "bg-cyan-400 shadow-sm shadow-cyan-400/50" },
+    { "label": "Exploits", "count": "4,240", "dot": "bg-indigo-500 shadow-sm shadow-indigo-500/50" },
+    { "label": "DDoS", "count": "3,211", "dot": "bg-fuchsia-400 shadow-sm shadow-fuchsia-400/50" }
   ],
   "threatSummary": {
     "totalBlocked": "12,847",
@@ -73,7 +73,7 @@
       "title": "Ring-0 Kernel eBPF Telemetry",
       "badge": "Sub-6ms Latency",
       "tagline": "Kernel-level execution without code instrumentation",
-      "description": "Aegix injects sandboxed eBPF bytecode directly into Linux kernel space. Analyze syscalls, socket buffers, and process namespaces with under 0.2% CPU overhead and zero sidecar baggage.",
+      "description": "NexAI injects sandboxed eBPF bytecode directly into Linux kernel space. Analyze syscalls, socket buffers, and process namespaces with under 0.2% CPU overhead and zero sidecar baggage.",
       "metrics": ["Sub-6ms syscall inspection", "0.2% CPU overhead", "Zero sidecar containers"]
     },
     {

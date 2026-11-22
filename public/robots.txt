@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://aegix-template.vercel.app/sitemap.xml
+Sitemap: https://nexai-template.vercel.app/sitemap.xml

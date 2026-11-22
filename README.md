@@ -1,13 +1,13 @@
-# AEGIX — Modern Cybersecurity & AI SaaS Landing Page Template
+# NEXAI — Modern Cybersecurity & AI SaaS Landing Page Template
 
-![AEGIX Version](https://img.shields.io/badge/version-1.0.0-cyan.svg)
+![NEXAI Version](https://img.shields.io/badge/version-1.0.0-cyan.svg)
 ![React 19](https://img.shields.io/badge/React-19.x-61dafb.svg)
 ![Vite 8](https://img.shields.io/badge/Vite-8.x-646cff.svg)
 ![Tailwind CSS 4](https://img.shields.io/badge/TailwindCSS-v4.x-38bdf8.svg)
 ![Author](https://img.shields.io/badge/Author-vrajalInnovations-indigo.svg)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=flat-square&logo=vercel)](https://aegix-template.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=flat-square&logo=vercel)](https://nexai-template.vercel.app/)
 
-**AEGIX** is a modern, high-converting React 19 & Tailwind CSS v4 landing page template designed specifically for next-generation **AI cybersecurity, cloud defense, DevSecOps, and enterprise SaaS startups**. Built with **React 19**, **Vite 8**, and **Tailwind CSS v4**, AEGIX combines dark frosted-glass specular aesthetics, interactive WebGL ambient effects, an interactive "Request Demo" lead capture modal, Formspree/webhook-ready contact forms, and a complete authentication suite.
+**NEXAI** is a modern, high-converting React 19 & Tailwind CSS v4 landing page template designed specifically for next-generation **AI cybersecurity, cloud defense, DevSecOps, and enterprise SaaS startups**. Built with **React 19**, **Vite 8**, and **Tailwind CSS v4**, NEXAI combines dark frosted-glass specular aesthetics, interactive WebGL ambient effects, an interactive "Request Demo" lead capture modal, Formspree/webhook-ready contact forms, and a complete authentication suite.
 
 ---
 
@@ -79,7 +79,7 @@ npm -v
 
 2. **Navigate into the Project Folder**
    ```bash
-   cd aegix
+   cd nexai
    ```
 
 3. **Install Dependencies**
@@ -134,7 +134,7 @@ In the project root, you can run:
 ## Project Structure
 
 ```text
-aegix/
+nexai/
 ├── public/
 │   ├── documentation/            # Offline cyber-dark documentation portal
 │   │   ├── css/app.css           # Standalone documentation styles
@@ -206,7 +206,7 @@ aegix/
 - Open `src/mock/navigation.json` and edit the `"brand"` object:
   ```json
   "brand": {
-    "name": "AEGIX",
+    "name": "NEXAI",
     "subtitle": "Cloud Security"
   }
   ```
@@ -259,7 +259,7 @@ aegix/
 
 ## Browser Support
 
-AEGIX is tested and compatible with modern evergreen browsers:
+NEXAI is tested and compatible with modern evergreen browsers:
 - Google Chrome (latest)
 - Mozilla Firefox (latest)
 - Apple Safari (latest desktop & iOS)
@@ -270,10 +270,13 @@ AEGIX is tested and compatible with modern evergreen browsers:
 
 ## Credits & Sources
 
-All external assets and libraries used in this template are licensed for commercial use:
-- **Icons:** [Lucide Icons](https://lucide.dev/) (ISC License) & [Bootstrap Icons](https://icons.getbootstrap.com/)
-- **Fonts:** [Google Fonts](https://fonts.google.com/) — *Plus Jakarta Sans* (OFL)
+All external assets, libraries, and graphics used in this template are licensed for commercial use:
+- **Icons:** [Lucide Icons](https://lucide.dev/) (ISC License) & [Bootstrap Icons](https://icons.getbootstrap.com/) (MIT License)
+- **Fonts:** [Google Fonts](https://fonts.google.com/) — *Plus Jakarta Sans* (SIL OFL 1.1)
 - **Smooth Scroll:** [Lenis](https://github.com/darkroomengineering/lenis) (MIT License)
+- **WebGL Math:** [OGL](https://github.com/oframe/ogl) (MIT License)
+- **Photography:** [Unsplash](https://unsplash.com/) & [Freepik](https://freepik.com/) (Free Commercial Licenses)
+- **Cyber Graphics & 3D Assets:** Custom Midjourney AI & Blender render pipeline (Royalty-free commercial use)
 
 ---
 

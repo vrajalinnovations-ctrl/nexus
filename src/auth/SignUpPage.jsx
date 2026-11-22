@@ -6,7 +6,7 @@ import authData from '@/mock/auth.json';
 import logo from '@/assets/logo.png';
 
 const inputClass =
-  'w-full rounded-xl border border-white/15 bg-white/5 py-3.5 pl-11 text-sm text-white placeholder-slate-400 outline-none backdrop-blur-md transition-all focus:border-cyan-400/50 focus:bg-white/10';
+  'w-full rounded-xl border border-slate-300 dark:border-white/15 bg-white/80 dark:bg-white/5 py-3.5 pl-11 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none backdrop-blur-md transition-all focus:border-cyan-500 dark:focus:border-cyan-400/50 focus:bg-white dark:focus:bg-white/10';
 
 export const SignUpPage = () => {
   const navigate = useNavigate();
@@ -44,28 +44,28 @@ export const SignUpPage = () => {
   const busy = loading || success;
 
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-black px-3.5 sm:px-4 py-8 sm:py-12 font-sans text-white selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-[#f4f5f8] dark:bg-black px-3.5 sm:px-4 py-8 sm:py-12 font-sans text-slate-900 dark:text-white selection:bg-cyan-500/30 selection:text-cyan-800 dark:selection:text-cyan-200 transition-colors duration-300">
       <FloatingBackground />
 
       <div className="pointer-events-none absolute left-1/2 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-600/25 blur-3xl" />
       <div className="pointer-events-none absolute left-1/2 bottom-1/4 h-80 w-80 -translate-x-1/2 translate-y-1/2 rounded-full bg-cyan-600/20 blur-3xl" />
 
       <main className="relative z-10 w-full max-w-md">
-        <Link to="/" className="mx-auto mb-6 sm:mb-8 flex w-fit items-center gap-2.5 group" aria-label="Aegix home">
+        <Link to="/" className="mx-auto mb-6 sm:mb-8 flex w-fit items-center gap-2.5 group" aria-label="NexAI home">
           <img
             src={logo}
-            alt="AEGIX"
+            alt="NEXAI"
             className="h-10 w-10 object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="text-lg font-bold tracking-tight text-white">AEGIX</span>
+          <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">NEXAI</span>
         </Link>
 
-        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/20 bg-white/5 p-5 sm:p-8 md:p-10 backdrop-blur-xl shadow-2xl transition-all duration-300">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent rounded-2xl sm:rounded-3xl" />
+        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-300 dark:border-white/20 bg-slate-200 dark:bg-white/5 p-5 sm:p-8 md:p-10 backdrop-blur-xl shadow-2xl transition-all duration-300">
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/5 dark:from-white/10 via-transparent to-transparent rounded-2xl sm:rounded-3xl" />
 
           <div className="relative z-10">
-            <h1 className="text-center text-2xl sm:text-3xl font-bold tracking-tight text-white">Create an account</h1>
-            <p className="mt-2 text-center text-xs sm:text-sm text-slate-300">Start your 14-day free trial</p>
+            <h1 className="text-center text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Create an account</h1>
+            <p className="mt-2 text-center text-xs sm:text-sm text-slate-600 dark:text-slate-300">Start your 14-day free trial</p>
 
             <form onSubmit={handleSubmit} className="mt-8 space-y-4">
               <div className="relative">
@@ -87,7 +87,7 @@ export const SignUpPage = () => {
 
               <div className="relative">
                 <label htmlFor="email" className="sr-only">
-                  Work Email
+                  Email
                 </label>
                 <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                 <input
@@ -121,7 +121,7 @@ export const SignUpPage = () => {
                   type="button"
                   onClick={() => setShowPassword((v) => !v)}
                   aria-label={showPassword ? 'Hide password' : 'Show password'}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 transition-colors hover:text-white"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 transition-colors hover:text-slate-900 dark:hover:text-white"
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
@@ -146,14 +146,14 @@ export const SignUpPage = () => {
                   type="button"
                   onClick={() => setShowConfirmPassword((v) => !v)}
                   aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 transition-colors hover:text-white"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 transition-colors hover:text-slate-900 dark:hover:text-white"
                 >
                   {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
               </div>
 
               {error && (
-                <div className="rounded-xl border border-rose-500/30 bg-rose-950/40 px-3.5 py-2.5 text-center text-xs text-rose-300 backdrop-blur-md">
+                <div className="rounded-xl border border-rose-500/30 bg-rose-50 dark:bg-rose-950/40 px-3.5 py-2.5 text-center text-xs text-rose-700 dark:text-rose-300 backdrop-blur-md">
                   {error}
                 </div>
               )}
@@ -161,12 +161,12 @@ export const SignUpPage = () => {
               <button
                 type="submit"
                 disabled={busy}
-                className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3.5 text-sm font-semibold text-black transition-colors hover:bg-slate-200 disabled:cursor-not-allowed disabled:opacity-80 shadow-lg shadow-white/10"
+                className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-slate-200 py-3.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-80 shadow-lg cursor-pointer"
               >
                 {success ? (
-                  <Check className="h-4 w-4 text-emerald-600" />
+                  <Check className="h-4 w-4 text-emerald-500" />
                 ) : loading ? (
-                  <span className="h-4 w-4 animate-spin rounded-full border-2 border-black/20 border-t-black" />
+                  <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-400 dark:border-black/20 border-t-white dark:border-t-black" />
                 ) : (
                   <>
                     Create account
@@ -176,21 +176,21 @@ export const SignUpPage = () => {
               </button>
             </form>
 
-            <p className="mt-4 text-center text-xs text-slate-400">
+            <p className="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
               By registering, you agree to our{' '}
-              <Link to="/terms" className="text-slate-300 underline underline-offset-2 hover:text-cyan-300">
+              <Link to="/terms" className="text-slate-700 dark:text-slate-300 underline underline-offset-2 hover:text-cyan-600 dark:hover:text-cyan-300">
                 Terms
               </Link>{' '}
               and{' '}
-              <Link to="/privacy" className="text-slate-300 underline underline-offset-2 hover:text-cyan-300">
+              <Link to="/privacy" className="text-slate-700 dark:text-slate-300 underline underline-offset-2 hover:text-cyan-600 dark:hover:text-cyan-300">
                 Privacy Policy
               </Link>.
             </p>
 
             <div className="my-6 flex items-center gap-4">
-              <span className="h-px flex-1 bg-white/10" />
-              <span className="text-xs text-slate-400">or continue with</span>
-              <span className="h-px flex-1 bg-white/10" />
+              <span className="h-px flex-1 bg-slate-200 dark:bg-white/10" />
+              <span className="text-xs text-slate-500 dark:text-slate-400">or continue with</span>
+              <span className="h-px flex-1 bg-slate-200 dark:bg-white/10" />
             </div>
 
             <div className="grid grid-cols-2 gap-3">
@@ -200,9 +200,9 @@ export const SignUpPage = () => {
                   type="button"
                   disabled={busy}
                   onClick={() => finish(600)}
-                  className="flex items-center justify-center gap-2 truncate rounded-xl border border-white/15 bg-white/5 px-3 py-3 text-xs font-medium text-slate-200 backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/30 hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+                  className="flex items-center justify-center gap-2 truncate rounded-xl border border-slate-300 dark:border-white/15 bg-white/80 dark:bg-white/5 px-3 py-3 text-xs font-medium text-slate-700 dark:text-slate-200 backdrop-blur-md transition-all hover:bg-slate-100 dark:hover:bg-white/10 hover:border-slate-400 dark:hover:border-white/30 hover:text-slate-900 dark:hover:text-white disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer"
                 >
-                  <Shield className="h-3.5 w-3.5 shrink-0 text-cyan-300" />
+                  <Shield className="h-3.5 w-3.5 shrink-0 text-cyan-600 dark:text-cyan-300" />
                   <span className="truncate">{prov.name}</span>
                 </button>
               ))}
@@ -210,15 +210,15 @@ export const SignUpPage = () => {
           </div>
         </div>
 
-        <p className="mt-6 text-center text-sm text-slate-400">
+        <p className="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
           Already have an account?{' '}
-          <Link to="/signin" className="font-semibold text-white underline underline-offset-4 hover:text-cyan-300 transition-colors">
+          <Link to="/signin" className="font-semibold text-slate-900 dark:text-white underline underline-offset-4 hover:text-cyan-600 dark:hover:text-cyan-300 transition-colors">
             Sign in
           </Link>
         </p>
 
-        <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-3 text-center text-xs text-slate-400 backdrop-blur-md">
-          <span className="text-cyan-300 font-medium">Template Note:</span> Authentication flows are styled and ready for integration with Supabase, Clerk, Firebase, or Auth0.
+        <div className="mt-4 rounded-xl border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 p-3 text-center text-xs text-slate-500 dark:text-slate-400 backdrop-blur-md">
+          <span className="text-cyan-700 dark:text-cyan-300 font-medium">Template Note:</span> Authentication flows are styled and ready for integration with Supabase, Clerk, Firebase, or Auth0.
         </div>
       </main>
     </div>

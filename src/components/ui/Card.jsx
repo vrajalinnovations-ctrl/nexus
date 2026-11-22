@@ -13,7 +13,7 @@ export const Card = ({
 }) => {
   const overflowStyle = overflowVisible ? 'overflow-visible' : 'overflow-hidden';
   const glassStyle =
-    'border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/30 backdrop-blur-xl shadow-2xl transition-all duration-300';
+    'border border-slate-300/90 bg-slate-200 hover:bg-slate-300/70 hover:border-cyan-500/40 dark:border-white/20 dark:bg-white/5 dark:hover:bg-white/10 dark:hover:border-cyan-400/50 backdrop-blur-xl shadow-md hover:shadow-xl dark:shadow-2xl transition-all duration-300';
   const baseStyle = `group relative flex flex-col rounded-3xl ${padding} ${glassStyle} ${overflowStyle}`;
 
   return (
@@ -21,8 +21,14 @@ export const Card = ({
       className={`${baseStyle} ${className}`}
       {...props}
     >
+      {/* Iridescent Ambient Glow on hover */}
+      <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-cyan-500/20 via-indigo-500/20 to-fuchsia-500/20 blur-sm" />
+
+      {/* Top subtle radiant light beam */}
+      <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 dark:via-cyan-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
       {sheen && (
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent rounded-3xl overflow-hidden" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/5 dark:from-white/10 via-transparent to-transparent rounded-3xl overflow-hidden" />
       )}
 
       {badge && (
@@ -33,12 +39,12 @@ export const Card = ({
 
       <div className="relative z-10 flex h-full flex-col">
         {title && (
-          <h3 className="text-xl font-semibold tracking-tight text-white">
+          <h3 className="text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
             {title}
           </h3>
         )}
         {text && (
-          <p className="mt-2 max-w-xs text-sm leading-relaxed text-slate-300">
+          <p className="mt-2 max-w-xs text-sm leading-relaxed text-slate-600 dark:text-slate-300">
             {text}
           </p>
         )}

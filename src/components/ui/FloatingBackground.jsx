@@ -23,12 +23,14 @@ export const FloatingBackground = () => {
 
     handleResize();
 
-    const particleCount = 18;
+    const particleCount = 28;
     const particles = [];
     const colors = [
-      'rgba(6, 182, 212, ',
-      'rgba(99, 102, 241, ',
-      'rgba(168, 85, 247, '
+      'rgba(6, 182, 212, ',   // Neon Cyan
+      'rgba(99, 102, 241, ',  // Indigo
+      'rgba(217, 70, 239, ',  // Fuchsia
+      'rgba(16, 185, 129, ',  // Emerald
+      'rgba(245, 158, 11, '   // Amber
     ];
 
     for (let i = 0; i < particleCount; i++) {

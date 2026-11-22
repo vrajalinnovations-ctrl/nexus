@@ -1,5 +1,5 @@
 /**
- * NEXUS Cyber Security — Documentation Interactive Controller
+ * NEXAI Cyber Security — Documentation Interactive Controller
  */
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Copy to Clipboard
@@ -22,56 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Screen Previews Filter
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const screenCards = document.querySelectorAll('.screen-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const category = btn.getAttribute('data-category');
-      screenCards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // 3. Search Bar Filter
+  // 2. Search Bar Filter across sections
   const searchInput = document.getElementById('docsSearch');
   if (searchInput) {
+    const sections = document.querySelectorAll('.doc-section, .docs-hero');
     searchInput.addEventListener('input', (e) => {
       const term = e.target.value.toLowerCase().trim();
-      screenCards.forEach(card => {
-        const text = card.innerText.toLowerCase();
+      sections.forEach(sec => {
+        const text = sec.innerText.toLowerCase();
         if (!term || text.includes(term)) {
-          card.style.display = 'flex';
+          sec.style.display = 'block';
         } else {
-          card.style.display = 'none';
+          sec.style.display = 'none';
         }
       });
     });
   }
 
-  // 4. FAQ Accordion Toggle
-  document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => {
-      const parent = q.parentElement;
-      const isOpen = parent.classList.contains('open');
-      // Close other FAQs
-      document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
-      if (!isOpen) {
-        parent.classList.add('open');
-      }
-    });
-  });
-
-  // 5. Active Sidebar Section Tracker on Scroll
+  // 3. Active Sidebar Section Tracker on Scroll
   const sections = document.querySelectorAll('.doc-section, .docs-hero');
   const navLinks = document.querySelectorAll('.sidebar-link');
 
@@ -93,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // 6. Mobile Sidebar Drawer Toggle & Backdrop
+  // 4. Mobile Sidebar Drawer Toggle & Backdrop
   const mobileToggle = document.getElementById('mobileNavToggle');
   const sidebar = document.querySelector('.docs-sidebar');
   const backdrop = document.getElementById('sidebarBackdrop');

@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="/logo.png">
-  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="icon" type="image/png" href="./images/logo.png">
+  <link rel="apple-touch-icon" href="./images/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AEGIX Security — Developer Documentation &amp; Screen Showcase</title>
+  <title>NEXAI Security — Developer Documentation</title>
 
   <meta name="description"
-    content="Official developer documentation and page guide for AEGIX — Modern AI Cloud Security & Cyber Defense React Template.">
+    content="Official developer documentation for NEXAI — Modern AI Cloud Security & Cyber Defense React Template.">
   <meta name="theme-color" content="#030712">
 
   <!-- Google Font: Plus Jakarta Sans -->
@@ -42,11 +42,11 @@
         <i class="bi bi-list"></i>
       </button>
 
-      <a href="#overview" class="brand-wrapper">
-        <img src="/logo.png" alt="AEGIX Logo" class="brand-logo">
+      <a href="#introduction" class="brand-wrapper">
+        <img src="./images/logo.png" alt="NEXAI Logo" class="brand-logo">
         <div>
-          <div class="brand-title">AEGIX</div>
-          <div class="brand-subtitle">Cloud Security Docs</div>
+          <div class="brand-title">NEXAI</div>
+          <div class="brand-subtitle">Documentation</div>
         </div>
         <span class="version-pill">v1.0.0</span>
       </a>
@@ -55,7 +55,7 @@
     <!-- Live Search -->
     <div class="search-container">
       <i class="bi bi-search search-icon"></i>
-      <input type="text" id="docsSearch" class="search-input" placeholder="Search screens, routes, or guides...">
+      <input type="text" id="docsSearch" class="search-input" placeholder="Search documentation...">
     </div>
 
     <div class="header-actions">
@@ -74,612 +74,941 @@
   <div class="docs-layout">
     <!-- Left Navigation Sidebar -->
     <aside class="docs-sidebar">
-      <!-- Getting Started -->
       <div class="sidebar-category">
         <div class="sidebar-category-title">
-          <i class="bi bi-lightning-charge"></i>
-          <span>Getting Started</span>
-        </div>
-        <a href="#overview" class="sidebar-link active">
+          <i class="bi bi-compass"></i>
           <span>Overview</span>
+        </div>
+        <a href="#introduction" class="sidebar-link active">
+          <span>1. Introduction</span>
         </a>
-        <a href="#quick-start" class="sidebar-link">
-          <span>Quick Start</span>
-          <span class="link-badge">npm</span>
+        <a href="#folder-structure" class="sidebar-link">
+          <span>2. Folder Structure</span>
         </a>
-        <a href="#file-structure" class="sidebar-link">
-          <span>Project Structure</span>
-          <span class="link-badge">src/</span>
+        <a href="#changelog" class="sidebar-link">
+          <span>3. Changelog</span>
+          <span class="link-badge">v1.0</span>
         </a>
       </div>
 
-      <!-- Live Screens & Routes -->
       <div class="sidebar-category">
         <div class="sidebar-category-title">
-          <i class="bi bi-grid"></i>
-          <span>Screens &amp; Routes</span>
+          <i class="bi bi-terminal"></i>
+          <span>Setup &amp; Build</span>
         </div>
-        <a href="#screens" class="sidebar-link">
-          <span>All 12 Screens</span>
-          <span class="link-badge">12</span>
+        <a href="#installation" class="sidebar-link">
+          <span>4. Installation Guide</span>
         </a>
-        <a href="#screens-landing" class="sidebar-link">
-          <span>Landing &amp; Core Pages</span>
+        <a href="#getting-started" class="sidebar-link">
+          <span>5. Getting Started</span>
+          <span class="link-badge">Guide</span>
         </a>
-        <a href="#screens-auth" class="sidebar-link">
-          <span>Authentication Suite</span>
-        </a>
-        <a href="#screens-error" class="sidebar-link">
-          <span>System Error Views</span>
-        </a>
-      </div>
-
-
-
-      <!-- Reference -->
-      <div class="sidebar-category">
-        <div class="sidebar-category-title">
-          <i class="bi bi-journal-text"></i>
-          <span>Reference</span>
-        </div>
         <a href="#dependencies" class="sidebar-link">
-          <span>Dependencies Table</span>
+          <span>6. Package Dependencies</span>
         </a>
-        <a href="#faq" class="sidebar-link">
-          <span>Frequently Asked Questions</span>
+      </div>
+
+      <div class="sidebar-category">
+        <div class="sidebar-category-title">
+          <i class="bi bi-sliders"></i>
+          <span>Customization</span>
+        </div>
+        <a href="#file-customization" class="sidebar-link">
+          <span>7. File Customization</span>
+          <span class="link-badge">JSON</span>
+        </a>
+        <a href="#color-font-customization" class="sidebar-link">
+          <span>8. Color &amp; Font</span>
+        </a>
+      </div>
+
+      <div class="sidebar-category">
+        <div class="sidebar-category-title">
+          <i class="bi bi-info-circle"></i>
+          <span>Credits &amp; Help</span>
+        </div>
+        <a href="#credits" class="sidebar-link">
+          <span>9. Credits</span>
         </a>
         <a href="#support" class="sidebar-link">
-          <span>Support &amp; Inquiries</span>
+          <span>10. Support</span>
         </a>
       </div>
     </aside>
 
     <!-- Main Content Reader -->
     <main class="docs-content">
-      <!-- 1. Hero Overview -->
-      <div id="overview" class="docs-hero">
+
+      <!-- ========================================================
+           1. INTRODUCTION
+           ======================================================== -->
+      <div id="introduction" class="docs-hero doc-section">
         <div class="hero-pill-badge">
           <span class="hero-pill-dot"></span>
-          <span>Enterprise Cloud Defense Template</span>
+          <span>Enterprise Cyber Defense &amp; AI Cloud Template</span>
         </div>
-        <h1 class="docs-title">AEGIX Security Platform Documentation</h1>
-        <p class="docs-subtitle">
-          Everything you need to understand, customize, and deploy the AEGIX React cybersecurity application. Built with
-          high-performance standards, zero unnecessary dependencies, and sleek dark glassmorphism.
+        <h1 class="docs-title">1. Introduction</h1>
+
+        <!-- License Information Box -->
+        <div class="license-card">
+          <div class="license-title">
+            <i class="bi bi-cart-check text-cyan"></i>
+            <span>License Information</span>
+          </div>
+          <div class="license-item">
+            <strong>Regular License</strong> – Use this for a single end product that users are not charged for. You can use this for your personal project or for one client.
+          </div>
+          <div class="license-item">
+            <strong>Extended License</strong> – Use this for a single end product that users can be charged for (e.g., a SaaS platform or a product for sale). This is required for any commercial project where the end-user pays to use the service.
+          </div>
+          <div class="license-note">
+            <i class="bi bi-info-circle" style="color: #22d3ee; margin-right: 6px;"></i>
+            <strong>Important Note:</strong> Each license is valid for a single project only. For more details on marketplace license terms, please visit the <a href="https://themeforest.net/licenses/standard" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">Official License Page</a>.
+          </div>
+        </div>
+
+        <p class="section-lead-text">
+          Welcome to the <strong>NEXAI AI SaaS &amp; Technology Template</strong> documentation. This comprehensive React template is built with Vite 8, React 19, Tailwind v4, and modern web technologies to help you build powerful, responsive SaaS platforms and technology websites. Following industry best practices, NEXAI combines beautiful dark cyber design with professional performance functionality to accelerate your development process.
         </p>
 
-        <div class="quick-stats-row">
-          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> React 19.2</div>
-          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Tailwind CSS 4</div>
-          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Vite 8 Bundler</div>
-          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> 12 Complete Screens</div>
-          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Single Font (Plus Jakarta Sans)</div>
-          <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Lenis Hardware Smooth Scroll</div>
+        <!-- 4 Feature Highlight Cards -->
+        <div class="feature-highlight-grid">
+          <div class="feature-highlight-card">
+            <div class="feature-highlight-title">
+              <i class="bi bi-grid-1x2 text-cyan"></i>
+              12 Production Routes
+            </div>
+            <div class="feature-highlight-desc">
+              Complete SaaS experience with dedicated marketing pages, full authentication suite (SignIn, SignUp, Verify, Recovery), error views, and legal compliance pages.
+            </div>
+          </div>
+          <div class="feature-highlight-card">
+            <div class="feature-highlight-title">
+              <i class="bi bi-sun text-cyan"></i>
+              Dark &amp; Light Mode
+            </div>
+            <div class="feature-highlight-desc">
+              Native React 19 Context ThemeProvider with smooth sun/moon navbar toggles, persistent localStorage state, and auto-detection of OS color preferences.
+            </div>
+          </div>
+          <div class="feature-highlight-card">
+            <div class="feature-highlight-title">
+              <i class="bi bi-water text-cyan"></i>
+              Fluid Animations
+            </div>
+            <div class="feature-highlight-desc">
+              Experience fluid motion with Lenis smooth-scrolling, ambient glowing mesh backdrops, interactive WebGL shader effects, and infinite marquee loops.
+            </div>
+          </div>
+          <div class="feature-highlight-card">
+            <div class="feature-highlight-title">
+              <i class="bi bi-phone text-cyan"></i>
+              Fully Responsive
+            </div>
+            <div class="feature-highlight-desc">
+              Seamlessly optimized with Tailwind CSS v4 for stunning performance and native touch responsiveness on all mobile, tablet, and desktop browsers.
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- 2. Quick Start Section -->
-      <section id="quick-start" class="doc-section">
+      <!-- ========================================================
+           2. FOLDER STRUCTURE
+           ======================================================== -->
+      <section id="folder-structure" class="doc-section">
         <div class="section-header">
-          <div class="section-icon-badge"><i class="bi bi-lightning-charge"></i></div>
-          <h2 class="section-title">Quick Start in 1 Minute</h2>
+          <div class="section-icon-badge"><i class="bi bi-folder2-open"></i></div>
+          <h2 class="section-title">2. Folder Structure</h2>
         </div>
 
-        <p class="mb-4">Get the project up and running locally with just two simple terminal commands:</p>
+        <p class="section-lead-text">
+          The project follows a clean, modular structure designed for effortless navigation and rapid development:
+        </p>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <div class="mac-dots">
+              <span class="mac-dot dot-red"></span>
+              <span class="mac-dot dot-yellow"></span>
+              <span class="mac-dot dot-green"></span>
+            </div>
+            <span class="code-label">directory-tree</span>
+            <button class="copy-btn" data-target="code-tree"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="terminal-code" id="code-tree">nexai/
+├── public/                  # Static assets served directly
+│   ├── documentation/       # Interactive documentation site (open index.html)
+│   ├── logo.png             # Site favicon & brand icon
+│   ├── robots.txt           # Search crawler directive rules
+│   └── sitemap.xml          # Complete XML sitemap
+├── src/
+│   ├── assets/              # Logos, portraits, UI screenshots & 3D cyber illustrations
+│   ├── auth/                # Full auth flows (SignIn, SignUp, ForgotPassword, Verify, ResetPassword)
+│   ├── components/          # Reusable UI sections & atom components
+│   │   ├── common/          # Global managers (ScrollManager.jsx)
+│   │   ├── layout/          # Navbar.jsx, Footer.jsx, SettingsSidebar.jsx (Floating Customizer)
+│   │   ├── sections/        # Hero, Features, Pricing, Testimonials, TrustedCompanies
+│   │   └── ui/              # Design system primitives (Card, DemoModal, GhostFibers, LogoLoop)
+│   ├── context/             # ThemeContext.jsx (Dark/Light) & SettingsContext.jsx (LTR/RTL, Accents)
+│   ├── mock/                # Clean, structured JSON data files for effortless content updates
+│   ├── pages/               # Route views (HomePage, AboutPage, FeaturesPage, PricingPage, ContactPage, etc.)
+│   ├── routes/              # Centralized routing definitions (AppRoutes.jsx)
+│   ├── App.jsx              # Root application component with Lenis smooth scroll
+│   ├── index.css            # Tailwind CSS v4 setup and theme configurations
+│   └── main.jsx             # React DOM application entry point with Providers
+├── .gitignore               # Git ignore rules
+├── eslint.config.js         # ESLint configuration
+├── package.json             # Project metadata, scripts, and dependencies
+├── README.md                # Quick start documentation
+└── vite.config.js           # Vite 8 configuration with React & Tailwind plugins</pre>
+        </div>
+
+        <div class="topic-heading">
+          <i class="bi bi-diagram-3 text-cyan"></i>
+          Key Directories:
+        </div>
+
+        <div class="key-dir-grid">
+          <div class="key-dir-card">
+            <div class="key-dir-path">src/context/</div>
+            <div class="key-dir-desc">Global React Context state providers for Dark &amp; Light theme switching (<code>ThemeContext.jsx</code>) and Layout Direction (LTR/RTL) with dynamic brand accents (<code>SettingsContext.jsx</code>), both with persistent localStorage and HTML root attribute syncing.</div>
+          </div>
+          <div class="key-dir-card">
+            <div class="key-dir-path">src/pages/</div>
+            <div class="key-dir-desc">Contains all marketing and legal page views: HomePage, AboutPage, FeaturesPage, PricingPage, ContactPage, Privacy, Terms, and Error screens.</div>
+          </div>
+          <div class="key-dir-card">
+            <div class="key-dir-path">src/auth/</div>
+            <div class="key-dir-desc">Complete authentication suite views: SignIn, SignUp, Forgot Password, OTP Verification, and Reset Password views.</div>
+          </div>
+          <div class="key-dir-card">
+            <div class="key-dir-path">src/components/</div>
+            <div class="key-dir-desc">Modular React components: Hero with WebGL shader, Features bento grid, Pricing tables, Testimonials marquee, TrustedCompanies, Navbar, Footer, and the Floating Live Customizer (<code>SettingsSidebar.jsx</code>).</div>
+          </div>
+          <div class="key-dir-card">
+            <div class="key-dir-path">src/mock/</div>
+            <div class="key-dir-desc">Structured JSON data files allowing easy text, price, and feature updates without modifying any JSX code.</div>
+          </div>
+          <div class="key-dir-card">
+            <div class="key-dir-path">src/assets/</div>
+            <div class="key-dir-desc">Stores optimized brand logos, team portraits, datacenter facilities, UI screenshots, and 3D cyber illustrations.</div>
+          </div>
+          <div class="key-dir-card">
+            <div class="key-dir-path">src/routes/</div>
+            <div class="key-dir-desc">Application routing shell defining all clean client-side routes with deep linking and smooth page transitions in AppRoutes.jsx.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           3. CHANGELOG
+           ======================================================== -->
+      <section id="changelog" class="doc-section">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-clock-history"></i></div>
+          <h2 class="section-title">3. Changelog</h2>
+        </div>
+
+        <p class="section-lead-text">
+          All release milestones, feature updates, and improvements are documented below:
+        </p>
+
+        <div class="step-card">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span class="badge-tag" style="background: rgba(6, 182, 212, 0.2); color: #22d3ee; font-weight: 700; font-size: 0.85rem; padding: 4px 12px;">v1.0.0</span>
+              <strong style="color: #fff; font-size: 1.05rem;">Initial Official Release</strong>
+            </div>
+            <span style="color: #94a3b8; font-size: 0.85rem; font-family: monospace;">November 2026</span>
+          </div>
+
+          <ul class="topic-list-clean">
+            <li>Initial release of NEXAI AI Cybersecurity &amp; SaaS Tech Startup React Template</li>
+            <li>Built with React 19, Tailwind CSS v4, and Vite 8</li>
+            <li>Interactive Floating Live Customizer Drawer for real-time Theme (Dark/Light), Layout Direction (LTR/RTL), and Brand Accent Color switching with persistent <code>localStorage</code></li>
+            <li>Refined Clean Light Mode Palette featuring an eye-friendly off-white canvas (<code>#f4f5f8</code>) and tactile gray card depth (<code>bg-slate-200</code>) with calibrated WebGL shader backdrops</li>
+            <li>Interactive React Dark &amp; Light Theme switching with <code>ThemeContext</code>, instant Sun/Moon navbar toggles, persistent <code>localStorage</code>, and dynamic WebGL shader color transitions</li>
+            <li>12 Production-Ready Routes (Home, About, Features, Pricing, Contact, Privacy, Terms, SignIn, SignUp, Forgot Password, OTP Verify, Reset Password, 404, 500)</li>
+            <li>Interactive "Request Demo" Modal with deployment environment selector and automated reference ID generation</li>
+            <li>Fluid WebGL Shader Mesh Backdrop (OGL) with automatic CSS gradient fallback for non-WebGL environments</li>
+            <li>Lenis Hardware Smooth Scroll with mobile touch protection for native 120Hz fluid UX</li>
+            <li>Modern Glassmorphism &amp; Cyber Grid Design with ambient glowing highlights</li>
+            <li>Formspree / Webhook live inquiry support via <code>VITE_CONTACT_FORM_ENDPOINT</code> in <code>ContactPage.jsx</code></li>
+            <li>Structured JSON Mock Data for seamless content updates without writing code</li>
+            <li>100% Fully Responsive, mobile-first layouts with 0 ESLint errors and 0 warnings</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           4. INSTALLATION GUIDE
+           ======================================================== -->
+      <section id="installation" class="doc-section">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-download"></i></div>
+          <h2 class="section-title">4. Installation Guide</h2>
+        </div>
+
+        <p class="section-lead-text">
+          Get the template set up and running on your local machine with these simple steps:
+        </p>
 
         <div class="quickstart-grid">
-          <!-- Step 1 -->
+          <!-- 1. Install Dependencies -->
           <div class="step-card">
             <div>
               <div class="step-number">1</div>
               <div class="step-title">Install Dependencies</div>
-              <div class="step-desc">Installs all active packages declared in <code>package.json</code>:</div>
+              <div class="step-desc">Run npm install to download all required packages into <code>node_modules</code>:</div>
             </div>
             <div class="code-wrapper">
               <div class="code-header">
-                <div class="mac-dots"><span class="mac-dot dot-red"></span><span class="mac-dot dot-yellow"></span><span
-                    class="mac-dot dot-green"></span></div>
                 <span class="code-label">terminal</span>
-                <button class="copy-btn" data-target="code-install"><i class="bi bi-clipboard"></i> Copy</button>
+                <button class="copy-btn" data-target="cmd-install"><i class="bi bi-clipboard"></i> Copy</button>
               </div>
-              <pre class="terminal-code" id="code-install">npm install</pre>
+              <pre class="terminal-code" id="cmd-install">npm install</pre>
             </div>
           </div>
 
-          <!-- Step 2 -->
+          <!-- 2. Run Dev Server -->
           <div class="step-card">
             <div>
               <div class="step-number">2</div>
-              <div class="step-title">Start Development Server</div>
-              <div class="step-desc">Launches Vite hot-module reload in development mode:</div>
+              <div class="step-title">Run Dev Server</div>
+              <div class="step-desc">Start the local development server with instant Hot Module Replacement (HMR):</div>
             </div>
             <div class="code-wrapper">
               <div class="code-header">
-                <div class="mac-dots"><span class="mac-dot dot-red"></span><span class="mac-dot dot-yellow"></span><span
-                    class="mac-dot dot-green"></span></div>
                 <span class="code-label">terminal</span>
-                <button class="copy-btn" data-target="code-dev"><i class="bi bi-clipboard"></i> Copy</button>
+                <button class="copy-btn" data-target="cmd-dev"><i class="bi bi-clipboard"></i> Copy</button>
               </div>
-              <pre class="terminal-code" id="code-dev">npm run dev</pre>
+              <pre class="terminal-code" id="cmd-dev">npm run dev</pre>
             </div>
+            <p class="step-desc" style="margin-top: 10px; margin-bottom: 0;">Open <strong>http://localhost:5173</strong> in your browser.</p>
           </div>
 
-          <!-- Step 3 -->
+          <!-- 3. Build Production -->
           <div class="step-card">
             <div>
               <div class="step-number">3</div>
-              <div class="step-title">Build for Production</div>
-              <div class="step-desc">Compiles minified production bundle into the <code>dist/</code> folder:</div>
+              <div class="step-title">Build Production</div>
+              <div class="step-desc">Compile and optimize your project for live production deployment:</div>
             </div>
             <div class="code-wrapper">
               <div class="code-header">
-                <div class="mac-dots"><span class="mac-dot dot-red"></span><span class="mac-dot dot-yellow"></span><span
-                    class="mac-dot dot-green"></span></div>
                 <span class="code-label">terminal</span>
-                <button class="copy-btn" data-target="code-build"><i class="bi bi-clipboard"></i> Copy</button>
+                <button class="copy-btn" data-target="cmd-build"><i class="bi bi-clipboard"></i> Copy</button>
               </div>
-              <pre class="terminal-code" id="code-build">npm run build</pre>
+              <pre class="terminal-code" id="cmd-build">npm run build</pre>
             </div>
+            <p class="step-desc" style="margin-top: 10px; margin-bottom: 0;">Outputs optimized production files into the <code>dist/</code> folder.</p>
+          </div>
+
+          <!-- 4. Preview Build -->
+          <div class="step-card">
+            <div>
+              <div class="step-number">4</div>
+              <div class="step-title">Preview Build</div>
+              <div class="step-desc">Test your compiled production build locally before uploading:</div>
+            </div>
+            <div class="code-wrapper">
+              <div class="code-header">
+                <span class="code-label">terminal</span>
+                <button class="copy-btn" data-target="cmd-preview"><i class="bi bi-clipboard"></i> Copy</button>
+              </div>
+              <pre class="terminal-code" id="cmd-preview">npm run preview</pre>
+            </div>
+            <p class="step-desc" style="margin-top: 10px; margin-bottom: 0;">Verifies production behavior and asset caching locally.</p>
           </div>
         </div>
       </section>
 
-      <!-- 3. Screen Showcase Section -->
-      <section id="screens" class="doc-section">
+      <!-- ========================================================
+           5. GETTING STARTED
+           ======================================================== -->
+      <section id="getting-started" class="doc-section">
         <div class="section-header">
-          <div class="section-icon-badge"><i class="bi bi-display"></i></div>
-          <h2 class="section-title">Application Screens Showcase</h2>
+          <div class="section-icon-badge"><i class="bi bi-play-circle"></i></div>
+          <h2 class="section-title">5. Getting Started</h2>
         </div>
 
-        <p class="mb-4">Explore all 12 fully designed pages with real routes and interactive components. Click any card
-          to launch the live screen:</p>
-
-        <!-- Category Filters -->
-        <div class="screen-filter-bar">
-          <button class="filter-btn active" data-category="all">All Screens (12)</button>
-          <button class="filter-btn" data-category="core">Landing &amp; Marketing (5)</button>
-          <button class="filter-btn" data-category="auth">Authentication Suite (5)</button>
-          <button class="filter-btn" data-category="diag">Diagnostic &amp; Error (2)</button>
+        <div class="topic-heading">
+          <i class="bi bi-image text-cyan"></i>
+          1. Changing the Logo
         </div>
 
-        <!-- 12 Screen Cards -->
-        <div class="screens-grid">
-          <!-- 1. Home -->
-          <div class="screen-card" data-category="core" id="screens-landing">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/1.png" alt="Home Screen" class="screen-thumb">
-              <span class="screen-route-badge">/</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">Home — Hero &amp; Threat Telemetry</h3>
-                <p class="screen-desc">High-impact hero section with interactive WebGL GhostFibers backdrop, dynamic telemetry metric cards, and responsive navigation.</p>
-              </div>
-              <a href="/" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
+        <p class="topic-paragraph">
+          NEXAI provides clean brand mark integration across navigation bars, footers, error pages, and authentication screens:
+        </p>
 
-          <!-- 2. Features -->
-          <div class="screen-card" data-category="core">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/3.png" alt="Features & Architecture" class="screen-thumb">
-              <span class="screen-route-badge">/features</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">Features — Architecture &amp; Telemetry</h3>
-                <p class="screen-desc">Deep architectural pillars showcasing eBPF telemetry models, autonomous incident mitigation metrics, and cloud peering specifications.</p>
-              </div>
-              <a href="/features" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
+        <ul class="topic-list-clean">
+          <li>Place your logo image file into <code>src/assets/logo.png</code> (used across UI components).</li>
+          <li>Place your browser favicon and PWA logo into <code>public/logo.png</code>.</li>
+        </ul>
 
-          <!-- 3. About Us -->
-          <div class="screen-card" data-category="core">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/2.png" alt="About Us Team & Mission" class="screen-thumb">
-              <span class="screen-route-badge">/about</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">About Us — Mission &amp; Engineering Team</h3>
-                <p class="screen-desc">Executive mission statement, core zero-trust values, leadership team showcase with LinkedIn links, and interactive inquiry card.</p>
-              </div>
-              <a href="/about" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- 4. Pricing Plans -->
-          <div class="screen-card" data-category="core">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/4.png" alt="Enterprise Pricing" class="screen-thumb">
-              <span class="screen-route-badge">/pricing</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">Pricing — Enterprise Tiers &amp; Matrix</h3>
-                <p class="screen-desc">Annual vs monthly billing toggle, feature tier matrix, enterprise SLA trust badges, and interactive FAQ accordion.</p>
-              </div>
-              <a href="/pricing" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- 5. Contact & SOC Hubs -->
-          <div class="screen-card" data-category="core">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/5.png" alt="Contact SOC Hubs" class="screen-thumb">
-              <span class="screen-route-badge">/contact</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">Contact &amp; SOC — Global Dispatch</h3>
-                <p class="screen-desc">Global security operations centers, 24/7 emergency dispatch channels, interactive domain inquiry form, and protocol knowledge base.</p>
-              </div>
-              <a href="/contact" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- 6. Sign In -->
-          <div class="screen-card" data-category="auth" id="screens-auth">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/6.png" alt="Sign In Portal" class="screen-thumb">
-              <span class="screen-route-badge">/signin</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">Sign In — Enterprise Authentication</h3>
-                <p class="screen-desc">Clean login form with password visibility toggle, enterprise SSO provider buttons, and hardware security key option.</p>
-              </div>
-              <a href="/signin" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- 7. Sign Up -->
-          <div class="screen-card" data-category="auth">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/10.png" alt="Sign Up Registration" class="screen-thumb">
-              <span class="screen-route-badge">/signup</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">Sign Up — Account Registration</h3>
-                <p class="screen-desc">Enterprise registration view with input validation feedback, terms agreement, password confirmation checks, and single-click SSO.</p>
-              </div>
-              <a href="/signup" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- 8. Forgot Password -->
-          <div class="screen-card" data-category="auth">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/7.png" alt="Forgot Password Flow" class="screen-thumb">
-              <span class="screen-route-badge">/forgot-password</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">Forgot Password — Recovery Flow</h3>
-                <p class="screen-desc">Minimal credential recovery form with instant validation, step-by-step guidance, and return-to-login navigation.</p>
-              </div>
-              <a href="/forgot-password" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- 9. Verify OTP -->
-          <div class="screen-card" data-category="auth">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/8.png" alt="Verify OTP Code" class="screen-thumb">
-              <span class="screen-route-badge">/verify</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">Verify OTP — Multi-Factor Verification</h3>
-                <p class="screen-desc">Six-digit auto-advancing verification code input with clipboard paste support, resend countdown timer, and success feedback.</p>
-              </div>
-              <a href="/verify" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- 10. Confirm Password -->
-          <div class="screen-card" data-category="auth">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/9.png" alt="Confirm Password Setup" class="screen-thumb">
-              <span class="screen-route-badge">/confirm-password</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">Confirm Password — New Password Setup</h3>
-                <p class="screen-desc">Clean password configuration form with password match validation, security requirements, and automated redirect to login.</p>
-              </div>
-              <a href="/confirm-password" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- 11. 404 Security Anomaly -->
-          <div class="screen-card" data-category="diag" id="screens-error">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/11.png" alt="404 Error Screen" class="screen-thumb">
-              <span class="screen-route-badge">/404</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">404 — Security Anomaly</h3>
-                <p class="screen-desc">Not Found error screen with return navigation buttons, ambient lighting, and quick links to platform sections.</p>
-              </div>
-              <a href="/404" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- 12. 500 Server Incident -->
-          <div class="screen-card" data-category="diag">
-            <div class="screen-thumb-wrap">
-              <img src="./images/screenshot/12.png" alt="500 Server Incident Screen" class="screen-thumb">
-              <span class="screen-route-badge">/500</span>
-            </div>
-            <div class="screen-body">
-              <div>
-                <h3 class="screen-name">500 — Server Incident</h3>
-                <p class="screen-desc">Graceful system failure state with retry diagnostics button and SOC incident reporting hotline link.</p>
-              </div>
-              <a href="/500" target="_blank" class="screen-action">
-                <span>Open Live Screen</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. Project Structure -->
-      <section id="file-structure" class="doc-section">
-        <div class="section-header">
-          <div class="section-icon-badge"><i class="bi bi-folder2-open"></i></div>
-          <h2 class="section-title">Clear Project Structure</h2>
-        </div>
-
-        <p class="mb-3">The codebase is organized into clean, single-responsibility folders:</p>
+        <p class="topic-paragraph">
+          The logo is imported and rendered in <code>src/components/layout/Navbar.jsx</code> and <code>src/components/layout/Footer.jsx</code>:
+        </p>
 
         <div class="code-wrapper">
           <div class="code-header">
-            <div class="mac-dots"><span class="mac-dot dot-red"></span><span class="mac-dot dot-yellow"></span><span
-                class="mac-dot dot-green"></span></div>
-            <span class="code-label">directory-tree</span>
-            <button class="copy-btn" data-target="code-tree"><i class="bi bi-clipboard"></i> Copy</button>
+            <span class="code-label">src/components/layout/Navbar.jsx</span>
+            <button class="copy-btn" data-target="code-logo-sample"><i class="bi bi-clipboard"></i> Copy</button>
           </div>
-          <pre class="terminal-code" id="code-tree">aegix/
-├── src/
-│   ├── assets/              # Branding, official logo.png, artwork
-│   ├── auth/                # Full authentication suite (SignIn, SignUp, Verify, etc.)
-│   ├── components/
-│   │   ├── common/          # Shared utilities (ScrollManager.jsx for Lenis)
-│   │   ├── layout/          # Global layout (Navbar.jsx, Footer.jsx)
-│   │   ├── sections/        # Section blocks (Hero, Features, Pricing, Testimonials)
-│   │   └── ui/              # Reusable atoms (Card.jsx, GhostFibers.jsx)
-│   ├── mock/                # Clean JSON mock data (features.json, pricing.json, etc.)
-│   ├── pages/               # Top-level route pages (HomePage, AboutPage, FeaturesPage)
-│   ├── routes/              # Centralized route mapping (AppRoutes.jsx)
-│   ├── App.jsx              # Ultra-clean layout root (14 lines)
-│   ├── main.jsx             # Entry point with BrowserRouter provider
-│   └── index.css            # Tailwind 4 configuration & Plus Jakarta Sans typography
-├── public/
-│   ├── documentation/       # Standalone documentation website
-│   ├── favicon.svg          # Favicon asset
-│   └── logo.png             # Root logo asset
-└── package.json             # Dependencies and scripts</pre>
-        </div>
-      </section>
+          <pre class="terminal-code" id="code-logo-sample">// In src/components/layout/Navbar.jsx
+import logo from '@/assets/logo.png';
 
-
-
-      <!-- 8. Package Dependencies Table -->
-      <section id="dependencies" class="doc-section">
-        <div class="section-header">
-          <div class="section-icon-badge"><i class="bi bi-boxes"></i></div>
-          <h2 class="section-title">Package Dependencies &amp; Versions</h2>
+// Inside JSX rendering:
+&lt;Link to="/" className="relative flex items-center gap-2.5 cursor-pointer group"&gt;
+  &lt;img
+    src={logo}
+    alt="NEXAI logo"
+    className="w-10 h-10 object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
+  /&gt;
+  &lt;div className="flex flex-col"&gt;
+    &lt;span className="font-bold tracking-tight text-white text-base leading-none"&gt;
+      NEXAI
+    &lt;/span&gt;
+    &lt;span className="text-xs tracking-widest text-slate-300 uppercase font-mono mt-1"&gt;Cloud Security&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/Link&gt;</pre>
         </div>
 
-        <p class="mb-3">Exact active dependencies declared in <code>package.json</code>:</p>
+        <div class="topic-heading">
+          <i class="bi bi-brush text-cyan"></i>
+          2. Updating Colors &amp; Tailwind CSS v4 Theme
+        </div>
 
-        <div class="glass-card table-responsive" style="padding: 0;">
-          <table class="docs-table mb-0">
+        <p class="topic-paragraph">
+          NEXAI is engineered with Tailwind CSS v4 using the native <code>@theme</code> directive in <code>src/index.css</code>. No complicated config files are needed:
+        </p>
+
+        <ul class="topic-list-clean">
+          <li>Open <code>src/index.css</code>.</li>
+          <li>Modify or extend typography and custom color tokens inside the <code>@theme</code> block:</li>
+        </ul>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-label">src/index.css</span>
+            <button class="copy-btn" data-target="code-css-theme"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="terminal-code" id="code-css-theme">/* In src/index.css */
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  
+  /* Add custom brand color tokens */
+  --color-primary: #06b6d4;
+  --color-primary-hover: #0891b2;
+}</pre>
+        </div>
+
+        <p class="topic-paragraph">
+          Vite provides instant Hot Module Replacement (HMR), so any CSS or component modifications will immediately reflect in your browser.
+        </p>
+
+        <div class="topic-heading">
+          <i class="bi bi-box-seam text-cyan"></i>
+          3. Libraries &amp; Fonts Used
+        </div>
+
+        <p class="topic-paragraph">
+          The template leverages modern web standards and official Google Fonts:
+        </p>
+
+        <div class="step-card mb-4">
+          <div class="step-title"><i class="bi bi-fonts text-cyan"></i> Typography</div>
+          <p class="step-desc" style="margin-bottom: 0;">
+            <strong>Plus Jakarta Sans</strong> – Clean, crisp UI and modern cyber display font (weights 400 to 800). Imported via Google Fonts in <code>index.html</code>.
+          </p>
+        </div>
+
+        <div class="table-container">
+          <table class="data-table">
             <thead>
               <tr>
-                <th>Package Name</th>
+                <th>Library</th>
                 <th>Version</th>
-                <th>Role</th>
+                <th>Purpose</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><code>react</code></td>
                 <td><span class="badge-tag">^19.2.8</span></td>
-                <td>Latest official React 19 UI engine</td>
+                <td>Core modern UI component library</td>
               </tr>
               <tr>
                 <td><code>react-dom</code></td>
                 <td><span class="badge-tag">^19.2.8</span></td>
-                <td>React DOM rendering library</td>
-              </tr>
-              <tr>
-                <td><code>react-router-dom</code></td>
-                <td><span class="badge-tag">^7.18.4</span></td>
-                <td>Declarative client-side routing v7</td>
-              </tr>
-              <tr>
-                <td><code>tailwindcss</code></td>
-                <td><span class="badge-tag">^4.3.3</span></td>
-                <td>Next-gen utility-first CSS framework v4</td>
-              </tr>
-              <tr>
-                <td><code>@tailwindcss/vite</code></td>
-                <td><span class="badge-tag">^4.3.3</span></td>
-                <td>Official Vite integration plugin for Tailwind</td>
-              </tr>
-              <tr>
-                <td><code>lucide-react</code></td>
-                <td><span class="badge-tag">^1.51.0</span></td>
-                <td>Crisp modern cyber and security vector icons</td>
-              </tr>
-              <tr>
-                <td><code>lenis</code></td>
-                <td><span class="badge-tag">^1.3.27</span></td>
-                <td>Hardware-accelerated smooth momentum scrolling</td>
-              </tr>
-              <tr>
-                <td><code>ogl</code></td>
-                <td><span class="badge-tag">^1.0.11</span></td>
-                <td>Minimal WebGL 2 library for GhostFibers shader</td>
+                <td>DOM renderer for React</td>
               </tr>
               <tr>
                 <td><code>vite</code></td>
                 <td><span class="badge-tag">^8.3.0</span></td>
-                <td>Frontend bundler and dev server</td>
+                <td>Next-generation lightning-fast dev server &amp; bundler</td>
+              </tr>
+              <tr>
+                <td><code>tailwindcss</code></td>
+                <td><span class="badge-tag">^4.3.3</span></td>
+                <td>Modern utility-first CSS framework (v4)</td>
+              </tr>
+              <tr>
+                <td><code>@tailwindcss/vite</code></td>
+                <td><span class="badge-tag">^4.3.3</span></td>
+                <td>Official Tailwind CSS v4 Vite integration plugin</td>
+              </tr>
+              <tr>
+                <td><code>lenis</code></td>
+                <td><span class="badge-tag">^1.3.27</span></td>
+                <td>Luxurious fluid smooth scrolling engine</td>
+              </tr>
+              <tr>
+                <td><code>ogl</code></td>
+                <td><span class="badge-tag">^1.0.11</span></td>
+                <td>Minimal WebGL 2 math &amp; shader engine for GhostFibers</td>
+              </tr>
+              <tr>
+                <td><code>lucide-react</code></td>
+                <td><span class="badge-tag">^1.51.0</span></td>
+                <td>Clean, modern vector icon collection</td>
+              </tr>
+              <tr>
+                <td><code>react-router-dom</code></td>
+                <td><span class="badge-tag">^7.18.4</span></td>
+                <td>Declarative client-side routing and navigation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="topic-heading">
+          <i class="bi bi-moon-stars text-cyan"></i>
+          4. Dark &amp; Light Mode Implementation (React Context)
+        </div>
+
+        <p class="topic-paragraph">
+          NEXAI includes a complete, production-grade Dark and Light mode powered by React 19 Context and Tailwind CSS v4:
+        </p>
+
+        <ul class="topic-list-clean">
+          <li><strong>Global ThemeProvider:</strong> Wrapped at the application root in <code>src/main.jsx</code> via <code>src/context/ThemeContext.jsx</code>.</li>
+          <li><strong>Custom Hook:</strong> Access <code>const { theme, toggleTheme, setTheme } = useTheme();</code> in any component.</li>
+          <li><strong>Persistence &amp; OS Detection:</strong> Automatically loads user preference from <code>localStorage.getItem('nexai-theme')</code> or falls back to system <code>window.matchMedia('(prefers-color-scheme: dark)')</code>.</li>
+          <li><strong>DOM Synchronization:</strong> Toggles the <code>dark</code> class and <code>color-scheme</code> attribute directly on the root <code>&lt;html&gt;</code> element.</li>
+        </ul>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-label">Example: Using useTheme in a Component</span>
+            <button class="copy-btn" data-target="code-theme-sample"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="terminal-code" id="code-theme-sample">import { useTheme } from '@/context/ThemeContext';
+import { Sun, Moon } from 'lucide-react';
+
+export const ThemeToggle = () => {
+  const { theme, toggleTheme } = useTheme();
+
+  return (
+    &lt;button 
+      onClick={toggleTheme}
+      aria-label="Toggle theme"
+      className="p-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5"
+    &gt;
+      {theme === 'dark' ? &lt;Sun className="w-4 h-4 text-amber-400" /&gt; : &lt;Moon className="w-4 h-4 text-cyan-600" /&gt;}
+    &lt;/button&gt;
+  );
+};</pre>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           6. PACKAGE DEPENDENCIES
+           ======================================================== -->
+      <section id="dependencies" class="doc-section">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-box-seam"></i></div>
+          <h2 class="section-title">6. Package Dependencies</h2>
+        </div>
+
+        <p class="section-lead-text">
+          Here are the exact packages and versions used in NEXAI:
+        </p>
+
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Package</th>
+                <th>Version</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>react</code></td>
+                <td><span class="badge-tag">^19.2.8</span></td>
+                <td>Core frontend UI library</td>
+              </tr>
+              <tr>
+                <td><code>react-dom</code></td>
+                <td><span class="badge-tag">^19.2.8</span></td>
+                <td>React rendering layer for the web</td>
+              </tr>
+              <tr>
+                <td><code>vite</code></td>
+                <td><span class="badge-tag">^8.3.0</span></td>
+                <td>Next-generation frontend tooling and bundler</td>
+              </tr>
+              <tr>
+                <td><code>tailwindcss</code></td>
+                <td><span class="badge-tag">^4.3.3</span></td>
+                <td>Utility-first styling framework v4</td>
+              </tr>
+              <tr>
+                <td><code>@tailwindcss/vite</code></td>
+                <td><span class="badge-tag">^4.3.3</span></td>
+                <td>High-performance Tailwind CSS plugin for Vite</td>
+              </tr>
+              <tr>
+                <td><code>lenis</code></td>
+                <td><span class="badge-tag">^1.3.27</span></td>
+                <td>Smooth scrolling engine for luxurious fluid UX</td>
+              </tr>
+              <tr>
+                <td><code>ogl</code></td>
+                <td><span class="badge-tag">^1.0.11</span></td>
+                <td>High-performance WebGL 2 shader math library</td>
+              </tr>
+              <tr>
+                <td><code>lucide-react</code></td>
+                <td><span class="badge-tag">^1.51.0</span></td>
+                <td>Consistent, beautiful SVG icons</td>
+              </tr>
+              <tr>
+                <td><code>react-router-dom</code></td>
+                <td><span class="badge-tag">^7.18.4</span></td>
+                <td>Component-based routing architecture</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <!-- 8. Backend & Webhook Integration Guide -->
-      <section id="integration" class="doc-section">
+      <!-- ========================================================
+           7. FILE CUSTOMIZATION
+           ======================================================== -->
+      <section id="file-customization" class="doc-section">
         <div class="section-header">
-          <div class="section-icon-badge"><i class="bi bi-cpu"></i></div>
-          <h2 class="section-title">Backend &amp; Webhook Integration Guide</h2>
+          <div class="section-icon-badge"><i class="bi bi-pencil-square"></i></div>
+          <h2 class="section-title">7. File Customization</h2>
         </div>
 
-        <p class="mb-4">AEGIX is designed as a modular, frontend-first React 19 template. Follow these quick guides to connect live endpoints:</p>
+        <p class="section-lead-text">
+          NEXAI is structured with extreme clarity so you can customize text, images, and pages effortlessly:
+        </p>
 
-        <div class="quickstart-grid">
-          <!-- Webhook Integration -->
-          <div class="step-card">
-            <div>
-              <div class="step-number"><i class="bi bi-send-check"></i></div>
-              <div class="step-title">1. Live Contact Form (Formspree / Webhooks)</div>
-              <div class="step-desc">Add your live submission endpoint in a <code>.env</code> file in your project root:</div>
-            </div>
-            <div class="code-wrapper">
-              <div class="code-header">
-                <span class="code-label">.env</span>
-              </div>
-              <pre class="terminal-code">VITE_CONTACT_FORM_ENDPOINT="https://formspree.io/f/your_form_id"</pre>
-            </div>
-            <p class="step-desc mt-2">When provided, <code>ContactPage.jsx</code> automatically sends real JSON payloads with name, email, organization, topic, and message.</p>
-          </div>
+        <div class="topic-heading">
+          <i class="bi bi-file-earmark-code text-cyan"></i>
+          1. Mock Data Customization
+        </div>
 
-          <!-- Auth Integration -->
+        <p class="topic-paragraph">
+          Update site content instantly without modifying JSX:
+        </p>
+
+        <div class="quickstart-grid mb-5">
           <div class="step-card">
-            <div>
-              <div class="step-number"><i class="bi bi-shield-lock"></i></div>
-              <div class="step-title">2. Authentication Suite (Supabase / Clerk / Firebase)</div>
-              <div class="step-desc">All authentication views in <code>src/auth/</code> contain isolated submit handlers. Simply replace the demo state with your SDK client:</div>
-            </div>
-            <div class="code-wrapper">
-              <div class="code-header">
-                <span class="code-label">src/auth/SignInPage.jsx</span>
-              </div>
-              <pre class="terminal-code">// Example Supabase Client
-const { data, error } = await supabase.auth.signInWithPassword({
-  email,
-  password
-});</pre>
-            </div>
+            <div class="step-title"><code>src/mock/navigation.json</code></div>
+            <div class="step-desc">Nav links, brand mark, footer quick links, SOC addresses &amp; contact hotline.</div>
           </div>
+          <div class="step-card">
+            <div class="step-title"><code>src/mock/features.json</code></div>
+            <div class="step-desc">Technical pillars, telemetry metrics, eBPF descriptions &amp; bento grid badges.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-title"><code>src/mock/pricing.json</code></div>
+            <div class="step-desc">Monthly &amp; yearly pricing tiers, feature checklists &amp; interactive FAQ accordion.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-title"><code>src/mock/testimonials.json</code></div>
+            <div class="step-desc">Customer reviews, CISO quotes, company names, ratings &amp; triage statistics.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-title"><code>src/mock/about.json</code></div>
+            <div class="step-desc">Company mission statement, core principles &amp; leadership team profiles.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-title"><code>src/mock/contact.json</code></div>
+            <div class="step-desc">Global SOC facilities, support channels, emergency numbers &amp; inquiry topics.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-title"><code>src/mock/auth.json</code></div>
+            <div class="step-desc">Identity attestation headlines, security certification badges &amp; recovery copy.</div>
+          </div>
+          <div class="step-card">
+            <div class="step-title"><code>src/mock/companies.json</code></div>
+            <div class="step-desc">Infinite partner logo loop brands and live threat neutralization counter stats.</div>
+          </div>
+        </div>
+
+        <div class="topic-heading">
+          <i class="bi bi-signpost-split text-cyan"></i>
+          2. Centralized Routing
+        </div>
+
+        <p class="topic-paragraph">
+          Add or adjust routes in <code>src/routes/AppRoutes.jsx</code>:
+        </p>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-label">src/routes/AppRoutes.jsx</span>
+            <button class="copy-btn" data-target="code-routing-sample"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="terminal-code" id="code-routing-sample">// Add a new route in AppRoutes.jsx
+import NewPage from '@/pages/NewPage';
+
+export const AppRoutes = () => {
+  return (
+    &lt;Routes&gt;
+      &lt;Route path="/" element={&lt;HomePage /&gt;} /&gt;
+      &lt;Route path="/about" element={&lt;AboutPage /&gt;} /&gt;
+      &lt;Route path="/new-page" element={&lt;NewPage /&gt;} /&gt;
+    &lt;/Routes&gt;
+  );
+};</pre>
+        </div>
+
+        <div class="topic-heading">
+          <i class="bi bi-layers text-cyan"></i>
+          3. UI Sections &amp; Components
+        </div>
+
+        <p class="topic-paragraph">
+          All reusable sections (Navbar, Footer, Hero, Features, Pricing, Testimonials, TrustedCompanies, DemoModal, GhostFibers) are located in <code>src/components/</code> for modular assembly.
+        </p>
+
+        <div class="topic-heading">
+          <i class="bi bi-circle-half text-cyan"></i>
+          4. Global Theme Context (Dark &amp; Light Mode)
+        </div>
+
+        <p class="topic-paragraph">
+          Located in <code>src/context/ThemeContext.jsx</code>. You can customize the default starting theme, the local storage key, or connect an external user profile preference:
+        </p>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-label">src/context/ThemeContext.jsx</span>
+            <button class="copy-btn" data-target="code-theme-context-sample"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="terminal-code" id="code-theme-context-sample">// Inside src/context/ThemeContext.jsx
+// Change default storage key or preferred default theme ('dark' or 'light')
+const THEME_KEY = 'nexai-theme';
+
+// Custom hook to consume anywhere in your application:
+export const useTheme = () => useContext(ThemeContext);</pre>
+        </div>
+
+        <div class="topic-heading">
+          <i class="bi bi-send text-cyan"></i>
+          5. Live Contact Form Webhook
+        </div>
+
+        <p class="topic-paragraph">
+          In <code>src/pages/ContactPage.jsx</code>, form submissions can be directed to Formspree, Basin, or your custom API endpoint simply by specifying <code>VITE_CONTACT_FORM_ENDPOINT</code> in a <code>.env</code> file.
+        </p>
+
+        <div class="topic-heading">
+          <i class="bi bi-sliders text-cyan"></i>
+          6. Live Settings Customizer &amp; Direction Context (LTR / RTL)
+        </div>
+
+        <p class="topic-paragraph">
+          Managed via <code>src/context/SettingsContext.jsx</code> and rendered through <code>src/components/layout/SettingsSidebar.jsx</code>. The floating drawer customizer lets users switch layout direction (LTR / RTL), toggle Dark / Light mode, and preview 6 dynamic brand accent colors (Cyan, Indigo, Emerald, Violet, Rose, Amber) in real time:
+        </p>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-label">Consuming useSettings in Components</span>
+            <button class="copy-btn" data-target="code-settings-sample"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="terminal-code" id="code-settings-sample">import { useSettings } from '@/context/SettingsContext';
+
+export const SettingsButton = () => {
+  const { direction, setDirection, accentColor, setAccentColor, toggleSettings, resetDefaults } = useSettings();
+
+  return (
+    &lt;div className="flex items-center gap-2"&gt;
+      &lt;button onClick={toggleSettings}&gt;Open Customizer&lt;/button&gt;
+      &lt;button onClick={() => setDirection(direction === 'ltr' ? 'rtl' : 'ltr')}&gt;
+        Direction: {direction.toUpperCase()}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+};</pre>
         </div>
       </section>
 
-      <!-- 9. FAQ Section -->
-      <section id="faq" class="doc-section">
+      <!-- ========================================================
+           8. COLOR & FONT CUSTOMIZATION
+           ======================================================== -->
+      <section id="color-font-customization" class="doc-section">
         <div class="section-header">
-          <div class="section-icon-badge"><i class="bi bi-question-circle"></i></div>
-          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="section-icon-badge"><i class="bi bi-palette"></i></div>
+          <h2 class="section-title">8. Color &amp; Font Customization</h2>
         </div>
 
-        <div class="faq-item open">
-          <div class="faq-question">
-            <span>How do I replace the logo with my own company branding?</span>
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            Simply replace <code>src/assets/logo.png</code> and <code>public/logo.png</code> with your company logo PNG
-            file. All navigation bars, footers, error pages, and authentication screens automatically import and scale
-            this asset.
-          </div>
+        <div class="topic-heading">
+          <i class="bi bi-palette2 text-cyan"></i>
+          Color Customization &amp; Dark/Light Mode
         </div>
 
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>How can I modify pricing tiers or FAQ questions?</span>
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            Open <code>src/mock/pricing.json</code>. You can easily edit tier names, prices, monthly/annual discounts,
-            feature checklist items, and accordion questions without touching any JSX code.
-          </div>
+        <p class="topic-paragraph">
+          NEXAI uses Tailwind CSS v4 styling with native <code>dark:</code> variant support. Both dark cyber and crisp light palettes are configured in <code>src/index.css</code>.
+        </p>
+
+        <div class="subtopic-heading">
+          <i class="bi bi-code-slash"></i>
+          Tailwind CSS v4 Directives
         </div>
 
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>How do I connect real backend authentication APIs?</span>
-            <i class="bi bi-chevron-down"></i>
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-label">src/index.css</span>
+            <button class="copy-btn" data-target="code-color-directives"><i class="bi bi-clipboard"></i> Copy</button>
           </div>
-          <div class="faq-answer">
-            In <code>src/auth/SignInPage.jsx</code>, <code>SignUpPage.jsx</code>, and <code>VerifyPage.jsx</code>,
-            replace the simulated <code>setTimeout</code> handlers inside <code>handleSubmit</code> with your actual
-            <code>fetch()</code> or <code>axios</code> calls to your authentication endpoints (e.g. Supabase, Firebase,
-            or custom REST APIs).
-          </div>
+          <pre class="terminal-code" id="code-color-directives">/* In src/index.css */
+@import "tailwindcss";
+
+/* Enables class-based dark mode on &lt;html class="dark"&gt; */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Add custom brand colors */
+  --color-primary: #06b6d4;
+  --color-primary-hover: #0891b2;
+  --color-secondary: #6366f1;
+}</pre>
         </div>
 
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Why is there only one Google Font loaded?</span>
-            <i class="bi bi-chevron-down"></i>
+        <p class="topic-paragraph">
+          To style any component for both light and dark modes, simply apply standard Tailwind utility classes for light mode and prefix with <code>dark:</code> for dark mode:
+        </p>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-label">Dual-Theme Component Styling Example</span>
+            <button class="copy-btn" data-target="code-dual-theme-sample"><i class="bi bi-clipboard"></i> Copy</button>
           </div>
-          <div class="faq-answer">
-            Loading multiple Google Fonts causes render-blocking network delays and layout shifts. Standardizing on
-            <strong>Plus Jakarta Sans</strong> ensures instantaneous page loads, 100/100 Lighthouse performance, and
-            pristine typographic consistency.
+          <pre class="terminal-code" id="code-dual-theme-sample">&lt;div className="bg-slate-50 dark:bg-black text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-white/10"&gt;
+  &lt;h3 className="text-slate-900 dark:text-white"&gt;Cyber Threat Radar&lt;/h3&gt;
+  &lt;p className="text-slate-600 dark:text-slate-400"&gt;Autonomous eBPF telemetry active.&lt;/p&gt;
+&lt;/div&gt;</pre>
+        </div>
+
+        <p class="topic-paragraph">
+          You can also use any of Tailwind CSS's built-in color palettes (cyan, indigo, violet, slate, etc.) anywhere in component <code>className</code> props.
+        </p>
+
+        <div class="subtopic-heading">
+          <i class="bi bi-droplet-half"></i>
+          Dynamic Brand Accent Colors (Live Customizer)
+        </div>
+
+        <p class="topic-paragraph">
+          NEXAI supports instant brand accent switching powered by <code>SettingsContext.jsx</code>. Six preset cyber palettes (Cyan <code>#06b6d4</code>, Indigo <code>#6366f1</code>, Emerald <code>#10b981</code>, Violet <code>#8b5cf6</code>, Rose <code>#f43f5e</code>, Amber <code>#f59e0b</code>) are selectable in the Live Customizer drawer, updating CSS variables (<code>--color-primary</code>, <code>--color-primary-hover</code>, <code>--brand-accent</code>) on the document root without reloading.
+        </p>
+
+        <div class="topic-heading">
+          <i class="bi bi-fonts text-cyan"></i>
+          Font Customization
+        </div>
+
+        <p class="topic-paragraph">
+          Customize typography by updating Google Font links in <code>index.html</code> and font tokens in <code>src/index.css</code>.
+        </p>
+
+        <div class="subtopic-heading">
+          <i class="bi bi-link-45deg"></i>
+          1. Google Fonts Import (index.html)
+        </div>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-label">index.html</span>
+            <button class="copy-btn" data-target="code-font-import"><i class="bi bi-clipboard"></i> Copy</button>
           </div>
+          <pre class="terminal-code" id="code-font-import">&lt;!-- In root index.html --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"&gt;</pre>
+        </div>
+
+        <div class="subtopic-heading">
+          <i class="bi bi-gear"></i>
+          2. Font Assignment (@theme in src/index.css)
+        </div>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span class="code-label">src/index.css</span>
+            <button class="copy-btn" data-target="code-font-theme"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="terminal-code" id="code-font-theme">@theme inline {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}</pre>
         </div>
       </section>
 
-      <!-- 10. Support Section -->
+      <!-- ========================================================
+           9. CREDITS
+           ======================================================== -->
+      <section id="credits" class="doc-section">
+        <div class="section-header">
+          <div class="section-icon-badge"><i class="bi bi-award"></i></div>
+          <h2 class="section-title">9. Credits</h2>
+        </div>
+
+        <div class="topic-heading">
+          <i class="bi bi-images text-cyan"></i>
+          Resources &amp; Assets
+        </div>
+
+        <ul class="topic-list-clean">
+          <li><a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">Unsplash</a> – High quality demo team &amp; facility imagery</li>
+          <li><a href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">Freepik</a> – Vector graphics &amp; illustrations</li>
+          <li><a href="https://lucide.dev/" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">Lucide React</a> – Clean, modern UI icon collection</li>
+          <li><a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">Google Fonts</a> – Plus Jakarta Sans typography</li>
+          <li><a href="https://icons.getbootstrap.com/" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">Bootstrap Icons</a> – Documentation UI icons</li>
+          <li>Custom Midjourney AI &amp; Blender – 3D cyber defense visuals &amp; graphics</li>
+        </ul>
+
+        <div class="topic-heading">
+          <i class="bi bi-code-square text-cyan"></i>
+          Frameworks &amp; Libraries
+        </div>
+
+        <ul class="topic-list-clean">
+          <li><a href="https://react.dev/" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">React 19</a> – Core UI component library</li>
+          <li><a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">Tailwind CSS v4</a> – Utility styling framework</li>
+          <li><a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">Vite 8</a> – Next-generation bundler &amp; dev server</li>
+          <li><a href="https://github.com/darkroomengineering/lenis" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">Lenis Smooth Scroll</a> – Ultra-smooth scrolling engine</li>
+          <li><a href="https://github.com/oframe/ogl" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">OGL</a> – Minimal WebGL 2 shader engine</li>
+          <li><a href="https://reactrouter.com/" target="_blank" rel="noopener noreferrer" style="color: #22d3ee; text-decoration: underline;">React Router DOM</a> – Client-side page routing</li>
+        </ul>
+      </section>
+
+      <!-- ========================================================
+           10. SUPPORT
+           ======================================================== -->
       <section id="support" class="doc-section mb-0">
         <div class="section-header">
           <div class="section-icon-badge"><i class="bi bi-headset"></i></div>
-          <h2 class="section-title">Support &amp; Developer Inquiries</h2>
+          <h2 class="section-title">10. Support</h2>
         </div>
 
         <div class="support-card">
@@ -720,6 +1049,7 @@ const { data, error } = await supabase.auth.signInWithPassword({
           </div>
         </div>
       </section>
+
     </main>
   </div>
 

@@ -1,28 +1,28 @@
 {
   "badge": "Trusted Worldwide",
   "heading": "Powering Security for Global Leaders",
-  "subheading": "Over 500+ forward-thinking organizations defend their critical cloud workloads using Aegix.",
+  "subheading": "Over 500+ forward-thinking organizations defend their critical cloud workloads using NexAI.",
   "row1": [
-    { "name": "Spotify", "icon": "Music", "color": "text-emerald-400" },
-    { "name": "Slack", "icon": "MessageSquare", "color": "text-cyan-400" },
-    { "name": "Dropbox", "icon": "Box", "color": "text-indigo-400" },
-    { "name": "LinkedIn", "icon": "Users", "color": "text-sky-400" },
-    { "name": "Twitter", "icon": "Share2", "color": "text-cyan-400" },
-    { "name": "Facebook", "icon": "Globe", "color": "text-blue-400" },
-    { "name": "YouTube", "icon": "Play", "color": "text-red-400" },
-    { "name": "Instagram", "icon": "Camera", "color": "text-fuchsia-400" }
+    { "name": "NovaMesh", "icon": "Cloud", "color": "text-cyan-400" },
+    { "name": "CyberShield", "icon": "Shield", "color": "text-indigo-400" },
+    { "name": "AetherData", "icon": "Database", "color": "text-emerald-400" },
+    { "name": "KubeGuard", "icon": "Box", "color": "text-sky-400" },
+    { "name": "Quantix AI", "icon": "Cpu", "color": "text-purple-400" },
+    { "name": "PulseOps", "icon": "Activity", "color": "text-rose-400" },
+    { "name": "SynapseNet", "icon": "Zap", "color": "text-amber-400" },
+    { "name": "ApexZero", "icon": "Lock", "color": "text-teal-400" }
   ],
   "row2": [
-    { "name": "Twitter", "icon": "Share2", "color": "text-cyan-400" },
-    { "name": "Facebook", "icon": "Globe", "color": "text-blue-400" },
-    { "name": "YouTube", "icon": "Play", "color": "text-red-400" },
-    { "name": "Instagram", "icon": "Camera", "color": "text-fuchsia-400" },
-    { "name": "Microsoft", "icon": "LayoutGrid", "color": "text-indigo-400" },
-    { "name": "Google", "icon": "Search", "color": "text-cyan-300" },
-    { "name": "Amazon", "icon": "Package", "color": "text-amber-400" },
-    { "name": "Apple", "icon": "Laptop", "color": "text-slate-300" },
-    { "name": "Spotify", "icon": "Music", "color": "text-emerald-400" },
-    { "name": "Slack", "icon": "MessageSquare", "color": "text-cyan-400" }
+    { "name": "Vanguard IO", "icon": "Layers", "color": "text-cyan-300" },
+    { "name": "SpectralWire", "icon": "Wifi", "color": "text-indigo-300" },
+    { "name": "FortressIQ", "icon": "ShieldCheck", "color": "text-emerald-300" },
+    { "name": "HyperScale", "icon": "Server", "color": "text-sky-300" },
+    { "name": "HexaNode", "icon": "Hexagon", "color": "text-purple-300" },
+    { "name": "ZeroTrace", "icon": "Globe", "color": "text-rose-300" },
+    { "name": "OmniVault", "icon": "Key", "color": "text-amber-300" },
+    { "name": "CoreFleet", "icon": "Laptop", "color": "text-blue-400" },
+    { "name": "NovaMesh", "icon": "Cloud", "color": "text-cyan-400" },
+    { "name": "CyberShield", "icon": "Shield", "color": "text-indigo-400" }
   ],
   "stats": [
     { "value": "120M+", "label": "Threats Neutralized", "gradient": "from-cyan-300 via-indigo-300 to-cyan-400" },

@@ -12,6 +12,12 @@ export const ScrollManager = () => {
       window.history.scrollRestoration = 'manual';
     }
 
+    const isTouch = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    if (isTouch) {
+      // Let mobile devices use native inertial scrolling for 120Hz fluid touch response
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.0,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
