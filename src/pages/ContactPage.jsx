@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Card from '@/components/ui/Card';
-import { Sparkles, Mail, Phone, MapPin, ArrowUpRight, Plus, Minus, Shield, Clock, ExternalLink } from 'lucide-react';
+import { Sparkles, Mail, Phone, MapPin, ArrowUpRight, Plus, Minus, Shield, Clock } from 'lucide-react';
 import contactData from '@/mock/contact.json';
 import heroImg from '@/assets/3.png';
 import sfImg from '@/assets/4.png';
@@ -164,7 +164,7 @@ export const ContactPage = () => {
         <section className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <Pill>{contactData.pill || 'Connect Us'}</Pill>
           <h1 className="mt-8 flex flex-wrap items-center justify-center gap-x-3 text-4xl font-extrabold tracking-tight sm:text-6xl text-slate-900 dark:text-white">
-            <span className="text-slate-500 dark:text-slate-400">{contactData.heading || "Let's Talk"}</span>
+            <span className="dark:text-slate-400">{contactData.heading || "Let's Talk"}</span>
             <span className="inline-flex items-center gap-2">
               <Shield className="h-8 w-8 text-cyan-500 dark:text-cyan-400 sm:h-12 sm:w-12 drop-shadow-[0_0_12px_rgba(6,182,212,0.5)]" />
               <span className="bg-gradient-to-r from-cyan-500 via-indigo-500 to-fuchsia-500 bg-clip-text text-transparent font-extrabold">

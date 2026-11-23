@@ -112,7 +112,7 @@ export const AboutPage = () => {
         <section className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <Pill>About Us</Pill>
           <h1 className="mt-8 flex flex-wrap items-center justify-center gap-x-3 text-4xl font-extrabold tracking-tight sm:text-6xl text-slate-900 dark:text-white">
-            <span className="text-slate-500 dark:text-slate-400">Welcome to</span>
+            <span className="text-slate-900 dark:text-slate-400">Welcome to</span>
             <span className="inline-flex items-center gap-2">
               <Shield className="h-8 w-8 text-cyan-600 dark:text-cyan-400 sm:h-12 sm:w-12" />
               <span className="bg-gradient-to-r from-cyan-500 via-indigo-500 to-fuchsia-500 dark:from-cyan-300 dark:via-indigo-300 dark:to-fuchsia-400 bg-clip-text text-transparent font-extrabold drop-shadow-[0_10px_25px_rgba(99,102,241,0.25)]">

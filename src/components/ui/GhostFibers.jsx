@@ -351,7 +351,8 @@ const GhostFibers = ({
       if (canvas && canvas.parentNode === container) container.removeChild(canvas);
       if (gl) gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
-  }, [dpr, lightMode]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dpr]);
 
   useEffect(() => {
     const container = containerRef.current;

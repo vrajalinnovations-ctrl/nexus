@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import FloatingBackground from '@/components/ui/FloatingBackground';
-import { Shield, Mail, Lock, Eye, EyeOff, ArrowRight, KeyRound, Check } from 'lucide-react';
+import { Shield, Mail, Lock, Eye, EyeOff, ArrowRight, ArrowLeft, KeyRound, Check } from 'lucide-react';
 import authData from '@/mock/auth.json';
 import logo from '@/assets/logo.png';
+import { useTheme } from '@/context/ThemeContext';
+import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 
 const inputClass =
   'w-full rounded-xl border border-slate-300 dark:border-white/15 bg-white/80 dark:bg-white/5 py-3.5 pl-11 text-sm text-slate-900 dark:text-white placeholder-slate-400 outline-none backdrop-blur-md transition-all focus:border-cyan-500 dark:focus:border-cyan-400/50 focus:bg-white dark:focus:bg-white/10';
@@ -11,6 +13,7 @@ const inputClass =
 export const SignInPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
   const [email, setEmail] = useState(location.state?.email || '');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -38,6 +41,26 @@ export const SignInPage = () => {
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-[#f4f5f8] dark:bg-black px-3.5 sm:px-4 py-8 sm:py-12 font-sans text-slate-900 dark:text-white selection:bg-cyan-500/30 selection:text-cyan-800 dark:selection:text-cyan-200 transition-colors duration-300">
       <FloatingBackground />
 
+      {/* Top Controls: Back to Home & Theme Toggler */}
+      <div className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-slate-300 dark:border-white/15 bg-white/90 hover:bg-white text-slate-700 dark:bg-white/5 dark:hover:bg-white/15 dark:text-slate-200 backdrop-blur-xl text-xs font-semibold transition-all duration-300 shadow-sm hover:shadow-md group"
+          aria-label="Back to home"
+        >
+          <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
+          <span className="hidden sm:inline">Back</span>
+        </Link>
+      </div>
+
+      <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
+        <AnimatedThemeToggler
+          theme={theme}
+          onThemeChange={setTheme}
+          className="p-2.5 rounded-full border border-slate-300 dark:border-white/15 bg-white/90 hover:bg-white text-slate-700 dark:bg-white/5 dark:hover:bg-white/15 dark:text-slate-200 backdrop-blur-xl transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
+        />
+      </div>
+
       <div className="pointer-events-none absolute left-1/2 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-600/25 blur-3xl" />
       <div className="pointer-events-none absolute left-1/2 bottom-1/4 h-80 w-80 -translate-x-1/2 translate-y-1/2 rounded-full bg-cyan-600/20 blur-3xl" />
 
@@ -55,6 +78,10 @@ export const SignInPage = () => {
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/5 dark:from-white/10 via-transparent to-transparent rounded-2xl sm:rounded-3xl" />
 
           <div className="relative z-10">
+            <div className="mx-auto mb-3.5 sm:mb-4 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl border border-slate-300 dark:border-white/15 bg-white dark:bg-white/5 text-cyan-600 dark:text-cyan-300 backdrop-blur-md shadow-lg shadow-cyan-500/10">
+              <Lock className="h-5 w-5 sm:h-6 sm:w-6" />
+            </div>
+
             {resetSuccess && (
               <div className="mb-6 rounded-xl border border-emerald-500/30 bg-emerald-50 dark:bg-emerald-950/40 p-3 text-center text-xs text-emerald-700 dark:text-emerald-300 backdrop-blur-md flex items-center justify-center gap-2">
                 <Check className="h-4 w-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
@@ -70,7 +97,7 @@ export const SignInPage = () => {
                 <label htmlFor="email" className="sr-only">
                   Email
                 </label>
-                <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500 dark:text-slate-400 z-10" />
                 <input
                   id="email"
                   type="email"
@@ -87,7 +114,7 @@ export const SignInPage = () => {
                 <label htmlFor="password" className="sr-only">
                   Password
                 </label>
-                <Lock className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                <Lock className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500 dark:text-slate-400 z-10" />
                 <input
                   id="password"
                   type={showPassword ? 'text' : 'password'}
@@ -102,7 +129,7 @@ export const SignInPage = () => {
                   type="button"
                   onClick={() => setShowPassword((v) => !v)}
                   aria-label={showPassword ? 'Hide password' : 'Show password'}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 transition-colors hover:text-slate-900 dark:hover:text-white"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-400 transition-colors hover:text-slate-900 dark:hover:text-white z-10 cursor-pointer"
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>

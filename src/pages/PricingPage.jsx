@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Pricing from '@/components/sections/Pricing';
@@ -29,7 +29,7 @@ export const PricingPage = () => {
       <Navbar />
 
       <main className="relative z-10 w-full">
-        <Pricing />
+        <Pricing isStandalone={true} hideTopDivider={true} />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24 lg:pb-28">
           <Divider />
@@ -81,7 +81,7 @@ export const PricingPage = () => {
                   </thead>
                   <tbody className="divide-y divide-slate-200 dark:divide-white/5 text-xs sm:text-sm">
                     {comparisonCategories.map((cat, cIdx) => (
-                      <React.Fragment key={cIdx}>
+                      <Fragment key={cIdx}>
                         <tr className="bg-slate-100/70 dark:bg-white/5 border-t border-b border-slate-200 dark:border-white/10">
                           <td colSpan={4} className="py-2.5 sm:py-3 px-4 sm:px-6 text-xs font-mono font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-300">
                             {cat.category}
@@ -125,7 +125,7 @@ export const PricingPage = () => {
                             </td>
                           </tr>
                         ))}
-                      </React.Fragment>
+                      </Fragment>
                     ))}
                   </tbody>
                 </table>

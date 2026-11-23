@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import FloatingBackground from '@/components/ui/FloatingBackground';
 import { ArrowLeft, RotateCcw, AlertOctagon, Check } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import { useTheme } from '@/context/ThemeContext';
+import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 
 export const ServerErrorPage = () => {
+  const { theme, setTheme } = useTheme();
   const [retrying, setRetrying] = useState(false);
   const [retried, setRetried] = useState(false);
 
@@ -22,6 +25,14 @@ export const ServerErrorPage = () => {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-[#f4f5f8] dark:bg-black px-3.5 sm:px-4 py-8 sm:py-12 font-sans text-slate-900 dark:text-white selection:bg-amber-500/30 selection:text-amber-800 dark:selection:text-amber-200 transition-colors duration-300">
       <FloatingBackground />
+
+      <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
+        <AnimatedThemeToggler
+          theme={theme}
+          onThemeChange={setTheme}
+          className="p-2.5 rounded-full border border-slate-300 dark:border-white/15 bg-white/90 hover:bg-white text-slate-700 dark:bg-white/5 dark:hover:bg-white/15 dark:text-slate-200 backdrop-blur-xl transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
+        />
+      </div>
 
       <div className="pointer-events-none absolute left-1/2 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-700/20 blur-3xl" />
       <div className="pointer-events-none absolute left-1/2 bottom-1/4 h-80 w-80 -translate-x-1/2 translate-y-1/2 rounded-full bg-amber-600/15 blur-3xl" />

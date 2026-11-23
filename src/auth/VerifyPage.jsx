@@ -1,12 +1,15 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import FloatingBackground from '@/components/ui/FloatingBackground';
-import { ArrowRight, Check, RotateCcw, Mail } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Check, RotateCcw, Mail } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import { useTheme } from '@/context/ThemeContext';
+import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 
 export const VerifyPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
   const email = location.state?.email || 'operator@enterprise.com';
 
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
@@ -86,6 +89,26 @@ export const VerifyPage = () => {
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-[#f4f5f8] dark:bg-black px-3.5 sm:px-4 py-8 sm:py-12 font-sans text-slate-900 dark:text-white selection:bg-cyan-500/30 selection:text-cyan-800 dark:selection:text-cyan-200 transition-colors duration-300">
       <FloatingBackground />
 
+      {/* Top Controls: Back to Home & Theme Toggler */}
+      <div className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50">
+        <Link
+          to="/signin"
+          className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-slate-300 dark:border-white/15 bg-white/90 hover:bg-white text-slate-700 dark:bg-white/5 dark:hover:bg-white/15 dark:text-slate-200 backdrop-blur-xl text-xs font-semibold transition-all duration-300 shadow-sm hover:shadow-md group"
+          aria-label="Back to sign in"
+        >
+          <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
+          <span className="hidden sm:inline">Back</span>
+        </Link>
+      </div>
+
+      <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
+        <AnimatedThemeToggler
+          theme={theme}
+          onThemeChange={setTheme}
+          className="p-2.5 rounded-full border border-slate-300 dark:border-white/15 bg-white/90 hover:bg-white text-slate-700 dark:bg-white/5 dark:hover:bg-white/15 dark:text-slate-200 backdrop-blur-xl transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
+        />
+      </div>
+
       <div className="pointer-events-none absolute left-1/2 top-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-600/25 blur-3xl" />
       <div className="pointer-events-none absolute left-1/2 bottom-1/4 h-80 w-80 -translate-x-1/2 translate-y-1/2 rounded-full bg-cyan-600/20 blur-3xl" />
 
@@ -103,7 +126,7 @@ export const VerifyPage = () => {
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/5 dark:from-white/10 via-transparent to-transparent rounded-2xl sm:rounded-3xl" />
 
           <div className="relative z-10">
-            <div className="mx-auto mb-3.5 sm:mb-4 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl border border-slate-200 dark:border-white/15 bg-slate-100 dark:bg-white/5 text-cyan-600 dark:text-cyan-300 backdrop-blur-md shadow-lg shadow-cyan-500/10">
+            <div className="mx-auto mb-3.5 sm:mb-4 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl border border-slate-300 dark:border-white/15 bg-white dark:bg-white/5 text-cyan-600 dark:text-cyan-300 backdrop-blur-md shadow-lg shadow-cyan-500/10">
               <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
             </div>
 

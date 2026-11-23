@@ -13,13 +13,14 @@
   <meta name="description"
     content="Explore all 12+ pre-built production screens of NEXAI: Main Landing, Architecture, Pricing Matrix, About, Contact, Complete 5-Screen Auth Suite, and 404/500 Incident Screens. Engineered with React 19, Tailwind CSS v4, and Vite 8.">
   <meta name="keywords"
-    content="cybersecurity template, AI SaaS landing page, React 19 template, Tailwind CSS v4, ThemeForest, Envato, 12+ screens, all pages showcase">
+    content="cybersecurity template, AI SaaS landing page, React 19 template, Tailwind CSS v4, WrapMarket, 12+ screens, all pages showcase">
   <meta name="theme-color" content="#030712">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <!-- Bootstrap Icons -->
@@ -71,7 +72,7 @@
     .cyber-grid-canvas {
       position: fixed;
       inset: 0;
-      background-image: 
+      background-image:
         radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15), transparent 45%),
         radial-gradient(circle at 90% 20%, rgba(6, 182, 212, 0.12), transparent 40%),
         radial-gradient(circle at 10% 70%, rgba(217, 70, 239, 0.1), transparent 40%),
@@ -287,8 +288,17 @@
     }
 
     @keyframes pulseGreen {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.8); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.8);
+      }
     }
 
     .hero-title {
@@ -547,9 +557,17 @@
       border-radius: 50%;
     }
 
-    .mockup-dot.r { background: #ef4444; }
-    .mockup-dot.y { background: #f59e0b; }
-    .mockup-dot.g { background: #10b981; }
+    .mockup-dot.r {
+      background: #ef4444;
+    }
+
+    .mockup-dot.y {
+      background: #f59e0b;
+    }
+
+    .mockup-dot.g {
+      background: #10b981;
+    }
 
     .mockup-url {
       font-size: 11px;
@@ -634,8 +652,13 @@
     }
 
     @keyframes floatBadge {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-10px); }
+      0% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(-10px);
+      }
     }
 
     /* Modern Tech Stack Ticker */
@@ -889,9 +912,17 @@
       border-radius: 50%;
     }
 
-    .mini-dot.r { background: #ef4444; }
-    .mini-dot.y { background: #f59e0b; }
-    .mini-dot.g { background: #10b981; }
+    .mini-dot.r {
+      background: #ef4444;
+    }
+
+    .mini-dot.y {
+      background: #f59e0b;
+    }
+
+    .mini-dot.g {
+      background: #10b981;
+    }
 
     .mini-slug {
       font-size: 10px;
@@ -997,11 +1028,35 @@
       border-radius: 9999px;
     }
 
-    .cat-core { background: rgba(6, 182, 212, 0.15); color: #38bdf8; border: 1px solid rgba(6, 182, 212, 0.3); }
-    .cat-auth { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
-    .cat-error { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
-    .cat-legal { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-    .cat-docs { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .cat-core {
+      background: rgba(6, 182, 212, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .cat-auth {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .cat-error {
+      background: rgba(244, 63, 94, 0.15);
+      color: #fb7185;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    .cat-legal {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .cat-docs {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
 
     .page-name {
       font-size: 19px;
@@ -1076,12 +1131,41 @@
       margin-bottom: 20px;
     }
 
-    .tile-icon-box.c-cyan { background: rgba(6, 182, 212, 0.15); color: var(--cyan); border: 1px solid rgba(6, 182, 212, 0.3); }
-    .tile-icon-box.c-indigo { background: rgba(99, 102, 241, 0.15); color: var(--indigo); border: 1px solid rgba(99, 102, 241, 0.3); }
-    .tile-icon-box.c-fuchsia { background: rgba(217, 70, 239, 0.15); color: var(--fuchsia); border: 1px solid rgba(217, 70, 239, 0.3); }
-    .tile-icon-box.c-emerald { background: rgba(16, 185, 129, 0.15); color: var(--emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
-    .tile-icon-box.c-amber { background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
-    .tile-icon-box.c-rose { background: rgba(244, 63, 94, 0.15); color: var(--rose); border: 1px solid rgba(244, 63, 94, 0.3); }
+    .tile-icon-box.c-cyan {
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--cyan);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .tile-icon-box.c-indigo {
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--indigo);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .tile-icon-box.c-fuchsia {
+      background: rgba(217, 70, 239, 0.15);
+      color: var(--fuchsia);
+      border: 1px solid rgba(217, 70, 239, 0.3);
+    }
+
+    .tile-icon-box.c-emerald {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .tile-icon-box.c-amber {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--amber);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .tile-icon-box.c-rose {
+      background: rgba(244, 63, 94, 0.15);
+      color: var(--rose);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
 
     .tile-title {
       font-size: 19px;
@@ -1196,8 +1280,15 @@
     }
 
     @keyframes modalSlide {
-      from { transform: scale(0.94) translateY(20px); opacity: 0; }
-      to { transform: scale(1) translateY(0); opacity: 1; }
+      from {
+        transform: scale(0.94) translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
     }
 
     .modal-header {
@@ -1282,25 +1373,77 @@
 
     /* Responsive */
     @media (max-width: 1200px) {
-      .hero-title { font-size: 52px; }
-      .pages-grid { grid-template-columns: repeat(2, 1fr); }
-      .bento-features-grid { grid-template-columns: repeat(2, 1fr); }
-      .package-grid { grid-template-columns: repeat(2, 1fr); }
-      .card-center { width: 620px; height: 390px; }
-      .card-left, .card-right { display: none; }
+      .hero-title {
+        font-size: 52px;
+      }
+
+      .pages-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bento-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .package-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card-center {
+        width: 620px;
+        height: 390px;
+      }
+
+      .card-left,
+      .card-right {
+        display: none;
+      }
     }
 
     @media (max-width: 860px) {
-      .hero-title { font-size: 40px; }
-      .nav-links { display: none; }
-      .stats-strip { grid-template-columns: repeat(2, 1fr); }
-      .stat-cell { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 12px; }
-      .pages-grid { grid-template-columns: 1fr; }
-      .bento-features-grid { grid-template-columns: 1fr; }
-      .package-grid { grid-template-columns: 1fr; }
-      .card-center { width: 100%; height: 280px; }
-      .telemetry-chip { display: none; }
-      .filter-deck { flex-direction: column; align-items: stretch; }
+      .hero-title {
+        font-size: 40px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-cell {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 12px;
+      }
+
+      .pages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bento-features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-center {
+        width: 100%;
+        height: 280px;
+      }
+
+      .telemetry-chip {
+        display: none;
+      }
+
+      .filter-deck {
+        flex-direction: column;
+        align-items: stretch;
+      }
     }
   </style>
 </head>
@@ -1338,7 +1481,7 @@
             <i class="bi bi-box-arrow-up-right"></i>
             <span>Live App</span>
           </a>
-          <a href="https://themeforest.net" target="_blank" class="btn-primary-nav">
+          <a href="https://wrapmarket.com" target="_blank" class="btn-primary-nav">
             <i class="bi bi-bag-check-fill"></i>
             <span>Buy Template</span>
           </a>
@@ -1363,7 +1506,9 @@
       </h1>
 
       <p class="hero-subtitle">
-        Accelerate your enterprise AI cybersecurity SaaS launch. Featuring <strong>12+ production-ready screens</strong>, hardware-accelerated 3D WebGL GhostFibers, an instant <strong>zero-flash Dark/Light &amp; RTL engine</strong>, and microsecond <strong>Vite 8</strong> development.
+        Accelerate your enterprise AI cybersecurity SaaS launch. Featuring <strong>12+ production-ready
+          screens</strong>, hardware-accelerated 3D WebGL GhostFibers, an instant <strong>zero-flash Dark/Light &amp;
+          RTL engine</strong>, and microsecond <strong>Vite 8</strong> development.
       </p>
 
       <!-- Triple CTAs -->
@@ -1376,7 +1521,7 @@
           <i class="bi bi-play-circle-fill"></i>
           <span>Open Live Web App</span>
         </a>
-        <a href="https://themeforest.net" target="_blank" class="btn-hero-purchase">
+        <a href="https://wrapmarket.com" target="_blank" class="btn-hero-purchase">
           <i class="bi bi-lightning-charge-fill"></i>
           <span>Purchase Template</span>
         </a>
@@ -1538,7 +1683,8 @@
         </div>
         <h2 class="section-title">Showcase of All 12+ Production Pages</h2>
         <p class="section-lead">
-          Every screen designed specifically for cybersecurity and AI platforms. Fully integrated, responsive, and ready to deploy with zero placeholder routes.
+          Every screen designed specifically for cybersecurity and AI platforms. Fully integrated, responsive, and ready
+          to deploy with zero placeholder routes.
         </p>
       </div>
 
@@ -1565,7 +1711,8 @@
 
         <div class="filter-search-wrap">
           <i class="bi bi-search"></i>
-          <input type="text" id="pageSearch" class="filter-search-input" placeholder="Search pages (e.g. auth, pricing, 404)..." onkeyup="searchPages(this.value)">
+          <input type="text" id="pageSearch" class="filter-search-input"
+            placeholder="Search pages (e.g. auth, pricing, 404)..." onkeyup="searchPages(this.value)">
         </div>
       </div>
 
@@ -1576,7 +1723,8 @@
         <div class="page-card" data-category="core" data-name="main landing home page 3d ghostfibers">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/</span>
             </div>
             <img src="./images/screenshot/1.png" alt="Main Landing Page" class="page-img">
@@ -1585,7 +1733,8 @@
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('Main Landing Page', './images/screenshot/1.png', '/')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('Main Landing Page', './images/screenshot/1.png', '/')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1595,11 +1744,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-core">Core Marketing</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 01</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  01</span>
               </div>
               <h3 class="page-name">Main Landing Page</h3>
               <p class="page-desc">
-                3D hardware-accelerated GhostFibers hero, enterprise partner ticker, threat telemetry analytics diagram, dual marquee testimonials, and pricing tiers.
+                3D hardware-accelerated GhostFibers hero, enterprise partner ticker, threat telemetry analytics diagram,
+                dual marquee testimonials, and pricing tiers.
               </p>
             </div>
             <a href="/" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1613,7 +1764,8 @@
         <div class="page-card" data-category="core" data-name="features kernel architecture telemetry ebpb zero trust">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/features</span>
             </div>
             <img src="./images/screenshot/3.png" alt="Features & Kernel Architecture" class="page-img">
@@ -1622,7 +1774,8 @@
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('Features & Kernel Architecture', './images/screenshot/3.png', '/features')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('Features & Kernel Architecture', './images/screenshot/3.png', '/features')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1632,11 +1785,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-core">Architecture</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 02</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  02</span>
               </div>
               <h3 class="page-name">Features &amp; Kernel Mesh</h3>
               <p class="page-desc">
-                Deep-dive architectural pillars, kernel-level eBPF probes, zero-trust verification grids, wire-speed threat telemetry charts, and SOC command workflows.
+                Deep-dive architectural pillars, kernel-level eBPF probes, zero-trust verification grids, wire-speed
+                threat telemetry charts, and SOC command workflows.
               </p>
             </div>
             <a href="/features" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1650,7 +1805,8 @@
         <div class="page-card" data-category="core" data-name="pricing comparison plans annual monthly tier matrix">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/pricing</span>
             </div>
             <img src="./images/screenshot/4.png" alt="Pricing & Comparison Matrix" class="page-img">
@@ -1659,7 +1815,8 @@
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('Pricing & Comparison Matrix', './images/screenshot/4.png', '/pricing')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('Pricing & Comparison Matrix', './images/screenshot/4.png', '/pricing')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1669,11 +1826,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-core">High Conversion</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 03</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  03</span>
               </div>
               <h3 class="page-name">Pricing &amp; Plan Matrix</h3>
               <p class="page-desc">
-                Interactive billing toggle (Monthly / Annual with discount tag), 3 jewel-tone tier cards, and an exhaustive 24-point feature comparison table.
+                Interactive billing toggle (Monthly / Annual with discount tag), 3 jewel-tone tier cards, and an
+                exhaustive 24-point feature comparison table.
               </p>
             </div>
             <a href="/pricing" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1687,7 +1846,8 @@
         <div class="page-card" data-category="core" data-name="about us leadership team mission executive company">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/about</span>
             </div>
             <img src="./images/screenshot/2.png" alt="About Us & Leadership" class="page-img">
@@ -1696,7 +1856,8 @@
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('About Us & Leadership', './images/screenshot/2.png', '/about')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('About Us & Leadership', './images/screenshot/2.png', '/about')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1706,11 +1867,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-core">Company</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 04</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  04</span>
               </div>
               <h3 class="page-name">About Us &amp; Leadership</h3>
               <p class="page-desc">
-                Core security principles, founder mission narrative, interactive executive leadership grid with social profiles, and headquarters overview.
+                Core security principles, founder mission narrative, interactive executive leadership grid with social
+                profiles, and headquarters overview.
               </p>
             </div>
             <a href="/about" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1721,10 +1884,12 @@
         </div>
 
         <!-- Screen 5: Contact & SOC Dispatch -->
-        <div class="page-card" data-category="core" data-name="contact soc dispatch inquiries formspree form hotline faq">
+        <div class="page-card" data-category="core"
+          data-name="contact soc dispatch inquiries formspree form hotline faq">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/contact</span>
             </div>
             <img src="./images/screenshot/5.png" alt="Contact & SOC Dispatch" class="page-img">
@@ -1733,7 +1898,8 @@
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('Contact & SOC Dispatch', './images/screenshot/5.png', '/contact')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('Contact & SOC Dispatch', './images/screenshot/5.png', '/contact')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1743,11 +1909,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-core">Lead Generation</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 05</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  05</span>
               </div>
               <h3 class="page-name">Contact &amp; SOC Dispatch</h3>
               <p class="page-desc">
-                Formspree-ready inquiry form with category selector, 24/7 global emergency hotline cards, and interactive accordion technical FAQ.
+                Formspree-ready inquiry form with category selector, 24/7 global emergency hotline cards, and
+                interactive accordion technical FAQ.
               </p>
             </div>
             <a href="/contact" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1761,7 +1929,8 @@
         <div class="page-card" data-category="auth" data-name="sign in login authentication portal sso security">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/signin</span>
             </div>
             <img src="./images/screenshot/6.png" alt="Sign In Portal" class="page-img">
@@ -1770,7 +1939,8 @@
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('Sign In Portal', './images/screenshot/6.png', '/signin')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('Sign In Portal', './images/screenshot/6.png', '/signin')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1780,11 +1950,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-auth">Auth Suite</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 06</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  06</span>
               </div>
               <h3 class="page-name">Sign In &amp; Authentication</h3>
               <p class="page-desc">
-                Zero-trust authentication interface with password visibility toggle, remember credentials toggle, Google/GitHub SSO, and biometric prompt indicator.
+                Zero-trust authentication interface with password visibility toggle, remember credentials toggle,
+                Google/GitHub SSO, and biometric prompt indicator.
               </p>
             </div>
             <a href="/signin" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1795,19 +1967,22 @@
         </div>
 
         <!-- Screen 7: Sign Up / Account Provisioning -->
-        <div class="page-card" data-category="auth" data-name="sign up register account creation provisioning password strength">
+        <div class="page-card" data-category="auth"
+          data-name="sign up register account creation provisioning password strength">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/signup</span>
             </div>
-            <img src="./images/screenshot/7.png" alt="Sign Up / Register" class="page-img">
+            <img src="./images/screenshot/10.png" alt="Sign Up / Register" class="page-img">
             <div class="preview-overlay">
               <a href="/signup" target="_blank" class="btn-card-action btn-card-launch">
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('Sign Up Provisioning', './images/screenshot/7.png', '/signup')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('Sign Up Provisioning', './images/screenshot/7.png', '/signup')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1817,11 +1992,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-auth">Auth Suite</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 07</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  07</span>
               </div>
               <h3 class="page-name">Sign Up Provisioning</h3>
               <p class="page-desc">
-                Enterprise user onboarding with dynamic password strength analyzer, real-time security requirement checklist, and legal terms agreement.
+                Enterprise user onboarding with dynamic password strength analyzer, real-time security requirement
+                checklist, and legal terms agreement.
               </p>
             </div>
             <a href="/signup" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1832,19 +2009,22 @@
         </div>
 
         <!-- Screen 8: Forgot Password Recovery -->
-        <div class="page-card" data-category="auth" data-name="forgot password recovery credentials email reset request">
+        <div class="page-card" data-category="auth"
+          data-name="forgot password recovery credentials email reset request">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/forgot-password</span>
             </div>
-            <img src="./images/screenshot/8.png" alt="Forgot Password Recovery" class="page-img">
+            <img src="./images/screenshot/7.png" alt="Forgot Password Recovery" class="page-img">
             <div class="preview-overlay">
               <a href="/forgot-password" target="_blank" class="btn-card-action btn-card-launch">
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('Forgot Password Recovery', './images/screenshot/8.png', '/forgot-password')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('Forgot Password Recovery', './images/screenshot/8.png', '/forgot-password')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1854,11 +2034,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-auth">Security Flow</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 08</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  08</span>
               </div>
               <h3 class="page-name">Forgot Password Recovery</h3>
               <p class="page-desc">
-                Enterprise credential recovery with rate-limiting notice, email address verification, security audit logging disclaimer, and instant back-to-login.
+                Enterprise credential recovery with rate-limiting notice, email address verification, security audit
+                logging disclaimer, and instant back-to-login.
               </p>
             </div>
             <a href="/forgot-password" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1869,19 +2051,22 @@
         </div>
 
         <!-- Screen 9: Two-Factor & Email OTP Verification -->
-        <div class="page-card" data-category="auth" data-name="verify otp two factor 2fa 6 digit email code verification">
+        <div class="page-card" data-category="auth"
+          data-name="verify otp two factor 2fa 6 digit email code verification">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/verify</span>
             </div>
-            <img src="./images/screenshot/9.png" alt="OTP Verification" class="page-img">
+            <img src="./images/screenshot/8.png" alt="OTP Verification" class="page-img">
             <div class="preview-overlay">
               <a href="/verify" target="_blank" class="btn-card-action btn-card-launch">
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('6-Digit OTP Verification', './images/screenshot/9.png', '/verify')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('6-Digit OTP Verification', './images/screenshot/9.png', '/verify')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1891,11 +2076,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-auth">Zero-Trust Flow</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 09</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  09</span>
               </div>
               <h3 class="page-name">6-Digit OTP Verification</h3>
               <p class="page-desc">
-                Auto-advancing 6-box OTP input, smart clipboard paste detection, resend countdown timer, and hardware security token verification ready.
+                Auto-advancing 6-box OTP input, smart clipboard paste detection, resend countdown timer, and hardware
+                security token verification ready.
               </p>
             </div>
             <a href="/verify" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1906,19 +2093,22 @@
         </div>
 
         <!-- Screen 10: Reset & Confirm Password -->
-        <div class="page-card" data-category="auth" data-name="reset password confirm password new password credential update">
+        <div class="page-card" data-category="auth"
+          data-name="reset password confirm password new password credential update">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/reset-password</span>
             </div>
-            <img src="./images/screenshot/10.png" alt="Reset Password" class="page-img">
+            <img src="./images/screenshot/9.png" alt="Reset Password" class="page-img">
             <div class="preview-overlay">
               <a href="/reset-password" target="_blank" class="btn-card-action btn-card-launch">
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('Reset & Confirm Password', './images/screenshot/10.png', '/reset-password')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('Reset & Confirm Password', './images/screenshot/10.png', '/reset-password')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1928,11 +2118,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-auth">Credential Reset</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 10</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  10</span>
               </div>
               <h3 class="page-name">Reset &amp; Confirm Password</h3>
               <p class="page-desc">
-                Secure token validation screen with dual-password confirmation matcher, live complexity verification, and automatic session re-authorization.
+                Secure token validation screen with dual-password confirmation matcher, live complexity verification,
+                and automatic session re-authorization.
               </p>
             </div>
             <a href="/reset-password" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1946,7 +2138,8 @@
         <div class="page-card" data-category="error" data-name="404 not found error sentinel threat intercept radar">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/404</span>
             </div>
             <img src="./images/screenshot/11.png" alt="404 Error Screen" class="page-img">
@@ -1955,7 +2148,8 @@
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('404 Sentinel Threat Intercept', './images/screenshot/11.png', '/404')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('404 Sentinel Threat Intercept', './images/screenshot/11.png', '/404')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -1965,11 +2159,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-error">Utility Screen</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 11</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  11</span>
               </div>
               <h3 class="page-name">404 Sentinel Intercept</h3>
               <p class="page-desc">
-                High-tech cyber defense radar sweep animation, technical diagnostic error code block, and one-click return to secure baseline mesh.
+                High-tech cyber defense radar sweep animation, technical diagnostic error code block, and one-click
+                return to secure baseline mesh.
               </p>
             </div>
             <a href="/404" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -1983,7 +2179,8 @@
         <div class="page-card" data-category="error" data-name="500 server error incident critical alert failover">
           <div class="page-preview-box">
             <div class="preview-header-mini">
-              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span class="mini-dot g"></span></div>
+              <div class="mini-dots"><span class="mini-dot r"></span><span class="mini-dot y"></span><span
+                  class="mini-dot g"></span></div>
               <span class="mini-slug">nexai.io/500</span>
             </div>
             <img src="./images/screenshot/12.png" alt="500 Server Error Screen" class="page-img">
@@ -1992,7 +2189,8 @@
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Open Route</span>
               </a>
-              <button type="button" class="btn-card-action btn-card-view" onclick="openPreviewModal('500 Critical Incident Response', './images/screenshot/12.png', '/500')">
+              <button type="button" class="btn-card-action btn-card-view"
+                onclick="openPreviewModal('500 Critical Incident Response', './images/screenshot/12.png', '/500')">
                 <i class="bi bi-arrows-fullscreen"></i>
                 <span>Zoom</span>
               </button>
@@ -2002,11 +2200,13 @@
             <div>
               <div class="page-meta-row">
                 <span class="page-cat-badge cat-error">Utility Screen</span>
-                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen 12</span>
+                <span style="font-size: 11px; font-family: 'JetBrains Mono', monospace; color: #64748b;">Screen
+                  12</span>
               </div>
               <h3 class="page-name">500 Incident Response</h3>
               <p class="page-desc">
-                Hexagonal emergency status indicator, automated failover diagnostic log feed, SOC hotline shortcuts, and quick reload action.
+                Hexagonal emergency status indicator, automated failover diagnostic log feed, SOC hotline shortcuts, and
+                quick reload action.
               </p>
             </div>
             <a href="/500" target="_blank" class="page-action-row" style="text-decoration: none;">
@@ -2032,7 +2232,8 @@
           <span>Engineered For Maximum Conversions</span>
         </div>
         <h2 class="section-title">Built to Pass Review &amp; Convert Buyers</h2>
-        <p class="section-lead">Every component is handcrafted for production stability, zero linting issues, and instant customization.</p>
+        <p class="section-lead">Every component is handcrafted for production stability, zero linting issues, and
+          instant customization.</p>
       </div>
 
       <div class="bento-features-grid">
@@ -2042,7 +2243,8 @@
           </div>
           <h3 class="tile-title">Zero-Flash Theme Engine</h3>
           <p class="tile-text">
-            Pre-DOM initialization script eliminates harsh white flashes on page loads. Features a clean, soft off-white light mode that preserves contrast without straining eyes.
+            Pre-DOM initialization script eliminates harsh white flashes on page loads. Features a clean, soft off-white
+            light mode that preserves contrast without straining eyes.
           </p>
         </div>
 
@@ -2052,7 +2254,8 @@
           </div>
           <h3 class="tile-title">True LTR &amp; RTL Support</h3>
           <p class="tile-text">
-            Flips margins, borders, paddings, and directional arrows automatically. Dual infinite marquees adapt coordinates dynamically for Arabic and Hebrew locales.
+            Flips margins, borders, paddings, and directional arrows automatically. Dual infinite marquees adapt
+            coordinates dynamically for Arabic and Hebrew locales.
           </p>
         </div>
 
@@ -2062,7 +2265,8 @@
           </div>
           <h3 class="tile-title">Floating Live Customizer</h3>
           <p class="tile-text">
-            A sleek slide-in drawer allows users and buyers to toggle themes, layout directions, and access documentation shortcuts directly on screen.
+            A sleek slide-in drawer allows users and buyers to toggle themes, layout directions, and access
+            documentation shortcuts directly on screen.
           </p>
         </div>
 
@@ -2072,7 +2276,8 @@
           </div>
           <h3 class="tile-title">Formspree Ready</h3>
           <p class="tile-text">
-            Zero server backend required. Paste your Formspree endpoint into environment variables for immediate, validated customer inquiry deliveries.
+            Zero server backend required. Paste your Formspree endpoint into environment variables for immediate,
+            validated customer inquiry deliveries.
           </p>
         </div>
 
@@ -2082,7 +2287,8 @@
           </div>
           <h3 class="tile-title">3D WebGL GhostFibers</h3>
           <p class="tile-text">
-            Hardware-accelerated ambient fiber-optic backdrop that reacts in real-time to dark and light modes with zero CPU throttling.
+            Hardware-accelerated ambient fiber-optic backdrop that reacts in real-time to dark and light modes with zero
+            CPU throttling.
           </p>
         </div>
 
@@ -2092,7 +2298,8 @@
           </div>
           <h3 class="tile-title">0 ESLint Warnings</h3>
           <p class="tile-text">
-            Clean code certified. Built strictly according to modern React 19 standards with zero unused imports, zero console warnings, and complete production build hygiene.
+            Clean code certified. Built strictly according to modern React 19 standards with zero unused imports, zero
+            console warnings, and complete production build hygiene.
           </p>
         </div>
       </div>
@@ -2145,13 +2352,15 @@
     <div class="cta-banner-final">
       <h3>Ready to Launch Your AI Cybersecurity SaaS?</h3>
       <p>
-        Save 300+ hours of design and development. Download NEXAI today and deploy your high-converting product with all 12+ pre-built screens.
+        Save 300+ hours of design and development. Download NEXAI today and deploy your high-converting product with all
+        12+ pre-built screens.
       </p>
 
       <div class="hero-actions-row" style="margin-bottom: 0;">
-        <a href="https://themeforest.net" target="_blank" class="btn-hero-primary" style="padding: 18px 40px; font-size: 16px;">
+        <a href="https://wrapmarket.com" target="_blank" class="btn-hero-primary"
+          style="padding: 18px 40px; font-size: 16px;">
           <i class="bi bi-bag-check-fill"></i>
-          <span>Purchase NEXAI on ThemeForest</span>
+          <span>Purchase NEXAI</span>
         </a>
         <a href="/" target="_blank" class="btn-hero-secondary" style="padding: 18px 36px; font-size: 16px;">
           <i class="bi bi-box-arrow-up-right"></i>
@@ -2180,7 +2389,8 @@
 
       <div class="modal-footer">
         <button type="button" class="btn-close-modal" onclick="closePreviewModal()">Close Preview</button>
-        <a id="modalRouteBtn" href="/" target="_blank" class="btn-hero-primary" style="padding: 10px 22px; font-size: 13px;">
+        <a id="modalRouteBtn" href="/" target="_blank" class="btn-hero-primary"
+          style="padding: 10px 22px; font-size: 13px;">
           <span>Launch Live Route</span>
           <i class="bi bi-box-arrow-up-right"></i>
         </a>
@@ -2196,7 +2406,7 @@
         <a href="#showcase">12+ Screens</a>
         <a href="./index.html">Documentation Portal</a>
         <a href="mailto:vrajalinnovations@gmail.com">Customer Support</a>
-        <a href="https://themeforest.net">Purchase License</a>
+        <a href="https://wrapmarket.com" target="_blank">Purchase License</a>
       </div>
       <p>© 2026 NEXAI Template by vrajalInnovations. Built with React 19 &amp; Tailwind CSS v4. All rights reserved.</p>
     </div>
@@ -2223,7 +2433,7 @@
     function searchPages(query) {
       const q = query.toLowerCase().trim();
       const cards = document.querySelectorAll('.page-card');
-      
+
       cards.forEach(card => {
         const text = (card.getAttribute('data-name') || '') + ' ' + card.innerText.toLowerCase();
         if (text.includes(q)) {
@@ -2263,4 +2473,5 @@
   </script>
 
 </body>
+
 </html>

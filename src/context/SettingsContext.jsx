@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { useTheme } from './ThemeContext';
 
 // eslint-disable-next-line react-refresh/only-export-components

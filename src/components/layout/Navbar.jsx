@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, Menu, X, Sparkles, Sun, Moon } from 'lucide-react';
+import { ArrowRight, Menu, X, Sparkles } from 'lucide-react';
 import DemoModal from '@/components/ui/DemoModal';
 import logo from '@/assets/logo.png';
 import { useTheme } from '@/context/ThemeContext';
+import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -16,7 +17,7 @@ const navItems = [
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const location = useLocation();
 
   const isActive = (path) => {
@@ -67,19 +68,11 @@ export const Navbar = () => {
 
           <div className="relative hidden sm:flex items-center gap-2.5">
             {/* Theme Toggle Button */}
-            <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            <AnimatedThemeToggler
+              theme={theme}
+              onThemeChange={setTheme}
               className="p-2 rounded-full border border-slate-200 dark:border-white/15 bg-slate-100/80 hover:bg-slate-200 text-slate-700 dark:bg-white/5 dark:hover:bg-white/15 dark:text-slate-200 transition-all duration-300 shadow-sm cursor-pointer"
-            >
-              {theme === 'dark' ? (
-                <Sun className="w-4 h-4 text-amber-400 transition-transform hover:rotate-45" />
-              ) : (
-                <Moon className="w-4 h-4 text-indigo-600 transition-transform hover:-rotate-12" />
-              )}
-            </button>
+            />
 
             <Link
               to="/signin"
@@ -108,18 +101,11 @@ export const Navbar = () => {
 
           <div className="relative flex md:hidden items-center gap-2">
             {/* Mobile Theme Toggle Button */}
-            <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-              className="p-2 rounded-full border border-slate-200 dark:border-white/15 bg-slate-100 text-slate-700 dark:bg-white/5 dark:text-slate-200 transition-colors"
-            >
-              {theme === 'dark' ? (
-                <Sun className="w-4 h-4 text-amber-400" />
-              ) : (
-                <Moon className="w-4 h-4 text-indigo-600" />
-              )}
-            </button>
+            <AnimatedThemeToggler
+              theme={theme}
+              onThemeChange={setTheme}
+              className="p-2 rounded-full border border-slate-200 dark:border-white/15 bg-slate-100 text-slate-700 dark:bg-white/5 dark:text-slate-200 transition-colors cursor-pointer"
+            />
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

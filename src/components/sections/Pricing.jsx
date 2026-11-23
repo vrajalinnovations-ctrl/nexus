@@ -24,7 +24,7 @@ const guarantees = (pricingData.guarantees || []).map(g => ({
 
 const faqs = pricingData.faqs;
 
-export const Pricing = () => {
+export const Pricing = ({ isStandalone = false, hideTopDivider = false, className = '' }) => {
   const [annualBilling, setAnnualBilling] = useState(true);
   const [openFaq, setOpenFaq] = useState(0);
 
@@ -33,13 +33,19 @@ export const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="relative w-full py-14 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-[#f4f5f8] dark:bg-black text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300">
-
-      <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
-        <div className="h-px w-full max-w-7xl bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
-        <div className="absolute top-0 h-px w-1/2 max-w-xl bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-lg shadow-cyan-400/50" />
-        <div className="absolute -top-1 h-3 w-1/3 max-w-md bg-gradient-to-r from-transparent via-violet-500/30 to-transparent blur-sm" />
-      </div>
+    <section
+      id="pricing"
+      className={`relative w-full ${
+        isStandalone ? 'pt-6 sm:pt-10 lg:pt-14 pb-14 sm:pb-20 lg:pb-28' : 'py-14 sm:py-20 lg:py-28'
+      } px-4 sm:px-6 lg:px-8 bg-transparent text-slate-900 dark:text-slate-100 overflow-hidden transition-colors duration-300 ${className}`}
+    >
+      {!hideTopDivider && (
+        <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
+          <div className="h-px w-full max-w-7xl bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
+          <div className="absolute top-0 h-px w-1/2 max-w-xl bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-lg shadow-cyan-400/50" />
+          <div className="absolute -top-1 h-3 w-1/3 max-w-md bg-gradient-to-r from-transparent via-violet-500/30 to-transparent blur-sm" />
+        </div>
+      )}
 
       <div
         className="pointer-events-none absolute inset-0 opacity-20"
